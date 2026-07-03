@@ -1,0 +1,29 @@
+{
+  "variantId": "mistral_jetstream_variant",
+  "hullId": "mistral_jetstream",
+  "displayName": "New Variant",
+  "goalVariant": false,
+  "fluxCapacitors": 0,
+  "fluxVents": 0,
+  "quality": 1,
+  "permaMods": [],
+  "hullMods": [],
+  "weaponGroups": [
+    {
+      "autofire": false,
+      "mode": "LINKED",
+      "weapons": {
+        "HEAD": "diableavionics_virtuous_headA",
+        "WS0002": "diableavionics_ibis",
+        "WS0003": "diableavionics_ibis",
+        "WS0005": "diableavionics_ibis",
+        "WS0006": "diableavionics_ibis",
+        "WS0010": "diableavionics_mistral_infernal_star",
+        "WS0012": "diableavionics_gravemg",
+        "WS0013": "diableavionics_gravemg"
+      }
+    }
+  ],
+  "modules": [],
+  "wings": []
+}

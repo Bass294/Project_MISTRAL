@@ -1,0 +1,89 @@
+{
+    "displayName": "Prototype",
+    "fluxCapacitors": 30,
+    "fluxVents": 50,
+    "goalVariant": false,
+    "hullId": "mistral_mistral_carrier",
+    "hullMods": [
+        "fluxbreakers",
+        "missleracks",
+        "stabilizedshieldemitter",
+    ],
+    "permaMods": [
+        "extendedshieldemitter",
+        "hardenedshieldemitter",
+        "magazines",
+    ],
+    "sMods": [
+        "extendedshieldemitter",
+        "hardenedshieldemitter",
+        "magazines",
+    ],
+    "suppressedMods": [],
+    "variantId": "mistral_mistral_carrier_boss",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_mistral_infernal_star",
+                "WS0015": "diableavionics_mistral_infernal_star",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0017": "diableavionics_banish",
+                "WS0018": "diableavionics_banish",
+                "WS0001": "diableavionics_banishsmall",
+                "WS0004": "diableavionics_banishsmall",
+                "WS0005": "diableavionics_banishsmall",
+                "WS0006": "diableavionics_banishsmall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "diableavionics_glaux",
+                "WS0013": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "diableavionics_nocturne",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0002": "diableavionics_graveac",
+                "WS0003": "diableavionics_graveac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_winee",
+                "WS0009": "diableavionics_winee",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "diableavionics_burchel",
+                "WS0011": "diableavionics_burchel",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [
+        {"MODULE": "mistral_nightingale_boss"},
+    ],
+}

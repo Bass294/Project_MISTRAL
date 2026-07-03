@@ -1,0 +1,33 @@
+{
+  "id":"DA_Mistral",
+  "name":"Project MISTRAL",
+  "version": "0.1",
+  "author": "Bass294 and Selkie",
+  "description":"Play MGR NOW also donate to ArmaA patreon",
+  "gameVersion":"0.98a-RC7",
+  "utility": false,
+  "jars": [ "jars/Mistral.jar" ],
+  "modPlugin":"data.scripts.Mistral_ModPlugin",
+  "dependencies": [
+        {
+            "id": "lw_lazylib",
+            "name": "LazyLib",
+            #"version": "2.6" # If a specific version or higher is required, include this line
+        },
+        {
+            "id": "MagicLib",
+            "name": "MagicLib",
+            #"version": "0.32rc2" # If a specific version is NOT required, comment out this line
+        },
+        {
+            "id": "armaa",
+            "name": "Arma Armatura",
+            "version": "3.3.1" # If a specific version is NOT required, comment out this line
+        },
+	{
+            "id": "diableavionics",
+            "name": "Diable Avionics",
+            #"version": "2.7.3" # If a specific version is NOT required, comment out this line
+        }
+  ],
+}

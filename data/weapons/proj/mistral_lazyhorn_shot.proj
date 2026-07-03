@@ -1,0 +1,47 @@
+{
+    "id":"mistral_lazyhorn_shot",
+    "specClass":"projectile",    
+    "spawnType":"BALLISTIC_AS_BEAM",
+    "collisionClass":"PROJECTILE_NO_FF",
+    "collisionClassByFighter":"PROJECTILE_FIGHTER",
+    "bulletSprite":"graphics/da/missiles/diableavionics_lazyhornhole.png",
+    "fringeColor":[0,0,0,0],
+    "coreColor":[255,255,255,255],
+    "glowSprite":"graphics/fx/shields64.png",
+    "glowColor":[201,109,234,100],
+    "length":42.0,
+    "width":42.0,
+    "collisionRadius":5,
+    "explosionColor":[201,109,234,220],
+    "explosionRadius":50, 
+    "textureScrollSpeed":0,
+    "pixelsPerTexel":0,
+    #"engineSpec":{
+    #            "turnAcc":720,
+    #            "turnRate":180,
+    #            "acc":200,
+    #            "dec":200
+    #            },
+    "fadeTime":0.5f, # total time from flameout to full fadeout
+    "behaviorSpec":{
+                "behavior":"PROXIMITY_FUSE",
+                #"shotRangeVariance":0.75,
+                #"slowToMaxSpeed":true,
+                "range":25,
+                "vsMissileRange":50,
+                "explosionSpec":{
+                        "duration":0.15f,
+                        "radius":75,
+                        "coreRadius":50, # full damage within core radius - also equal to proximity fuse range
+                        "collisionClass":PROJECTILE_FF,
+                        "collisionClassByFighter":PROJECTILE_FIGHTER,
+                        "particleSizeMin":5.0,
+                        "particleSizeRange":5.0,
+                        "particleDuration":0.75,
+                        "particleCount":15,
+                        "particleColor":[100,20,255,128],
+                        "explosionColor":[201,109,234,220],
+                        "sound":"diableavionics_lazyhorn_hit"
+                },
+        }
+}

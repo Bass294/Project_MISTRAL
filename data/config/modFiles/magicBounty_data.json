@@ -1,0 +1,122 @@
+{
+	"mistral_project_mistral":{
+		"trigger_marketFaction_any":["independent","tritachyon","diableavionics"],
+		"trigger_player_minLevel":15,
+
+		"job_name":"Project MISTRAL",
+		"job_description":"Your comms officer lets you know your fleet has picked up an anonymous bounty posting for the destruction of an experimental craft, with nothing but coordinates and a payout amount. While the senders have clearly put great effort into covering their tracks, decryption has revealed it to be a job from the ==Diable Avionics corporation==. Further information gathering has revealed that they are likely tracking a ==large, high-mobility weapons platform== that was first sighted fleeing Diable Avionics space several cycles ago. Supposedly the pilot has gained support from dissidents and refugees opposed to Diable, so there is little question why the corporation would like to see this \"movement\" dealt a death blow.",
+		"job_comm_reply":"\"You aren't the first Diable dog I've put down, and you won't be the last. Angela, we have guests.\"\n\nYou hear a robotic female voice through the comms:\n\"Main System: Activating Combat Mode.\"\n\nThe connection terminates, with your officers notifying you that the enemy fleet is powering up weapons.",
+		"job_intel_success":"Your comms officer notifies Diable Avionics of the completed job. The representative nervously denies corporate responsibility for the anonymous posting, but the payout is deposited into your account before the comm feed is cut.",
+		"job_forFaction":"diableavionics",
+		"job_credit_reward":750000,
+		"job_reputation_reward":20,
+		"job_type":"assassination",
+		"job_difficultyDescription":"auto",
+        	"job_item_reward": {"diableavionics_mistral_infernal_star":2},
+
+		"target_first_name": "Angelos",
+       		"target_last_name": "Orchis",
+		"target_portrait": "graphics/portraits/angelos.png",
+		"target_gender":"MALE",
+		"target_rank":"spaceCommander",
+		"target_post":"fleetCommander",
+		"target_personality":"reckless",
+		"target_level":14,
+		"target_skills":{
+			"helmsmanship":2,
+			"combat_endurance":2,
+			"impact_mitigation":2,
+			"damage_control":2,
+			"field_modulation":2,
+			"point_defense":2,
+			"target_analysis":2,
+			"ballistic_mastery":2,
+			"systems_expertise":2,
+			"missile_specialization":2,
+			"gunnery_implants":2,
+			"energy_weapon_mastery":2,
+			"ordnance_expert":2,
+			"polarized_armor":2
+		},
+
+		"fleet_name":"Angelos Contingent",
+		"fleet_faction":"diableavionics",
+		"fleet_flagship_variant":"mistral_mistral_carrier_boss",
+		"fleet_flagship_name":"ACS Mistral",
+		"fleet_flagship_alwaysRecoverable": true,
+		"fleet_preset_ships":{
+			"mistral_nightingale_boss":4,
+			"diableavionics_maelstrom_mistralboss":4,
+			"diableavionics_haze_mistralboss":4,
+			"diableavionics_calm_mistralboss":4,
+			"diableavionics_hayle_mistralboss":4,
+			"diableavionics_versant_mistralboss":6
+		},
+		"fleet_composition_quality":2,
+		"fleet_transponder":false,
+		"fleet_no_retreat":true,
+		"fleet_behavior":"AGGRESSIVE",
+
+		"location_distance":"FAR",
+		"location_themes":["procgen_no_theme_pulsar_blackhole"],
+		"location_themes_blacklist":["theme_already_occupied","theme_already_colonized","theme_hidden","no_pulsar_blackhole"]
+	},
+
+	"mistral_sunshower":{
+		"trigger_marketFaction_any":["independent","tritachyon","diableavionics"],
+		"trigger_player_minLevel":15,
+
+		"job_name":"Sundown",
+		"job_description":"Tri-Tachyon has posted a bounty including a ship stolen from the ==Traverser Design Bureau== by the ==Diable Avionics corporation==. It appears to be undergoing field testing alongside other craft that have been integrated with parts of its advanced VLS missile technology. The bounty specifies the assassination of the researcher heading the project, currently acting captain of the ==Sunshower==.",
+		"job_comm_reply":"\"Kids are cruel, Captain. And I'm very in touch with my inner child!\"",
+		"job_intel_success":"Your comms officer notifies Tri-Tachyon of the completed job. After some formal processing arrangements are complete, the payout is deposited into your account before the comm feed is cut.",
+		"job_forFaction":"tritachyon",
+		"job_credit_reward":500000,
+		"job_reputation_reward":10,
+		"job_type":"assassination",
+		"job_difficultyDescription":"auto",
+
+		"target_first_name": "Nagai",
+       		"target_last_name": "Sundowner",
+		"target_portrait": "graphics/portraits/diableresearcher.png",
+		"target_gender":"MALE",
+		"target_rank":"spaceCommander",
+		"target_post":"fleetCommander",
+		"target_personality":"aggressive",
+		"target_level":10,
+		"target_skills":{
+			"helmsmanship":2,
+			"field_modulation":2,
+			"point_defense":2,
+			"target_analysis":2,
+			"systems_expertise":2,
+			"missile_specialization":2,
+			"gunnery_implants":2,
+			"energy_weapon_mastery":2,
+			"ordnance_expert":2,
+			"polarized_armor":2
+		},
+
+		"fleet_name":"Winds of Destruction",
+		"fleet_faction":"diableavionics",
+		"fleet_flagship_variant":"mistral_sunshower_DA_mistralboss",
+		"fleet_flagship_name":"DSF Taiyang Yu",
+		"fleet_flagship_alwaysRecoverable": true,
+		"fleet_preset_ships":{
+			"diableavionics_storm_support":4,
+			"diableavionics_daze_mistralboss":4,
+			"mistral_pandemonium_AC_mistralboss":2,
+			"diableavionics_calm_mistralboss":4,
+			"diableavionics_hayle_mistralboss":4,
+			"diableavionics_versant_mistralboss":6
+		},
+		"fleet_composition_quality":2,
+		"fleet_transponder":false,
+		"fleet_no_retreat":true,
+		"fleet_behavior":"GUARDED",
+
+		"location_distance":"FAR",
+		"location_themes":["procgen_no_theme_pulsar_blackhole"],
+		"location_themes_blacklist":["theme_already_occupied","theme_already_colonized","theme_hidden","no_pulsar_blackhole"]
+	},
+}

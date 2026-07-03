@@ -1,0 +1,263 @@
+{
+  "hullName": "Jetstream",
+  "hullId": "mistral_jetstream",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/mistral_jetstream_base.png",
+  "style": "MISTRAL",
+  "height": 192,
+  "width": 170,
+  "center": [85, 94],
+  "collisionRadius": 138,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 105,
+  "viewOffset": 50,
+  "builtInMods": [
+    "mistral_himac_big"
+  ],
+  "builtInWeapons": {
+    "leftwing": "mistral_jetstream_leftwing",
+    "rightwing": "mistral_jetstream_rightwing",
+    "topcover": "mistral_jetstream_topcover",
+    "under_left": "mistral_jetstream_under_left",
+    "under_right": "mistral_jetstream_under_right"
+  },
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-50, 18]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [-50, -18]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 45,
+      "locations": [10, 11],
+      "renderOrderMod": 401
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -45,
+      "locations": [10, -11],
+      "renderOrderMod": 401
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [-39, 33],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -90,
+      "locations": [-39, -33],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0012",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [46, -26]
+    },
+    {
+      "id": "WS0013",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": -0,
+      "locations": [46, 26]
+    },
+    {
+      "id": "under_left",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [30.5, 35],
+      "renderOrderMod": 101
+    },
+    {
+      "id": "under_right",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [30.5, -35],
+      "renderOrderMod": 101
+    },
+    {
+      "id": "leftwing",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [47, 42],
+      "renderOrderMod": 301
+    },
+    {
+      "id": "rightwing",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -0,
+      "locations": [47, -42],
+      "renderOrderMod": 301
+    },
+    {
+      "id": "topcover",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [47, -0],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0010",
+      "size": "LARGE",
+      "type": "HYBRID",
+      "mount": "HARDPOINT",
+      "arc": 20,
+      "angle": 0,
+      "locations": [42, -0]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-9.5, -0]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-27.5, -0]
+    },
+    {
+      "id": "HEAD",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 0,
+      "locations": [31, -0],
+      "renderOrderMod": 401
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-57, 9.5],
+      "length": 40,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-57, -9.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-57, 5.5],
+      "length": 40,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-57, -5.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-57, 7.5],
+      "length": 36,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-57, -7.5],
+      "length": 36,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    }
+  ],
+  "bounds": [
+    -66, -16,
+    -72, -22.5,
+    -63, -36.5,
+    -39, -39,
+    -7, -46,
+    20, -39,
+    59, -34,
+    64.5, -19,
+    93, -17,
+    90, -10,
+    73.5, -10,
+    73.5, 10,
+    90, 10,
+    93, 17,
+    64.5, 19,
+    59, 34,
+    20, 39,
+    -7, 46,
+    -39, 39,
+    -63, 36.5,
+    -72, 22.5,
+    -66, 16
+  ]
+}

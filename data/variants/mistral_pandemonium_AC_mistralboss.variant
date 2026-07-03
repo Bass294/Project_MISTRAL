@@ -1,0 +1,93 @@
+{
+    "displayName": "Prototype",
+    "fluxCapacitors": 27,
+    "fluxVents": 50,
+    "goalVariant": false,
+    "hullId": "mistral_pandemonium_AC",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "stabilizedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [
+        "advancedshieldemitter",
+        "auxiliarythrusters",
+        "reinforcedhull",
+    ],
+    "sMods": [
+        "advancedshieldemitter",
+        "auxiliarythrusters",
+        "reinforcedhull",
+    ],
+    "suppressedMods": [],
+    "variantId": "mistral_pandemonium_AC_mistralboss",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_uhlan",
+                "WS0004": "diableavionics_uhlan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "diableavionics_opfergv",
+                "WS0017": "diableavionics_opfergv",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0007": "diableavionics_nocturne",
+                "WS0008": "diableavionics_nocturne",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "diableavionics_state",
+                "WS0006": "diableavionics_state",
+                "WS0034": "diableavionics_state",
+                "WS0035": "diableavionics_state",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0026": "diableavionics_esp_kestrel_light",
+                "WS0027": "diableavionics_esp_kestrel_light",
+                "WS0028": "diableavionics_esp_kestrel_light",
+                "WS0029": "diableavionics_esp_kestrel_light",
+                "WS0001": "locust",
+                "WS0002": "locust",
+                "WS0009": "diableavionics_raptor",
+                "WS0010": "diableavionics_raptor",
+                "WS0012": "diableavionics_winee",
+                "WS0013": "diableavionics_winee",
+                "WS0014": "diableavionics_ibis",
+                "WS0015": "diableavionics_ibis",
+                "WS0018": "diableavionics_burchel",
+                "WS0019": "diableavionics_burchel",
+                "WS0030": "diableavionics_burchel",
+                "WS0031": "diableavionics_burchel",
+                "WS0032": "diableavionics_ibis",
+                "WS0033": "diableavionics_ibis",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "diableavionics_lazyhorn",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

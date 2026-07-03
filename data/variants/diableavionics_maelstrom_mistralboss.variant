@@ -1,0 +1,73 @@
+{
+    "displayName": "Prototype",
+    "fluxCapacitors": 42,
+    "fluxVents": 50,
+    "goalVariant": true,
+    "hullId": "diableavionics_maelstrom",
+    "hullMods": [
+        "stabilizedshieldemitter",
+    ],
+    "permaMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "turretgyros",
+		"mistral_wanzergantry"
+    ],
+    "sMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+        "turretgyros",
+    ],
+    "suppressedMods": [],
+    "variantId": "diableavionics_maelstrom_mistralboss",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "diableavionics_mostro",
+				"WS0003": "diableavionics_glowtusk",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {          
+                "WS0005": "diableavionics_gravemg",
+                "WS0004": "diableavionics_gravemg",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_micromissile",
+                "WS0002": "diableavionics_microarray",
+                "WS0016": "diableavionics_micromissile",
+                "WS0015": "diableavionics_micromissile",
+                "WS0017": "diableavionics_micromissile",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "diableavionics_ibis",
+                "WS0023": "diableavionics_ibis",
+                "WS0022": "diableavionics_ibis",
+                "WS0013": "diableavionics_ibis",
+                "WS0024": "diableavionics_ibis",
+                "WS0010": "diableavionics_ibis",
+                "WS0009": "diableavionics_ibis",
+                "WS0008": "diableavionics_ibis",
+                "WS0007": "diableavionics_ibis",
+                "WS0006": "diableavionics_raptor",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_strife_wing",
+        "diableavionics_frost_wing",
+    ],
+    "modules": [],
+}

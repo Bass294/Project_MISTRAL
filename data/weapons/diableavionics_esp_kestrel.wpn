@@ -1,0 +1,79 @@
+{
+  "id": "diableavionics_esp_kestrel",
+  "specClass": "projectile",
+  "projectileSpecId": "diableavionics_esp_kestrelpod",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "everyFrameEffect": "data.scripts.weapons.DA_ESP_VerticalMissileAnimation",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/diableavionics_esp_kestrel/diableavionics_esp_kestrel_00.png",
+  "hardpointSprite": "graphics/weapons/diableavionics_esp_kestrel/diableavionics_esp_kestrel_00.png",
+  "turretOffsets": [
+    9.5,
+    4.5,
+    9.5,
+    -4.5,
+    0.5,
+    4.5,
+    0.5,
+    -4.5,
+    -8.5,
+    -4.5,
+    -8.5,
+    4.5
+  ],
+  "turretAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "hardpointOffsets": [
+    16,
+    4.5,
+    16,
+    -4.5,
+    7,
+    -4.5,
+    7,
+    4.5,
+    -2,
+    4.5,
+    -2,
+    -4.5
+  ],
+  "hardpointAngleOffsets": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "animationType": "SMOKE",
+  "autocharge":"true",
+  "numFrames": 6,
+  "frameRate": 6,
+  "smokeSpec": {
+    "particleSizeMin": 15,
+    "particleSizeRange": 10,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1.5,
+    "cloudRadius": 15,
+    "blowbackParticleCount": 4,
+    "blowbackDuration": 2,
+    "blowbackLength": 15,
+    "blowbackSpread": 10,
+    "particleColor": [
+      55,
+      70,
+      100,
+      105
+    ]
+  },
+  "fireSoundOne": "diableavionics_thunderboltpod_firing",
+  "fireSoundTwo": "diableavionics_thrush_firing"
+}

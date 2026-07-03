@@ -1,0 +1,49 @@
+{
+    "displayName": "Prototype",
+    "fluxCapacitors": 10,
+    "fluxVents": 4,
+    "goalVariant": false,
+    "hullId": "mistral_nightingale",
+    "hullMods": [
+        "armaa_emergencyRecallDevice",
+        "hardened_subsystems",
+        "hardenedshieldemitter",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "mistral_nightingale_nexstart",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0004": "diableavionics_thunderboltsmall",
+                "WS0005": "diableavionics_thunderboltsmall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "TRUE_GUN_B": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "TRUE_GUN_A": "diableavionics_gravemg",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "HEAD": "mistral_nightingaleHead",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

@@ -1,0 +1,23 @@
+{
+	"id":"mistral_ghb_shot",
+	"specClass":"projectile",
+	"spawnType":"BALLISTIC_AS_BEAM",
+	"onHitEffect":"data.scripts.weapons.mistral_infernalflame",
+	"onFireEffect":"data.scripts.weapons.mistral_InfernalStarScript",
+    "collisionClass":"RAY",
+    "collisionClassByFighter":"RAY_FIGHTER",
+	"length":50.0,
+	"hitGlowRadius":80,
+	"width":12.0,
+	"fadeTime":0.5,
+	"fringeColor":[185,127,255,175],
+	#"coreColor":[255,225,175,225],
+	"coreColor":[255,255,255,200],
+	"glowColor":[125,115,255,30],
+	"glowRadius":60,
+	"textureScrollSpeed":64.0,
+	"pixelsPerTexel":5.0,
+	"passThroughMissiles":true,
+	"bulletSprite":"graphics/missiles/shell_hellbore.png"
+	#"bulletSprite":"graphics/missiles/shell_round_lrg.png"
+}

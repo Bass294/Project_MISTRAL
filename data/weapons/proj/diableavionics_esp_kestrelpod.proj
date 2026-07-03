@@ -1,0 +1,28 @@
+{
+	"id":"diableavionics_esp_kestrelpod",
+	"specClass":"missile",	
+	"missileType":"MISSILE",
+	"sprite":"graphics/missiles/diableavionics_esp_kestrelpod.png",
+	"size":[10,10],	
+	"center":[5,5],
+	"collisionRadius":10,
+	"collisionClass":"MISSILE_NO_FF",
+	"noCollisionWhileFading":true,
+	"explosionColor":[100,100,255,255],  # purely visual, will get a white additively blended core on top of this color
+	"explosionRadius":150, # purely visual
+	"explosionSpec":{"duration":1.1f, # not visual
+					 "radius":150,
+					 "coreRadius":100, # full damage within core radius
+					 "collisionClass":PROJECTILE_FIGHTER,
+					 "collisionClassByFighter":PROJECTILE_FIGHTER,
+					 "particleSizeMin":2.0,
+					 "particleSizeRange":1.0,
+					 "particleDuration":1,
+					 "particleCount":20,
+					 "particleColor":[0,185,187,255]},
+	"engineSpec":{"turnAcc":210,
+				  "turnRate":70,
+				  "acc":1000,
+				  "dec":500},
+	"engineSlots":[]
+}

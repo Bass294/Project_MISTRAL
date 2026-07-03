@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="armaa">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../../../Program Files (x86)/Fractal Softworks/Starsector/mods/Arma Armatura-3.3.0/jars/armaa.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

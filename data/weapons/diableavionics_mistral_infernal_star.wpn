@@ -1,0 +1,63 @@
+{
+  "id": "diableavionics_mistral_infernal_star",
+  "specClass": "projectile",
+  "projectileSpecId": "mistral_ghb_shot",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "displayArcRadius": 600,
+  "turretSprite": "graphics/weapons/mistral_zimmerman_turret_base.png",
+  "turretGunSprite": "graphics/weapons/mistral_zimmerman_turret_recoil.png",
+  "hardpointSprite": "graphics/weapons/mistral_zimmerman_hardpoint_base.png",
+  "hardpointGunSprite": "graphics/weapons/mistral_zimmerman_hardpoint_recoil.png",
+  "visualRecoil": 6,
+  "turretOffsets": [
+    34.5,
+    -3.5,
+    34.5,
+    3.5,
+    34.5,
+    6.5,
+    34.5,
+    -6.5
+  ],
+  "turretAngleOffsets": [
+    4,
+    -4,
+    12,
+    -12
+  ],
+  "hardpointOffsets": [
+    45.5,
+    -3.5,
+    45.5,
+    3.5,
+    45.5,
+    6.5,
+    45.5,
+    -6.5
+  ],
+  "hardpointAngleOffsets": [
+    4,
+    -4,
+    12,
+    -12
+  ],
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "interruptibleBurst": true,
+  "muzzleFlashSpec": {
+    "length": 60,
+    "spread": 15,
+    "particleSizeMin": 20,
+    "particleSizeRange": 40,
+    "particleDuration": 0.1,
+    "particleCount": 10,
+    "particleColor": [
+      165,
+      100,
+      255,
+      150
+    ]
+  },
+  "fireSoundTwo": "zimmy"
+}

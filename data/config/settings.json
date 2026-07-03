@@ -1,0 +1,42 @@
+{
+	# This file is optional and can be deleted if you aren't using it, but doesn't hurt to keep.
+
+	# Add plugins like `EveryFrameCombatPlugin` and `EveryFrameScript` here and the game will automatically run them.
+	# The list of plugins that should be added here seems slightly random.
+	#"plugins":{
+	#	 "coreLifecyclePlugin":"com.fs.starfarer.api.impl.campaign.CoreLifecyclePluginImpl",
+	#},
+
+	# rules.csv can call Java from within a rule. The code must extend `BaseCommandPlugin`.
+	# This section is where we can tell the game where to look for our custom rule commands.
+	# Rules from multiple packages CAN NOT share the same name	
+	#"ruleCommandPackages":[
+	#	 "com.fs.starfarer.api.impl.campaign.rulecmd",
+	#],
+	
+    # This section is where we can define images that can be referenced ingame using Global.getSettings().getSpriteName("category", "name");
+	#"graphics":{
+	#	"category":{ "name":"graphics/ui/sector_age_young.png", }
+	#}
+    "graphics":{
+        "fx":{
+            	"mistral_shields":"graphics/fx/mistral_shields.png",
+		"mistral_sunshower_DA_glow1":"graphics/ships/decos/mistral_sunshower_DA_glow1.png",
+		"mistral_sunshower_DA_glow2":"graphics/ships/decos/mistral_sunshower_DA_glow2.png",
+        },
+
+        "planets":{
+            	"atoll_texture":"graphics/planets/US_planet_textureAtoll.jpg",
+		"atoll_clouds":"graphics/planets/US_clouds_textureSoft.png",
+        },
+
+	"characters":{
+            	"angelos":"graphics/portraits/angelos.png",
+		"diableresearcher":"graphics/portraits/diableresearcher.png",
+		"angelosleader1":"graphics/portraits/angelosleader1.png",
+		"angelospilot1":"graphics/portraits/angelospilot1.png",
+		"angelosspy1":"graphics/portraits/angelosspy1.png",
+        },
+
+    },
+}

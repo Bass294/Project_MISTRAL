@@ -1,0 +1,21 @@
+name,id,tier,rarity,tech/manufacturer,tags,uiTags,base value,unlocked,hidden,hiddenEverywhere,cost_frigate,cost_dest,cost_cruiser,cost_capital,script,desc,short,sModDesc,sprite
+Phase Grazer Velocity Assist,mistral_himac_big,,,Diable Avionics,"special,no_drop","Engines, Special",,,TRUE,,0,0,0,0,data.hullmods.mistral_himac_big,Rapidly boost in any direction by double tapping the [WASD] keys.,[REDACTED],,graphics/hullmods/mistral_avionics.png
+Nachtreiher Subsystems,mistral_zandatsu,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_zandatsu,no description..... yet!!!!!!!,,,graphics/hullmods/mistral_tuning.png
+Mistral Shield Style,mistral_shield_style,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.mistral_shield_style,,Replaces shield style to Mistral,,
+Mistral Shield Sparkles,mistral_shieldsparkles,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.mistral_shieldsparkles,,I hope this works lol,,
+Angelos Reactor Tuning,mistral_aquila,,,Diable Avionics,"special, engines, offensive, merc, no_drop","Special, Engines",,,TRUE,,6,13,20,30,data.hullmods.mistral_aquila,no description..... yet!!!!!!!,"Drastic improvement in speed, maneuverability, and active venting speed, lower peak time.",,graphics/hullmods/mistral_quantumsensor.png
+Specialized Wanzer Microforge,mistral_wanzergantry,,,Diable Avionics,"special,no_drop",,,,TRUE,,10,15,25,40,data.hullmods.mistral_WanzerGantry,"This ship's microforges contain optimization protocols for production of smaller Wanzer and Aribitrator strikecraft. 
+
+Grants the following effects to each installed Wanzer or Arbitrator wing based on it's initial wing size:
+
+1 fighter: no benefit.
+
+2 fighters: %s increased damage and %s less damage taken.
+
+3+ fighters: %s.
+
+These specialized facilities do not offer any tangible benefit nor drawback when operating regular fighters wings.",,"Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched to operate from a ""B-deck"". Standby fighters are launched to rapidly bring wings back to full strength, and the fighter replacement rate is set to %s.",graphics/hullmods/rapidwanzerbays.png
+Glow Parts,DA_ESP_Glow,,,,"special,no_drop",Special,4000,,TRUE,TRUE,0,0,0,0,data.hullmods.DA_ESP_Glow,no description..... yet!!!!!!!,Make designated weapon invisible,,graphics/hullmods/mistral_avionics.png
+Diable Engine Flicker Fix,mistral_diableenginefix,,,Diable Avionics,"diable, cosmetic, engines, no_build_in",Engines,0,TRUE,FALSE,FALSE,0,0,0,0,data.hullmods.mistral_diableenginefix,Changes engine glow from a flicker to a slow pulse.,"Cosmetic. No bonuses, no cost.",,graphics/hullmods/mistral_avionics.png
+Heavy Weapon Mount Integration,mistral_pandemounts,,,Diable Avionics,,,,,TRUE,,0,0,0,0,data.hullmods.mistral_pandemounts,"The ship's weapon emplacements are designed around strengthened recoil dampeners, enabling projectile weapons to fire with a %s reduction in recoil. Also reduces the cost of Diable Avionics large ballistic and energy weapons by %s.",,,graphics/hullmods/ballistics_integration.png
+,,,,,,,,,,,,,,,,,,,

@@ -1,0 +1,45 @@
+{
+  "id": "diableavionics_mistral_foura",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "LARGE",
+  "beamEffect": "com.fs.starfarer.api.impl.combat.TachyonLanceEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/weapons/mistral_foura_turret_base.png",
+  "turretGlowSprite": "graphics/weapons/mistral_foura_turret_glow.png",
+  "hardpointSprite": "graphics/weapons/mistral_foura_hardpoint_base.png",
+  "hardpointGlowSprite": "graphics/weapons/mistral_foura_hardpoint_glow.png",
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    13,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    23,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "glowColor": [255,255,255,185],
+  #"fringeColor": [75,15,205,175],
+  "fringeColor": [130,15,205,175],
+  #"fringeColor": [255,15,15,175],
+  "coreColor": [50,110,140,200],
+  "width": 40,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 292,
+  "pixelsPerTexel": 4,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER,
+    MISSILE_FF,
+    MISSILE_NO_FF
+  ],
+  "fireSoundTwo": "tachyon_lance_fire"
+}

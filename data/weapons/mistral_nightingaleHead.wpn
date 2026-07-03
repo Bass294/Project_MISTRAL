@@ -1,0 +1,55 @@
+{
+  "id": "mistral_nightingaleHead",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "SMALL",
+  "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/ships/nightingale/mistral_nightingalehead.png",
+  "turretGlowSprite": "graphics/ships/nightingale/mistral_nightingale_head_glow.png",
+  "hardpointSprite": "",
+  "glowColor": [
+    232,
+    128,
+    35,
+    255
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    2.5,
+    0
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    4,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    155,
+    50,
+    50,
+    255
+  ],
+  "coreColor": [
+    15,
+    15,
+    15,
+    255
+  ],
+  "darkCore": true,
+  "width": 16,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 128,
+  "pixelsPerTexel": 5,
+  "pierceSet": [
+    PROJECTILE_FF,
+    PROJECTILE_NO_FF,
+    PROJECTILE_FIGHTER
+  ]
+}

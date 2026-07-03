@@ -1,0 +1,449 @@
+{
+  "hullName": "Sunrain",
+  "hullId": "mistral_sunrain",
+  "hullSize": "CAPITAL_SHIP",
+  "spriteName": "graphics/ships/mistral_sunrain.png",
+  "style": "MISTRAL",
+  "height": 526,
+  "width": 346,
+  "center": [173, 263],
+  "collisionRadius": 319,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 285.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "mistral_wanzergantry",
+    "DA_ESP_Glow"
+  ],
+  "builtInWeapons": {
+    "WS0028": "diableavionics_esp_kestrel",
+    "WS0029": "diableavionics_esp_kestrel"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0028",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [25, -0]
+    },
+    {
+      "id": "WS0029",
+      "size": "MEDIUM",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [59, -0]
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 147,
+      "angle": -46,
+      "locations": [49, -24]
+    },
+    {
+      "id": "WS0004",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 147,
+      "angle": 46,
+      "locations": [49, 24]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": -45,
+      "locations": [9, -94]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-7, 99]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 110,
+      "angle": 45,
+      "locations": [9, 94]
+    },
+    {
+      "id": "WS0008",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-7, -99]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 45,
+      "locations": [80, 13]
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -45,
+      "locations": [80, -13]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -45,
+      "locations": [98, -13]
+    },
+    {
+      "id": "WS0012",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": 45,
+      "locations": [98, 13]
+    },
+    {
+      "id": "WS0013",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -90,
+      "locations": [-114, -103]
+    },
+    {
+      "id": "WS0014",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 90,
+      "locations": [-114, 103]
+    },
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": -45,
+      "locations": [17, -25]
+    },
+    {
+      "id": "WS0002",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 145,
+      "angle": 45,
+      "locations": [17, 25]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": -90,
+      "locations": [-112, -68]
+    },
+    {
+      "id": "WS0016",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 150,
+      "angle": 90,
+      "locations": [-112, 68]
+    },
+    {
+      "id": "WS0017",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -135,
+      "locations": [-105, -21]
+    },
+    {
+      "id": "WS0018",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 135,
+      "locations": [-105, 21]
+    },
+    {
+      "id": "WS0019",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -135,
+      "locations": [-128, -54]
+    },
+    {
+      "id": "WS0020",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 135,
+      "locations": [-128, 54]
+    },
+    {
+      "id": "WS0021",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -135,
+      "locations": [-143, -44]
+    },
+    {
+      "id": "WS0022",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 135,
+      "locations": [-143, 44]
+    },
+    {
+      "id": "WS0023",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 250,
+      "angle": -180,
+      "locations": [-117, -0]
+    },
+    {
+      "id": "WS0025",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [-75, -0],
+      "renderOrderMod": 1
+    },
+    {
+      "id": "WS0024",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 0,
+      "locations": [-29, -0]
+    },
+    {
+      "id": "WS0026",
+      "size": "MEDIUM",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [117, -0]
+    },
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -91.5, 37.5,
+        -73.5, -58.5,
+        -63.5, 53.5,
+        -91.5, -39
+      ]
+    },
+    {
+      "id": "LB 2",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        -64, -53,
+        -81, -43,
+        -85, 44.5,
+        -72.5, 57.5
+      ]
+    },
+    {
+      "id": "LB 3",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        175, 1,
+        182, 1,
+        175, 9.5,
+        182.5, 9.5
+      ]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-157.5, -0],
+      "length": 25,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-155.5, -7.5],
+      "length": 16,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-155.5, 7.5],
+      "length": 16,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-161, 97.5],
+      "length": 8.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-161, -97.5],
+      "length": 8.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-202.5, -66],
+      "length": 8.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [-202.5, 66],
+      "length": 8.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [69, -80],
+      "length": 8.5,
+      "width": 10,
+      "angle": -135,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [69, 80],
+      "length": 8.5,
+      "width": 10,
+      "angle": 135,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [64, -75],
+      "length": 8.5,
+      "width": 10,
+      "angle": -135,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    },
+    {
+      "location": [64, 75],
+      "length": 8.5,
+      "width": 10,
+      "angle": 135,
+      "contrailSize": 10,
+      "style": "DiableAvionicsTrail2"
+    }
+  ],
+  "bounds": [
+    -231, -23,
+    -242.5, -24,
+    -251.5, -39,
+    -230.5, -41,
+    -187.5, -91,
+    -151.5, -116,
+    -118.5, -114,
+    -65.5, -102,
+    -37.5, -82,
+    -38, -102,
+    -24, -112,
+    27.5, -95,
+    45, -79,
+    61, -73,
+    83, -86,
+    165.5, -61.5,
+    243.5, -52.5,
+    242.5, -16,
+    189, -15,
+    189, 15,
+    242.5, 16,
+    243.5, 52.5,
+    165.5, 61.5,
+    83, 86,
+    61, 73,
+    45, 79,
+    27.5, 95,
+    -24, 112,
+    -38, 102,
+    -37.5, 82,
+    -65.5, 102,
+    -118.5, 114,
+    -151.5, 116,
+    -187.5, 91,
+    -230.5, 41,
+    -251.5, 39,
+    -242.5, 24,
+    -231, 23
+  ]
+}

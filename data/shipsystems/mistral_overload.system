@@ -1,0 +1,16 @@
+{
+	"id":"mistral_overload",
+	"type":"STAT_MOD",
+	"aiType":"WEAPON_BOOST",
+
+	"statsScript":"data.shipsystems.scripts.Mistral_overLoadStats",
+
+	"weaponGlowColor":[255,0,255,255],
+	"weaponTypes":[ENERGY, BALLISTIC],
+
+	"useSound":"voidcaller_sound",
+	"deactivateSound":"system_high_energy_focus_deactivate",
+
+	"outOfUsesSound":"gun_out_of_ammo",
+	"loopSound":"system_high_energy_focus_loop",
+}

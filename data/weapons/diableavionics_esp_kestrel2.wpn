@@ -1,0 +1,48 @@
+{
+  "id": "diableavionics_esp_kestrel2",
+  "specClass": "projectile",
+  "projectileSpecId": "diableavionics_esp_kestrelmirv",
+  "type": "MISSILE",
+  "size": "MEDIUM",
+  "everyFrameEffect": "data.scripts.weapons.DA_ESP_VerticalMissileAnimation",
+  "displayArcRadius": 1000,
+  "turretSprite": "graphics/weapons/diableavionics_esp_kestrel/diableavionics_esp_kestrel_00.png",
+  "hardpointSprite": "graphics/weapons/diableavionics_esp_kestrel/diableavionics_esp_kestrel_00.png",
+  "turretOffsets": [
+    0,
+    -0.5
+  ],
+  "turretAngleOffsets": [
+    0
+  ],
+  "hardpointOffsets": [
+    10,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "barrelMode": "ALTERNATING",
+  "autocharge":"true",
+  "animationType": "SMOKE",
+  "numFrames": 6,
+  "frameRate": 6,
+  "smokeSpec": {
+    "particleSizeMin": 15,
+    "particleSizeRange": 10,
+    "cloudParticleCount": 8,
+    "cloudDuration": 1.5,
+    "cloudRadius": 15,
+    "blowbackParticleCount": 4,
+    "blowbackDuration": 2,
+    "blowbackLength": 15,
+    "blowbackSpread": 10,
+    "particleColor": [
+      55,
+      70,
+      100,
+      105
+    ]
+  },
+  "fireSoundTwo": "sabot_srm_fire"
+}
