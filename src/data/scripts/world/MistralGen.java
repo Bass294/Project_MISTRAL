@@ -69,22 +69,20 @@ public class MistralGen implements SectorGeneratorPlugin {
     }
 
     public static void initFactionRelationships(SectorAPI sector) {
-        FactionAPI hegemony = sector.getFaction(Factions.HEGEMONY);
-        FactionAPI tritachyon = sector.getFaction(Factions.TRITACHYON);
-        FactionAPI pirates = sector.getFaction(Factions.PIRATES);
-        FactionAPI kol = sector.getFaction(Factions.KOL);
-        FactionAPI church = sector.getFaction(Factions.LUDDIC_CHURCH);
-        FactionAPI path = sector.getFaction(Factions.LUDDIC_PATH);
-        FactionAPI league = sector.getFaction(Factions.PERSEAN);
+
         FactionAPI angelos = sector.getFaction("angelos");
 
-        //angelos.setRelationship(path.getId(), RepLevel.HOSTILE);
-        //angelos.setRelationship(hegemony.getId(), RepLevel.FAVORABLE);
-        //angelos.setRelationship(pirates.getId(), RepLevel.HOSTILE);
-        //angelos.setRelationship(tritachyon.getId(), RepLevel.SUSPICIOUS);
-        //angelos.setRelationship(church.getId(), RepLevel.INHOSPITABLE);
-        //angelos.setRelationship(kol.getId(), RepLevel.INHOSPITABLE);
-        //angelos.setRelationship(league.getId(), RepLevel.SUSPICIOUS);
+        angelos.setRelationship(Factions.LUDDIC_CHURCH, 0.6f);
+        angelos.setRelationship(Factions.LUDDIC_PATH, 0f);
+        angelos.setRelationship(Factions.TRITACHYON, -0.2f);
+        angelos.setRelationship(Factions.PERSEAN, -0.2f);
+        angelos.setRelationship(Factions.PIRATES, 0f);
+        angelos.setRelationship(Factions.INDEPENDENT, 0.5f);
+        angelos.setRelationship(Factions.DIKTAT, -0.2f);
+        angelos.setRelationship(Factions.LIONS_GUARD, -0.2f);
+        angelos.setRelationship(Factions.HEGEMONY, 0.5f);
+        angelos.setRelationship(Factions.REMNANTS, -0.5f);
+        angelos.setRelationship("diableavionics", -0.4f);
 
     }
 

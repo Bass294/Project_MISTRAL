@@ -14,10 +14,10 @@
   "builtInMods": [
     "strikeCraft",
     "mistral_himac_big",
-	"cataphract2",
-	"mistral_zandatsu",
-	"mistral_shield_style",
-	"mistral_shieldsparkles"
+    "cataphract2",
+    "mistral_zandatsu",
+    "mistral_shield_style",
+    "mistral_shieldsparkles"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_nightingaleLeftArm",
@@ -33,8 +33,8 @@
       "type": "DECORATIVE",
       "mount": "TURRET",
       "arc": 90,
-      "angle": 0,
-      "locations": [-0.5, 20]
+      "angle": 10,
+      "locations": [-0.5, 9]
     },
     {
       "id": "FAKE_GUN_B",
@@ -42,8 +42,8 @@
       "type": "DECORATIVE",
       "mount": "TURRET",
       "arc": 90,
-      "angle": 0,
-      "locations": [-0.5, -20]
+      "angle": -10,
+      "locations": [-0.5, -9]
     },
     {
       "id": "HEAD",
@@ -80,8 +80,8 @@
       "type": "BALLISTIC",
       "mount": "TURRET",
       "arc": 90,
-      "angle": 0,
-      "locations": [-0.5, 20]
+      "angle": 10,
+      "locations": [-0.5, 9]
     },
     {
       "id": "TRUE_GUN_B",
@@ -89,17 +89,17 @@
       "type": "ENERGY",
       "mount": "TURRET",
       "arc": 90,
-      "angle": 0,
-      "locations": [-0.5, -20]
+      "angle": -10,
+      "locations": [-0.5, -9]
     },
     {
       "id": "SHOULDER_R",
       "size": "SMALL",
       "type": "DECORATIVE",
       "mount": "TURRET",
-      "arc": 0,
-      "angle": 0,
-      "locations": [-0.5, -14],
+      "arc": 360,
+      "angle": -10,
+      "locations": [-0.5, -9],
       "renderOrderMod": 10
     },
     {
@@ -107,9 +107,9 @@
       "size": "SMALL",
       "type": "DECORATIVE",
       "mount": "TURRET",
-      "arc": 0,
-      "angle": -0,
-      "locations": [-0.5, 14],
+      "arc": 360,
+      "angle": 10,
+      "locations": [-0.5, 9],
       "renderOrderMod": 10
     }
   ],

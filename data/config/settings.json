@@ -36,6 +36,12 @@
 		"angelosleader1":"graphics/portraits/angelosleader1.png",
 		"angelospilot1":"graphics/portraits/angelospilot1.png",
 		"angelosspy1":"graphics/portraits/angelosspy1.png",
+		"angelosdamsel1":"graphics/portraits/angelosdamsel1.png",
+		"angelosdamsel2":"graphics/portraits/angelosdamsel2.png",
+        },
+
+	"illustrations":{
+            	"angelosdamselillust":"graphics/illustrations/angelosdamselillust.png",
         },
 
     },

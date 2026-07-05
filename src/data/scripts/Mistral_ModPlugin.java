@@ -82,5 +82,41 @@ public class Mistral_ModPlugin extends BaseModPlugin {
         angelospilot.addTag(Tags.CONTACT_MILITARY);
         angelospilot.addTag(Tags.CONTACT_TRADE);
         angelospilot.setImportanceAndVoice(PersonImportance.HIGH, new Random());
+
+        PersonAPI agnelosdamsel = MagicCampaign.addCustomPerson(
+                Iskandar,
+                "Atra",
+                "Sariel",
+                "angelosdamsel1",
+                FullName.Gender.FEMALE,
+                "angelos",
+                "angelosdamsel",
+                "angelosdamsel",
+                false,
+                0,
+                2
+        );
+
+
+        PersonAPI angelosspy = MagicCampaign.addCustomPerson(
+                Iskandar,
+                "Izuki",
+                "Harut",
+                "angelosspy1",
+                FullName.Gender.MALE,
+                "angelos",
+                "angelosspy",
+                "angelosspy",
+                false,
+                0,
+                3
+        );
+
+        //Iskandar.getCommDirectory().getEntryForPerson(angelosleader).setHidden(true);
+        //Iskandar.getCommDirectory().getEntryForPerson(angelospilot).setHidden(true);
+        //Iskandar.getCommDirectory().removePerson(agnelosdamsel);
+        //Iskandar.getCommDirectory().removePerson(angelosspy);
+        Iskandar.getCommDirectory().getEntryForPerson(agnelosdamsel).setHidden(true);
+        Iskandar.getCommDirectory().getEntryForPerson(angelosspy).setHidden(true);
     }
 }

@@ -439,12 +439,16 @@
             "ranks":{
 				"factionLeader":{"name":"Councilor"},
 				"angelospilot":{"name":"Pilot"},
+				"angelosspy":{"name":"Spy1"},
+				"angelosdamsel":{"name":"Damsel1"},
 				
 				"spaceCommander":{"name":"Commander"},
             },
             "posts":{
 				"factionLeader":{"name":"Councilor"},
 				"angelospilot":{"name":"Pilot"},
+				"angelosspy":{"name":"Spy2"},
+				"angelosdamsel":{"name":"Damsel2"},
 			
 				"patrolCommander":{"name":"Patrol Commander"},
 				"fleetCommander":{"name":"Fleet Commander"},
