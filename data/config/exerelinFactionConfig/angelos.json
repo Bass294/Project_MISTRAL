@@ -1,0 +1,117 @@
+{
+    "playableFaction":true,
+    "corvusCompatible":true,
+
+    "rebelFleetSuffix":"Deserters",
+    
+    "directoryUseShortName":false,
+    "noSyncRelations":false,
+    "useConfigRelationshipsInNonRandomSector":true,
+    "factionIdForHqResponse":"angelos",
+    "startRelationships":{
+        "hegemony":0.5,
+        "luddic_church":0.6,
+        "persean":-0.2,
+        "sindrian_diktat":-0.2,
+	"lions_guard":-0.2,
+	"tritachyon":-0.2, 
+	"independent":0.5, 
+	"luddic_path":0, 
+	"pirates":0.2,   
+	"remnant":-0.5, 
+	"diableavionics":-0.4,
+	"ironshell":0.6,
+	"tahlan_legioinfernalis":-0.2,
+	"uaf":0.2,
+	"orks":0.3,
+	"TDB":0.5
+    },
+
+    "diplomacyPositiveChance":{ 
+	"diableavionics":0.5 
+    },
+
+    "diplomacyNegativeChance":{
+	"diableavionics":1.5
+    },
+
+    "maxRelationships":{
+
+		},
+
+    "minRelationships":{	
+
+		},
+
+    "morality":"good",
+
+    "diplomacyTraits":["stalwart", "lowprofile", "helps_allies", "pacifist", "selfrighteous"],
+
+
+    "alignments":{
+            "corporate":-1,
+            "technocratic":0,
+	    "hierarchial":-0.5,
+            "militarist":0,
+            "diplomatic":0.5,
+    },
+
+
+    #"isPirateNeutral":true,
+
+    "vengeanceLevelNames":["Retaliation", "Interdiction", "Crusade"],
+    "vengeanceFleetNames":["Retaliation", "Inquisition", "Crusade"],
+    "vengeanceFleetNamesSingle":["a Retaliation Fleet", "an Inquisition", "a Crusade"],
+
+    "miningVariantsOrWings":["diableavionics_laminar_miner"],
+    
+    "startShipsSolo":[
+        ["diableavionics_sleet_standard"],
+        ["diableavionics_draft_standard"],
+    ],
+
+    "startShipsCombatSmall":[
+        ["diableavionics_calm_mixed", "diableavionics_draft_support", "diableavionics_draft_support"],
+        ["diableavionics_hayle_combat", "diableavionics_vapor_standard","diableavionics_sleet_standard"],
+        ["diableavionics_coanda_support", "diableavionics_hayle_combat"],
+    ],
+
+    "startShipsCombatLarge":[
+        ["diableavionics_haze_standard", "diableavionics_coanda_standard", "diableavionics_draft_assault"],
+        ["diableavionics_daze_standard", "diableavionics_hayle_combat", "diableavionics_vapor_attack"],
+        ["diableavionics_gust_missile", "diableavionics_miniGust_support", "diableavionics_sleet_standard"],
+    ],
+
+    "startShipsTradeSmall":[
+        ["diableavionics_stratus_standard", "diableavionics_draft_support", "diableavionics_laminar_miner"],
+    ],
+
+    "startShipsTradeLarge":[
+        ["diableavionics_rime_breach", "diableavionics_calm_mixed", "diableavionics_versant_assault"],
+    ],
+
+    "startShipsCarrierSmall":[
+        ["diableavionics_fractus_standard", "diableavionics_vapor_standard", "diableavionics_vapor_standard"],
+    ],
+
+    "startShipsCarrierLarge":[
+        ["diableavionics_storm_standard", "diableavionics_derecho_kite", "diableavionics_draft_standard"],
+    ],
+
+    "startShipsSuper":[
+        ["diableavionics_versant_standard","diableavionics_stratus_standard"],
+        ["diableavionics_virtuous_carbine","diableavionics_stratus_standard"],
+	["mistral_nightingale_nexstart","diableavionics_rime_m_standard","diableavionics_stratus_standard"],
+    ],
+	
+    "defenceStations":[
+        {"ids":["diableavionics_orbitalstation", "diableavionics_battlestation", "diableavionics_starfortress"]},
+    ],
+
+    "startSpecialItems":[
+        [["diableavionics_ship_package",""]],
+        [["diableavionics_weapon_package",""]],
+        [["diableavionics_wanzer_package",""]],
+
+    ],
+}
