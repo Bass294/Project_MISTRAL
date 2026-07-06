@@ -1,0 +1,59 @@
+{
+  "id": "mistral_sparrowLeftArm",
+  "specClass": "beam",
+  "type": "ENERGY",
+  "size": "MEDIUM",
+  "everyFrameEffect": "data.scripts.weapons.mistral_koutoDummyWeapon_A",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/ships/sparrow/mistral_sparrowLeftArm.png",
+  "hardpointSprite": "",
+  "glowColor": [
+    232,
+    128,
+    35,
+    255
+  ],
+  "specialWeaponGlowHeight": 20,
+  "specialWeaponGlowWidth": 10,
+  "hitGlowRadius": 0,
+  "renderHints": [
+    RENDER_BARREL_BELOW
+  ],
+  "turretOffsets": [
+    15,
+    13,
+    15,
+    13,
+    15,
+    13
+  ],
+  "turretAngleOffsets": [
+    1,
+    1,
+    1
+  ],
+  "hardpointOffsets": [
+    17,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
+  "width": 10,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 64,
+  "pixelsPerTexel": 1
+}

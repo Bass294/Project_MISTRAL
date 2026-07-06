@@ -86,11 +86,11 @@ public class mistral_shoulderEffect implements EveryFrameWeaponEffectPlugin {
 
         // shoulder angle tracking (FAKE_GUN_A pairs with SHOULDER_L, FAKE_GUN_B pairs with SHOULDER_R)
         if (shoulderL != null) {
-            shoulderL.setCurrAngle(global + aimA * 0.75f - SHOULDER_OFFSET * 0.5f);
+            shoulderL.setCurrAngle(global + aimA * 0.5f - SHOULDER_OFFSET * 0.5f);
         }
 
         if (shoulderR != null) {
-            shoulderR.setCurrAngle(global + aimB * 0.75f + SHOULDER_OFFSET * 0.5f);
+            shoulderR.setCurrAngle(global + aimB * 0.5f + SHOULDER_OFFSET * 0.5f);
         }
 
         // recoil (cooldown-driven sprite nudge), now applied to both arms instead of just one

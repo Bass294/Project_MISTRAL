@@ -1,0 +1,150 @@
+{
+  "hullName": "Nachtreiher",
+  "hullId": "mistral_hummingbird",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/hummingbird/mistral_hummingbird.png",
+  "style": "MISTRAL",
+  "height": 74,
+  "width": 74,
+  "center": [37, 37],
+  "collisionRadius": 48.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 41.5,
+  "viewOffset": 0,
+  "builtInMods": [
+    "strikeCraft",
+    "cataphract2"
+  ],
+  "builtInWings": [
+    "mistral_beak_drone_wing"
+  ],
+  "builtInWeapons": {
+    "FAKE_GUN_A": "mistral_hummingbirdLeftArm",
+    "FAKE_GUN_B": "mistral_hummingbirdRightArm",
+    "HEAD": "mistral_hummingbirdHead",
+    "SHOULDER_L": "mistral_hummingbird_shoulderL",
+    "SHOULDER_R": "mistral_hummingbird_shoulderR"
+  },
+  "weaponSlots": [
+    {
+      "id": "FAKE_GUN_A",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 10,
+      "locations": [0, 4]
+    },
+    {
+      "id": "FAKE_GUN_B",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -10,
+      "locations": [0, -4]
+    },
+    {
+      "id": "HEAD",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "COMPOSITE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -0,
+      "locations": [9, -0],
+      "renderOrderMod": 1
+    },
+    {
+      "id": "TRUE_GUN_A",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 10,
+      "locations": [0, 4]
+    },
+    {
+      "id": "TRUE_GUN_B",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -10,
+      "locations": [0, -4]
+    },
+    {
+      "id": "SHOULDER_R",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -10,
+      "locations": [0, -4],
+      "renderOrderMod": 10
+    },
+    {
+      "id": "SHOULDER_L",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 10,
+      "locations": [0, 4],
+      "renderOrderMod": 10
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-8.5, 6.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-8.5, -6.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-13, -0],
+      "length": 18.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_P"
+    }
+  ],
+  "bounds": [
+    5, -10,
+    2, -14.5,
+    -2.5, -14.5,
+    -4.5, -8.5,
+    -13, -3,
+    -13, 3,
+    -4.5, 8.5,
+    -2.5, 14.5,
+    2, 14.5,
+    5, 10,
+    10, 6,
+    13, 5,
+    13, -5,
+    10, -6
+  ]
+}

@@ -1,0 +1,147 @@
+{
+  "hullName": "Nachtreiher",
+  "hullId": "mistral_sparrow",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/sparrow/mistral_sparrow.png",
+  "style": "MISTRAL",
+  "height": 74,
+  "width": 74,
+  "center": [37, 37],
+  "collisionRadius": 50,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 44,
+  "viewOffset": 0,
+  "builtInMods": [
+    "strikeCraft",
+    "cataphract2"
+  ],
+  "builtInWeapons": {
+    "FAKE_GUN_A": "mistral_sparrowLeftArm",
+    "FAKE_GUN_B": "mistral_sparrowRightArm",
+    "HEAD": "mistral_sparrowHead",
+    "SHOULDER_L": "mistral_sparrow_shoulderL",
+    "SHOULDER_R": "mistral_sparrow_shoulderR"
+  },
+  "weaponSlots": [
+    {
+      "id": "FAKE_GUN_A",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 10,
+      "locations": [0, 6]
+    },
+    {
+      "id": "FAKE_GUN_B",
+      "size": "MEDIUM",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -10,
+      "locations": [0, -6]
+    },
+    {
+      "id": "HEAD",
+      "size": "SMALL",
+      "type": "BUILT_IN",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 0,
+      "locations": [0, -0]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 135,
+      "angle": 45,
+      "locations": [-7, 11],
+      "renderOrderMod": 999
+    },
+    {
+      "id": "TRUE_GUN_A",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 10,
+      "locations": [0, 6]
+    },
+    {
+      "id": "TRUE_GUN_B",
+      "size": "MEDIUM",
+      "type": "BALLISTIC",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": -10,
+      "locations": [0, -6]
+    },
+    {
+      "id": "SHOULDER_R",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": -10,
+      "locations": [0, -6],
+      "renderOrderMod": 10
+    },
+    {
+      "id": "SHOULDER_L",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 360,
+      "angle": 10,
+      "locations": [0, 6],
+      "renderOrderMod": 10
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-15, 9],
+      "length": 8.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-15, -9],
+      "length": 8.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-12, -0],
+      "length": 18.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_P"
+    }
+  ],
+  "bounds": [
+    4.5, -12,
+    2, -19.5,
+    -3.5, -19.5,
+    -8, -12,
+    -15, -11,
+    -15, 11,
+    -8, 12,
+    -3.5, 19.5,
+    2, 19.5,
+    4.5, 12,
+    10, 11,
+    13, 7,
+    13, -7,
+    10, -11
+  ]
+}

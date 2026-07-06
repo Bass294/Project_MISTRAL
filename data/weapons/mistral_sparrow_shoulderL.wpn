@@ -1,0 +1,48 @@
+{
+  "id": "mistral_sparrow_shoulderL",
+  "specClass": "beam",
+  "type": "DECORATIVE",
+  "size": "SMALL",
+  "collisionClass": "RAY",
+  "collisionClassByFighter": "RAY_FIGHTER",
+  "turretSprite": "graphics/ships/sparrow/mistral_sparrow_shoulderL.png",
+  "hardpointSprite": "",
+  "showDamageWhenDecorative": true,
+  "glowColor": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "hitGlowRadius": 0,
+  "turretOffsets": [
+    -25,
+    -13
+  ],
+  "turretAngleOffsets": [
+    -90
+  ],
+  "hardpointOffsets": [
+    0,
+    0
+  ],
+  "hardpointAngleOffsets": [
+    0
+  ],
+  "fringeColor": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    0
+  ],
+  "width": 1,
+  "textureType": ROUGH,
+  "textureScrollSpeed": 1,
+  "pixelsPerTexel": 5
+}

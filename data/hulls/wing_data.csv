@@ -1,4 +1,6 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
-# Add your fighter wings here. One left commented out for reference.
-# See https://starsector.fandom.com/wiki/Wing_data.csv_Overview
-#flash_wing,flash_Bomber,"no_sell, bomber, remnant, bomber5, auto_fighter, merc",3,,5,12,V,4000,2500,300,4,BOMBER,Strike Drone,18,8000,,,,,,,,,,,,,21
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+mistral_beak_drone_wing,mistral_beak_drone_std,"no_drop, no_sell,wingmen_no_swarm,leader_no_swarm,stay_in_front_of_ship",3,,3,4,DIAMOND,0,500,,2,SUPPORT,Fire Support,12,6000,,,,,,,,,,,,,19
+diableavionics_mistral_raven_kai_wing,diableavionics_mistral_raven_kai_Standard,"wanzer, fighter4, fighter, high, rare_bp, rd_no_extra_craft",3,0.5,12,24,BOX,4000,500,,1,FIGHTER,Heavy Trooper,25,13000,,,,,,,,,,,,,1
