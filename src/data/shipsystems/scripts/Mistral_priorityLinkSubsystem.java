@@ -42,13 +42,23 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     private static final float IN_DURATION = 2f;
     private static final float ACTIVE_DURATION = 10f;
     private static final float OUT_DURATION = 0f;
-    private static final float COOLDOWN_DURATION = 25f;
+    private static final float COOLDOWN_DURATION = 18f;
 
     private static final float TIME_MULT = 1.25f;
     private static final float DAMAGE_TAKEN_MULT = 0.66f;
-    private static final Color JITTER_COLOR = new Color(150, 100, 50, 50);
-    private static final Color EMP_FRINGE = Color.RED;
+    //private static final Color JITTER_COLOR = new Color(150, 100, 50, 50);
+    private static final Color EMP_FRINGE = Color.CYAN;
     private static final Color EMP_CORE = Color.WHITE;
+
+    // vanilla Temporal Shell's own sound cues (starsector-core/data/config/sounds.json) - ramp up
+    // once when the buff lands, loop for as long as it holds, ramp down once when it's removed
+    private static final String TIME_BUFF_ACTIVATE_SOUND = "system_temporalshell";
+    private static final String TIME_BUFF_LOOP_SOUND = "system_temporalshell_loop";
+    private static final String TIME_BUFF_DEACTIVATE_SOUND = "system_temporalshell_off";
+
+    // vanilla icons (starsector-core), reused so the HUD status readout looks native
+    private static final String TIME_STATUS_ICON = "graphics/icons/hullsys/temporal_shell.png";
+    private static final String DAMAGE_STATUS_ICON = "graphics/icons/hullsys/damper_field.png";
 
     // ships currently buffed by ANY instance of this subsystem, cleared between battles
     private static final Set<ShipAPI> BUFFED_TARGETS = Collections.newSetFromMap(new WeakHashMap<ShipAPI, Boolean>());
@@ -253,6 +263,7 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
                 );
 
                 applyBuff(target);
+                Global.getSoundPlayer().playSound(TIME_BUFF_ACTIVATE_SOUND, 1f, 1f, target.getLocation(), target.getVelocity());
             }
         }
     }
@@ -295,12 +306,28 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
             for (ShipAPI target : selectedTargets) {
                 if (target == null || !target.isAlive()) continue;
                 target.setJitter(target,
-                        Color.RED,
-                        0.4f * effectLevel * jitterOpacity,
+                        Color.CYAN,
+                        0.3f + 0.2f * effectLevel * jitterOpacity,
                         3,
-                        (4 + 5f * effectLevel) * jitterOpacity,
-                        (7 + 10f * effectLevel) * jitterOpacity
+                        (2 + 3f * effectLevel) * jitterOpacity,
+                        (5 + 6f * effectLevel) * jitterOpacity
                 );
+
+                // needs to be called every frame to keep playing - fades itself out the moment
+                // this stops being refreshed, so it naturally ends when the target leaves ACTIVE
+                Global.getSoundPlayer().playLoop(TIME_BUFF_LOOP_SOUND, target, 1f, 1f, target.getLocation(), target.getVelocity());
+
+                // same HUD readout vanilla ship systems use for the piloted ship (e.g. Temporal
+                // Shell's "time flow altered") - only shows up if the buffed target happens to be
+                // the ship the player is currently flying, same restriction the native call has
+                if (target == Global.getCombatEngine().getPlayerShip()) {
+                    Global.getCombatEngine().maintainStatusForPlayerShip(
+                            SYSTEM_ID + "_time_" + target.getId(), TIME_STATUS_ICON,
+                            getDisplayText(), "time flow altered", false);
+                    Global.getCombatEngine().maintainStatusForPlayerShip(
+                            SYSTEM_ID + "_dmg_" + target.getId(), DAMAGE_STATUS_ICON,
+                            getDisplayText(), "damage taken reduced", false);
+                }
             }
         }
     }
@@ -396,19 +423,21 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         stats.getArmorDamageTakenMult().modifyMult(SYSTEM_ID, DAMAGE_TAKEN_MULT);
         stats.getShieldDamageTakenMult().modifyMult(SYSTEM_ID, DAMAGE_TAKEN_MULT);
 
-        target.setWeaponGlow(1f, Misc.setAlpha(JITTER_COLOR, 50), EnumSet.allOf(WeaponType.class));
-        target.setJitterUnder(target, JITTER_COLOR, 1f, 5, 3, 6);
+        //target.setWeaponGlow(1f, Misc.setAlpha(JITTER_COLOR, 50), EnumSet.allOf(WeaponType.class));
+        //target.setJitterUnder(target, JITTER_COLOR, 1f, 5, 3, 6);
     }
 
     private void removeBuff(ShipAPI target) {
         if (target == null) return;
+
+        Global.getSoundPlayer().playSound(TIME_BUFF_DEACTIVATE_SOUND, 1f, 1f, target.getLocation(), target.getVelocity());
 
         target.getMutableStats().getTimeMult().unmodify(SYSTEM_ID);
         target.getMutableStats().getHullDamageTakenMult().unmodify(SYSTEM_ID);
         target.getMutableStats().getArmorDamageTakenMult().unmodify(SYSTEM_ID);
         target.getMutableStats().getShieldDamageTakenMult().unmodify(SYSTEM_ID);
 
-        target.setWeaponGlow(0f, Color.BLACK, EnumSet.allOf(WeaponType.class));
+        //target.setWeaponGlow(0f, Color.BLACK, EnumSet.allOf(WeaponType.class));
 
         BUFFED_TARGETS.remove(target);
     }

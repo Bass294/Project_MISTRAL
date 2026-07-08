@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "strikeCraft",
-    "cataphract2"
+    "cataphract2",
+    "mistral_featherDrones"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_sparrowLeftArm",

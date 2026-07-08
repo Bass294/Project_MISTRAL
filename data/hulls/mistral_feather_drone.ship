@@ -1,33 +1,30 @@
 {
-  "hullName": "Bit",
-  "hullId": "mistral_beak_drone",
+  "hullName": "Feather",
+  "hullId": "mistral_feather_drone",
   "hullSize": "FIGHTER",
-  "spriteName": "graphics/ships/drones/mistral_beak_drone.png",
+  "spriteName": "graphics/ships/drones/mistral_feather_drone.png",
   "style": "MISTRAL",
   "height": 74,
   "width": 74,
-  "center": [38, 37],
+  "center": [37.5, 37.5],
   "collisionRadius": 16.5,
-  "shieldCenter": [0, -0],
-  "shieldRadius": 14.5,
+  "shieldCenter": [-13.5, -0],
+  "shieldRadius": 25,
   "viewOffset": 0,
-  "builtInMods": [
-    "pointdefenseai"
-  ],
   "weaponSlots": [
     {
       "id": "WS0001",
       "size": "SMALL",
       "type": "HYBRID",
       "mount": "HIDDEN",
-      "arc": 5,
+      "arc": 180,
       "angle": 0,
-      "locations": [8, -0]
+      "locations": [2.5, -0]
     }
   ],
   "engineSlots": [
     {
-      "location": [-10, -0],
+      "location": [-5.5, -0],
       "length": 8.5,
       "width": 5,
       "angle": 180,
@@ -36,7 +33,7 @@
       "styleId": "MISTRAL_ENG_P"
     },
     {
-      "location": [-8, -2.5],
+      "location": [-5.5, -1],
       "length": 5,
       "width": 3,
       "angle": 180,
@@ -45,7 +42,7 @@
       "styleId": "MISTRAL_ENG_B"
     },
     {
-      "location": [-8, 2.5],
+      "location": [-5.5, 1],
       "length": 5,
       "width": 3,
       "angle": 180,
@@ -55,8 +52,10 @@
     }
   ],
   "bounds": [
-    -7, -4,
-    9, 0,
-    -7, 4
+    1, 9,
+    6, 4,
+    6, -4,
+    1, -9,
+    -7.5, -0
   ]
 }

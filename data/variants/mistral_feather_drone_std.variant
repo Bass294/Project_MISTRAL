@@ -1,0 +1,16 @@
+{
+    "displayName": "UWS",
+    "fluxCapacitors": 0,
+    "fluxVents": 0,
+    "hullId": "mistral_feather_drone",
+    "goalVariant": true,
+    "hullMods": ["no_weapon_flux"],
+    "permaMods": [],
+    "variantId": "mistral_feather_drone_std",
+    "weaponGroups": [{
+        "autofire": true,
+        "mode": "LINKED",
+        "weapons": {"WS0001": "diableavionics_ibis"}
+
+    }]
+}
