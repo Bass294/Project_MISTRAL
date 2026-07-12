@@ -4,7 +4,6 @@
   "type": "ENERGY",
   "size": "SMALL",
   "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
-  "everyFrameEffect": "data.scripts.weapons.mistral_shoulderEffect",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
   "turretSprite": "graphics/ships/sparrow/mistral_sparrowhead.png",

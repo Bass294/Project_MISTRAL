@@ -1,0 +1,21 @@
+{
+	"id":"mistral_drift",
+	"type":"ENGINE_MOD",
+	"aiType":"CUSTOM",
+	"aiScript":"data.shipsystems.scripts.ai.Mistral_driftAI",
+
+	"statsScript":"data.shipsystems.scripts.Mistral_driftStats",
+
+	"clampTurnRateAfter":true,
+	"clampMaxSpeedAfter":false,
+
+	#"useSound":"diableavionics_drift",
+	#"loopSound":"diableavionics_drift",
+	#"outOfUsesSound":"engine_disabled",
+
+	"aiHints":{
+		"activeSpeedIncrease":75,
+		"burstMovementPotential":0,
+		"averageSpeedIncrease":40,
+	}
+}

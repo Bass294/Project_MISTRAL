@@ -1,55 +1,73 @@
 {
   "id": "mistral_hummingbirdHead",
-  "specClass": "beam",
+  "specClass": "projectile",
   "type": "ENERGY",
   "size": "SMALL",
-  "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
-  "everyFrameEffect": "data.scripts.weapons.mistral_shoulderEffect",
+  "turretSprite": "graphics/ships/hummingbird/mistral_hummingbirdhead.png",
+  "turretGlowSprite": "graphics/ships/hummingbird/mistral_hummingbirdhead_glow.png",
+  "hardpointSprite": "",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/hummingbird/mistral_hummingbirdhead.png",
-  "hardpointSprite": "",
-  "glowColor": [
-    232,
-    128,
-    35,
-    255
-  ],
-  "hitGlowRadius": 0,
   "turretOffsets": [
-    2,
-    0
+    2, -0.5,
+    2, 0.5,
+    2, 1.5,
+    2, -1.5,
+    2, -2.5,
+    2, 2.5
   ],
   "turretAngleOffsets": [
-    0
+    -0.5,
+    0.5,
+    1.5,
+    -1.5,
+    -2.5,
+    2.5
   ],
   "hardpointOffsets": [
-    4,
-    0
+    11, -0.5,
+    11, 0.5,
+    11, 1.5,
+    11, -1.5,
+    11, -2.5,
+    11, 2.5
   ],
   "hardpointAngleOffsets": [
-    0
+    -0.5,
+    0.5,
+    1.5,
+    -1.5,
+    -2.5,
+    2.5
   ],
-  "fringeColor": [
-    155,
-    50,
-    50,
+  "barrelMode": "DUAL",
+  "separateRecoilForLinkedBarrels": "TRUE",
+  "glowColor": [
+    100,
+    200,
+    255,
     255
   ],
-  "coreColor": [
-    15,
-    15,
-    15,
-    255
-  ],
-  "darkCore": true,
-  "width": 16,
-  "textureType": ROUGH,
-  "textureScrollSpeed": 128,
-  "pixelsPerTexel": 5,
-  "pierceSet": [
-    PROJECTILE_FF,
-    PROJECTILE_NO_FF,
-    PROJECTILE_FIGHTER
-  ]
+  "specialWeaponGlowWidth": 3,
+  "specialWeaponGlowHeight": 5,
+  "animationType": "GLOW_AND_FLASH",
+  "muzzleFlashSpec": {
+    "length": 33.0,
+    "spread": 15.0,
+    "particleSizeMin": 10.0,
+    "particleSizeRange": 12.0,
+    "particleDuration": 0.12,
+    "particleCount": 17,
+    "particleColor": [
+      100,
+      200,
+      255,
+      255
+    ]
+  },
+  "autocharge": true,
+  "projectileSpecId": "mistral_hummingbirdHead_shot",
+  "fireSoundOne": "diableavionics_winee_charge",
+  "fireSoundTwo": "diableavionics_winee_fire",
+  "everyFrameEffect": "data.scripts.weapons.Mistral_hummingbirdHeadFire"
 }

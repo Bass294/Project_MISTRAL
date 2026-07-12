@@ -267,7 +267,7 @@
       "size": "LARGE",
       "type": "ENERGY",
       "mount": "TURRET",
-      "arc": 180,
+      "arc": 210,
       "angle": 0,
       "locations": [-29, -0]
     },
@@ -288,10 +288,10 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        111, 73,
-        130.5, 45,
-        139.5, 71,
-        155.5, 39.5
+        174.5, 3,
+        173.5, 12,
+        186.5, -2.5,
+        189.5, -11
       ]
     },
     {
@@ -302,10 +302,10 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        199, 54,
-        174, 64,
-        110, 60,
-        93, 54
+        188.5, 12,
+        187, 2.5,
+        174.5, -2.5,
+        173.5, -5
       ]
     },
     {
@@ -316,10 +316,10 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        -89, -40,
-        -66, -51.5,
+        -73, -55,
+        -81, -47.5,
         -88.5, 39,
-        -65, 52
+        -73.5, 56
       ]
     },
     {
@@ -330,101 +330,173 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        21.5, -31.5,
-        29.5, -40.5,
-        18, -46,
-        26.5, -52
+        -89, -40,
+        -81, 46.5,
+        -68, 59.5,
+        -67.5, -60
       ]
     }
   ],
   "engineSlots": [
     {
-      "location": [-157.5, -0],
+      "location": [64, -73],
+      "length": 10,
+      "width": 6,
+      "angle": -135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-152, -11],
       "length": 25,
-      "width": 10,
-      "angle": -180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
-    },
-    {
-      "location": [-155.5, -7.5],
-      "length": 16,
-      "width": 10,
-      "angle": -180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
-    },
-    {
-      "location": [-155.5, 7.5],
-      "length": 16,
-      "width": 10,
+      "width": 5,
       "angle": 180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "contrailSize": 15,
+      "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-161, 97.5],
-      "length": 8.5,
-      "width": 10,
+      "location": [-155, 3],
+      "length": 40,
+      "width": 6,
       "angle": 180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-155, -3],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-153, 9],
+      "length": 20,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-153, -9],
+      "length": 20,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-156, -0],
+      "length": 36,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-154, -7],
+      "length": 25,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-152, 11],
+      "length": 25,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-154, 7],
+      "length": 25,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 15,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [67.5, -76],
+      "length": 10,
+      "width": 17,
+      "angle": -135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [70.5, -79.5],
+      "length": 10,
+      "width": 6,
+      "angle": -135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [67.5, 76],
+      "length": 10,
+      "width": 17,
+      "angle": 135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [64, 73],
+      "length": 10,
+      "width": 6,
+      "angle": 135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [70.5, 79.5],
+      "length": 10,
+      "width": 6,
+      "angle": 135,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     },
     {
       "location": [-161, -97.5],
-      "length": 8.5,
-      "width": 10,
-      "angle": -180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
-    },
-    {
-      "location": [-202.5, -66],
-      "length": 8.5,
-      "width": 10,
-      "angle": -180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
-    },
-    {
-      "location": [-202.5, 66],
-      "length": 8.5,
-      "width": 10,
+      "length": 10,
+      "width": 6,
       "angle": 180,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [69, -80],
-      "length": 8.5,
-      "width": 10,
-      "angle": -135,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "location": [-202, -66],
+      "length": 10,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [69, 80],
-      "length": 8.5,
-      "width": 10,
-      "angle": 135,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "location": [-202, 66],
+      "length": 10,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [64, -75],
-      "length": 8.5,
-      "width": 10,
-      "angle": -135,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "location": [-161, 97.5],
+      "length": 10,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [64, 75],
-      "length": 8.5,
-      "width": 10,
-      "angle": 135,
-      "contrailSize": 10,
-      "style": "DiableAvionicsTrail2"
+      "location": [-161, -97.5],
+      "length": 10,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 5,
+      "style": "MISTRAL_ENG_B"
     }
   ],
   "bounds": [

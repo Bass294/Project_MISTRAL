@@ -19,11 +19,11 @@
 			{"file":"sounds/diablefx/mistral_nightingale_howling.ogg","pitch":0.7, "volume":0.9}
 		],
 	"zimmy":[
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.06, "volume":7},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.03, "volume":7},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.00, "volume":7},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.97, "volume":7},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.94, "volume":7}
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.06, "volume":12},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.03, "volume":12},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.00, "volume":12},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.97, "volume":12},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.94, "volume":12}
 		],
 
         }

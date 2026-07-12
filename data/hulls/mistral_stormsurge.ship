@@ -1,0 +1,209 @@
+{
+  "hullName": "Stormsurge",
+  "hullId": "mistral_stormsurge",
+  "hullSize": "CRUISER",
+  "spriteName": "graphics/ships/mistral_stormsurge.png",
+  "style": "MISTRAL",
+  "height": 340,
+  "width": 140,
+  "center": [67, 170],
+  "collisionRadius": 217.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 179,
+  "viewOffset": 50,
+  "builtInMods": [
+    "missleracks"
+  ],
+  "weaponSlots": [
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": -110,
+      "locations": [-71, -38],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0010",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 90,
+      "locations": [29, 23]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 90,
+      "angle": 0,
+      "locations": [-8, 0]
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [59, 24]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 240,
+      "angle": -60,
+      "locations": [70, -23]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -0,
+      "locations": [76, 23]
+    },
+    {
+      "id": "WS0014",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 0,
+      "locations": [112, 3]
+    },
+    {
+      "id": "WS0015",
+      "size": "MEDIUM",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 270,
+      "angle": 0,
+      "locations": [66, -2]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 180,
+      "angle": 110,
+      "locations": [-71, 29]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 90,
+      "locations": [42, 23]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [38, -24]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": -90,
+      "locations": [51, -24]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [-11, -27]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-166, 15.5],
+      "length": 40,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-137, -13.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-164, 7.5],
+      "length": 40,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-138, -5.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-165, 11.5],
+      "length": 36,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-137, -9.5],
+      "length": 36,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    }
+  ],
+  "bounds": [
+    -166, 18,
+    -164, 5,
+    -140, 1,
+    -138, -16,
+    -115, -21,
+    -94, -40,
+    -11, -47,
+    -3.5, -32.5,
+    157, -18,
+    157, 20,
+    150, 26,
+    135, 23,
+    21, 23,
+    11, 31,
+    -6, 32,
+    -10, 38,
+    -40, 42,
+    -49.5, 34,
+    -84, 35,
+    -137, 32
+  ]
+}

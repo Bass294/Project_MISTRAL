@@ -1,24 +1,19 @@
 {
-  "hullName": "Tailwind",
-  "hullId": "mistral_tailwind",
+  "hullName": "Typhoon",
+  "hullId": "mistral_typhoon",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/mistral_tailwind.png",
+  "spriteName": "graphics/ships/mistral_typhoon.png",
   "style": "MISTRAL",
-  "height": 350,
-  "width": 140,
-  "center": [70, 175],
-  "collisionRadius": 238.5,
+  "height": 288,
+  "width": 176,
+  "center": [88, 144],
+  "collisionRadius": 188.5,
   "shieldCenter": [0, -0],
-  "shieldRadius": 199.5,
+  "shieldRadius": 157.5,
   "viewOffset": 50,
   "builtInMods": [
     "armaa_serviceBays",
-    "armaa_spare_chassis_storage",
-    "mistral_priorityLink",
     "mistral_wanzergantry"
-  ],
-  "builtInWings": [
-    "diableavionics_mistral_raven_kai_wing"
   ],
   "weaponSlots": [
     {
@@ -29,8 +24,8 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        -109.5, -0,
-        -101, -0
+        -76.5, -6.5,
+        -89, 6.5
       ]
     },
     {
@@ -41,56 +36,36 @@
       "arc": 360,
       "angle": 0,
       "locations": [
-        -35, -41,
-        -71, -41
+        -89, -6.5,
+        -76.5, 6.5
       ]
     },
     {
-      "id": "WS0005",
-      "size": "SMALL",
-      "type": "HYBRID",
-      "mount": "TURRET",
-      "arc": 160,
-      "angle": 90,
-      "locations": [-53, 52],
-      "renderOrderMod": 201
-    },
-    {
-      "id": "WS0006",
-      "size": "SMALL",
-      "type": "HYBRID",
-      "mount": "TURRET",
-      "arc": 160,
-      "angle": -90,
-      "locations": [-53, -52],
-      "renderOrderMod": 201
-    },
-    {
       "id": "WS0010",
-      "size": "LARGE",
+      "size": "MEDIUM",
       "type": "MISSILE",
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": 0,
-      "locations": [85, -0]
+      "locations": [-11, -43.5]
     },
     {
       "id": "WS0007",
       "size": "SMALL",
       "type": "HYBRID",
       "mount": "TURRET",
-      "arc": 230,
+      "arc": 270,
       "angle": 180,
-      "locations": [-135, -0]
+      "locations": [-45, -0]
     },
     {
       "id": "WS0008",
-      "size": "LARGE",
+      "size": "MEDIUM",
       "type": "ENERGY",
       "mount": "TURRET",
-      "arc": 20,
+      "arc": 270,
       "angle": 0,
-      "locations": [35, -0]
+      "locations": [10, -0]
     },
     {
       "id": "WS0002",
@@ -99,7 +74,7 @@
       "mount": "TURRET",
       "arc": 210,
       "angle": 90,
-      "locations": [67, 41]
+      "locations": [36, 18]
     },
     {
       "id": "WS0003",
@@ -108,25 +83,7 @@
       "mount": "TURRET",
       "arc": 210,
       "angle": -90,
-      "locations": [67, -41]
-    },
-    {
-      "id": "WS0009",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 120,
-      "angle": -0,
-      "locations": [84, 41]
-    },
-    {
-      "id": "WS0011",
-      "size": "SMALL",
-      "type": "ENERGY",
-      "mount": "TURRET",
-      "arc": 120,
-      "angle": 0,
-      "locations": [84, -41]
+      "locations": [36, -18]
     },
     {
       "id": "WS0014",
@@ -135,7 +92,7 @@
       "mount": "TURRET",
       "arc": 160,
       "angle": -45,
-      "locations": [-5, -27]
+      "locations": [-23, -21]
     },
     {
       "id": "WS0015",
@@ -144,33 +101,39 @@
       "mount": "TURRET",
       "arc": 160,
       "angle": 45,
-      "locations": [-5, 27]
+      "locations": [-23, 21]
     },
     {
-      "id": "WS0016",
+      "id": "WS0001",
       "size": "MEDIUM",
-      "type": "HYBRID",
-      "mount": "TURRET",
-      "arc": 270,
-      "angle": 180,
-      "locations": [-58, -0]
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [-11, 43.5]
     },
     {
-      "id": "LB 3",
-      "size": "LARGE",
-      "type": "LAUNCH_BAY",
-      "mount": "HIDDEN",
-      "arc": 360,
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 15,
       "angle": 0,
-      "locations": [
-        -71.5, 42,
-        -35, 42
-      ]
+      "locations": [-26, 70]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [-26, -70]
     }
   ],
   "engineSlots": [
     {
-      "location": [-144, 18.5],
+      "location": [-93, 23.5],
       "length": 40,
       "width": 6,
       "angle": 180,
@@ -178,7 +141,7 @@
       "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-144, -18.5],
+      "location": [-93, -23.5],
       "length": 40,
       "width": 6,
       "angle": -180,
@@ -186,7 +149,7 @@
       "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-145, 10.5],
+      "location": [-94, 15.5],
       "length": 40,
       "width": 6,
       "angle": 180,
@@ -194,7 +157,7 @@
       "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-145, -10.5],
+      "location": [-94, -15.5],
       "length": 40,
       "width": 6,
       "angle": -180,
@@ -202,7 +165,7 @@
       "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-144.5, 14.5],
+      "location": [-93.5, 19.5],
       "length": 36,
       "width": 17,
       "angle": -180,
@@ -210,7 +173,39 @@
       "style": "MISTRAL_ENG_P"
     },
     {
-      "location": [-144.5, -14.5],
+      "location": [-93.5, -19.5],
+      "length": 36,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-115, 7.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-115, -7.5],
+      "length": 40,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-115, -7.5],
+      "length": 36,
+      "width": 17,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-115, 7.5],
       "length": 36,
       "width": 17,
       "angle": 180,
@@ -219,27 +214,29 @@
     }
   ],
   "bounds": [
-    -172, -5,
-    -146, -7,
-    -145, -29,
-    -139, -35,
-    -102, -42.5,
-    -72, -61,
-    -34, -61,
-    23.5, -43,
-    169, -43,
-    169, -13,
-    119, -10,
-    119, 10,
-    169, 13,
-    169, 43,
-    23.5, 43,
-    -34, 61,
-    -72, 61,
-    -102, 42.5,
-    -139, 35,
-    -145, 29,
-    -146, 7,
-    -172, 5
+    -116.5, -13.5,
+    -95.5, -15,
+    -87, -33,
+    -64, -47.5,
+    -78, -59,
+    -53, -67,
+    -33.5, -85,
+    -24, -78.5,
+    -23, -64,
+    -3.5, -36.5,
+    45, -21,
+    127, -5,
+    127, 5,
+    45, 21,
+    -3.5, 36.5,
+    -23, 64,
+    -24, 78.5,
+    -33.5, 85,
+    -53, 67,
+    -78, 59,
+    -64, 47.5,
+    -87, 33,
+    -95.5, 15,
+    -116.5, 13.5
   ]
 }

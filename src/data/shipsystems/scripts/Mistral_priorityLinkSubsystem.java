@@ -16,6 +16,7 @@ import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.subsystems.MagicSubsystem;
+import org.magiclib.subsystems.MagicSubsystemsManager;
 import org.magiclib.util.MagicRender;
 
 import java.awt.Color;
@@ -44,8 +45,18 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     private static final float OUT_DURATION = 0f;
     private static final float COOLDOWN_DURATION = 18f;
 
+    // how many seconds before the buff ends the jitter intensity starts easing down to 0
+    private static final float JITTER_FADE_OUT_WINDOW = 2f;
+
+    // beep/diamond-pulse cadence during chargeup - shared so the diamond flash is spawned
+    // on exactly the same tick as the beep and lasts no longer than the gap to the next one
+    private static final float BEEP_INTERVAL = 0.7f;
+
     private static final float TIME_MULT = 1.25f;
     private static final float DAMAGE_TAKEN_MULT = 0.66f;
+    // derived once for the in-game buff description text
+    private static final int TIME_BONUS_PERCENT = Math.round((TIME_MULT - 1f) * 100f);
+    private static final int DAMAGE_REDUCTION_PERCENT = Math.round((1f - DAMAGE_TAKEN_MULT) * 100f);
     //private static final Color JITTER_COLOR = new Color(150, 100, 50, 50);
     private static final Color EMP_FRINGE = Color.CYAN;
     private static final Color EMP_CORE = Color.WHITE;
@@ -81,6 +92,22 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         this.maxTargets = maxTargets;
     }
 
+    // shared lookup for hullmod tooltips (mistral_priorityLink/mistral_priorityLink_dual) that
+    // want to display this ship's actual assigned hotkey via MagicSubsystem#getKeyText()
+    public static Mistral_priorityLinkSubsystem getAttachedInstance(ShipAPI ship) {
+        if (ship == null) return null;
+
+        List<MagicSubsystem> subsystems = MagicSubsystemsManager.getSubsystemsForShipCopy(ship);
+        if (subsystems == null) return null;
+
+        for (MagicSubsystem subsystem : subsystems) {
+            if (subsystem instanceof Mistral_priorityLinkSubsystem) {
+                return (Mistral_priorityLinkSubsystem) subsystem;
+            }
+        }
+        return null;
+    }
+
     @Override
     public int getOrder() {
         return ORDER_SHIP_UNIQUE;
@@ -88,7 +115,7 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
 
     @Override
     public String getDisplayText() {
-        return "Priority Link";
+        return "Wanzer Amp Relay";
     }
 
     @Override
@@ -223,28 +250,35 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         for (ShipAPI target : selectedTargets) {
             if (target == null) continue;
 
-            Global.getSoundPlayer().playSound("diableavionics_virtuousTarget_beep", 1f, 1f, ship.getLocation(), ship.getVelocity());
-
-            //targeting diamond on the target itself (was missing the jitterRange/jitterTilt pair before flickerRange/flickerMedian/maxDelay)
-            MagicRender.objectspace(
-                    Global.getSettings().getSprite("diableavionics", "DIAMOND"),
-                    target,
-                    new Vector2f(),
-                    new Vector2f(),
-                    new Vector2f(64, 64),
-                    new Vector2f(),
-                    45f,
-                    0f,
-                    false,
-                    Color.orange,
-                    false,
-                    0f, 0f,
-                    2f, 1f, 0.2f,
-                    0.3f, Math.max(0.1f, getInDuration() - 0.6f), 0.3f,
-                    true,
-                    CombatEngineLayers.BELOW_INDICATORS_LAYER
-            );
+            Global.getSoundPlayer().playSound("diableavionics_virtuousTarget_beep", 1f, 0.5f, ship.getLocation(), ship.getVelocity());
+            spawnDiamondPulse(target);
         }
+    }
+
+    // one short flash of the targeting diamond, timed to fully fade before the next beep -
+    // called on the same tick as each beep (here and in the advance() IN-state loop) so the
+    // blink and the sfx read as a single synced pulse instead of two independent animations
+    private void spawnDiamondPulse(ShipAPI target) {
+        if (target == null) return;
+
+        MagicRender.objectspace(
+                Global.getSettings().getSprite("diableavionics", "DIAMOND"),
+                target,
+                new Vector2f(),
+                new Vector2f(),
+                new Vector2f(64, 64),
+                new Vector2f(),
+                45f,
+                0f,
+                false,
+                Color.orange,
+                false,
+                0f, 0f,
+                0f, 0f, 0f,
+                BEEP_INTERVAL * 0.25f, BEEP_INTERVAL * 0.4f, BEEP_INTERVAL * 0.35f,
+                true,
+                CombatEngineLayers.BELOW_INDICATORS_LAYER
+        );
     }
 
     @Override
@@ -292,10 +326,11 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         if (state == State.IN) {
             beepTimer -= amount;
             if (beepTimer <= 0f) {
-                beepTimer = 0.2f;
+                beepTimer = BEEP_INTERVAL;
                 for (ShipAPI target : selectedTargets) {
                     if (target == null || !target.isAlive()) continue;
-                    Global.getSoundPlayer().playSound("diableavionics_virtuousTarget_beep", 1f, 1f, ship.getLocation(), ship.getVelocity());
+                    Global.getSoundPlayer().playSound("diableavionics_virtuousTarget_beep", 1f, 0.5f, ship.getLocation(), ship.getVelocity());
+                    spawnDiamondPulse(target);
                 }
             }
         } else if (state == State.ACTIVE) {
@@ -303,11 +338,18 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
             // instead of the ship using the system. jitterOpacity fades 1 -> 0 across the active window.
             float effectLevel = getEffectLevel();
             float jitterOpacity = 1f - getStateCompleteRatio();
+
+            // intensity stays at its high baseline for most of the buff, then eases down to 0
+            // only in the last JITTER_FADE_OUT_WINDOW seconds - avoids the abrupt cutoff that
+            // happens when ACTIVE ends and setJitter simply stops being called altogether
+            float secondsRemaining = jitterOpacity * ACTIVE_DURATION;
+            float intensityFade = MathUtils.clamp(secondsRemaining / JITTER_FADE_OUT_WINDOW, 0f, 1f);
+
             for (ShipAPI target : selectedTargets) {
                 if (target == null || !target.isAlive()) continue;
                 target.setJitter(target,
                         Color.CYAN,
-                        0.3f + 0.2f * effectLevel * jitterOpacity,
+                        (0.5f + 0.2f * effectLevel) * intensityFade,
                         3,
                         (2 + 3f * effectLevel) * jitterOpacity,
                         (5 + 6f * effectLevel) * jitterOpacity
@@ -323,10 +365,10 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
                 if (target == Global.getCombatEngine().getPlayerShip()) {
                     Global.getCombatEngine().maintainStatusForPlayerShip(
                             SYSTEM_ID + "_time_" + target.getId(), TIME_STATUS_ICON,
-                            getDisplayText(), "time flow altered", false);
+                            getDisplayText(), "time flow altered +" + TIME_BONUS_PERCENT + "%", false);
                     Global.getCombatEngine().maintainStatusForPlayerShip(
                             SYSTEM_ID + "_dmg_" + target.getId(), DAMAGE_STATUS_ICON,
-                            getDisplayText(), "damage taken reduced", false);
+                            getDisplayText(), "damage taken reduced " + DAMAGE_REDUCTION_PERCENT + "%", false);
                 }
             }
         }
@@ -363,11 +405,29 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         // fill both slots if possible: exhaust the highest tier first, then backfill
         // from the next tier down rather than stopping as soon as one tier is non-empty
         List<ShipAPI> result = new ArrayList<>();
+
+        // whatever fighter/frigate this ship currently has targeted takes priority over every
+        // other tier below, same pattern as armaa_RecallDeviceStats.apply()'s ship.getShipTarget()
+        // check - if it qualifies, it's grabbed immediately instead of going through the pools
+        ShipAPI targetedPriority = findTargetedPriority();
+        if (targetedPriority != null) {
+            result.add(targetedPriority);
+        }
+
         addUpToLimit(result, highDPFrigates);
         addUpToLimit(result, priorityTargets);
         addUpToLimit(result, lowDPFrigates);
 
         return result;
+    }
+
+    private ShipAPI findTargetedPriority() {
+        ShipAPI target = ship.getShipTarget();
+        if (target == null) return null;
+        if (target.getHullSize() != HullSize.FRIGATE && target.getHullSize() != HullSize.FIGHTER) return null;
+        if (!isEligible(target)) return null;
+        if (MathUtils.getDistance(target, ship) > SCAN_RANGE) return null;
+        return target;
     }
 
     private void addUpToLimit(List<ShipAPI> result, List<ShipAPI> candidates) {
