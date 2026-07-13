@@ -16,7 +16,8 @@
     "DA_ESP_Glow",
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
-    "mistral_priorityLink_dual"
+    "mistral_priorityLink_dual",
+    "ML_skinSwap"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing",
@@ -343,7 +344,7 @@
       "length": 10,
       "width": 6,
       "angle": -135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -351,7 +352,7 @@
       "length": 25,
       "width": 5,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 5,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -399,7 +400,7 @@
       "length": 25,
       "width": 5,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 5,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -407,7 +408,7 @@
       "length": 25,
       "width": 5,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 5,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -415,7 +416,7 @@
       "length": 25,
       "width": 5,
       "angle": 180,
-      "contrailSize": 15,
+      "contrailSize": 5,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -423,7 +424,7 @@
       "length": 10,
       "width": 17,
       "angle": -135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_P"
     },
     {
@@ -431,7 +432,7 @@
       "length": 10,
       "width": 6,
       "angle": -135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -439,7 +440,7 @@
       "length": 10,
       "width": 17,
       "angle": 135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_P"
     },
     {
@@ -447,7 +448,7 @@
       "length": 10,
       "width": 6,
       "angle": 135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -455,7 +456,7 @@
       "length": 10,
       "width": 6,
       "angle": 135,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -463,7 +464,7 @@
       "length": 10,
       "width": 6,
       "angle": 180,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {
@@ -471,7 +472,7 @@
       "length": 10,
       "width": 6,
       "angle": 180,
-      "contrailSize": 5,
+      "contrailSize": 0,
       "style": "MISTRAL_ENG_B"
     },
     {

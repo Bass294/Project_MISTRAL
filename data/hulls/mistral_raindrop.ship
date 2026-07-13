@@ -1,0 +1,158 @@
+{
+  "hullName": "Raindrop",
+  "hullId": "mistral_raindrop",
+  "hullSize": "FRIGATE",
+  "spriteName": "graphics/ships/mistral_raindrop.png",
+  "style": "DA_WANZER",
+  "height": 126,
+  "width": 96,
+  "center": [48, 63],
+  "collisionRadius": 91.5,
+  "shieldCenter": [0, 0],
+  "shieldRadius": 80.5,
+  "viewOffset": 0,
+  "builtInWeapons": {
+    "WS0004": "mistral_small_dummy_launcher",
+    "WS0005": "mistral_small_dummy_launcher",
+    "WS0008": "mistral_raindrop_center"
+  },
+  "weaponSlots": [
+    {
+      "id": "WS0001",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [0, -0],
+      "renderOrderMod": 301
+    },
+    {
+      "id": "WS0003",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 7,
+      "angle": 0,
+      "locations": [41, -0]
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": 90,
+      "locations": [-2, 27]
+    },
+    {
+      "id": "WS0007",
+      "size": "SMALL",
+      "type": "MISSILE",
+      "mount": "HIDDEN",
+      "arc": 10,
+      "angle": -90,
+      "locations": [-2, -27]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 90,
+      "locations": [-2, 18],
+      "renderOrderMod": 101
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": -90,
+      "locations": [-2, -18]
+    },
+    {
+      "id": "WS0008",
+      "size": "LARGE",
+      "type": "DECORATIVE",
+      "mount": "TURRET",
+      "arc": 0,
+      "angle": 0,
+      "locations": [-2, -0],
+      "renderOrderMod": 201
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-46, 22.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-46, -22.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-48, -18],
+      "length": 18.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-48, 18],
+      "length": 18.5,
+      "width": 10,
+      "angle": -180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-50, -13.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": 180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-50, 13.5],
+      "length": 8.5,
+      "width": 6,
+      "angle": -180,
+      "contrailSize": 6,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_B"
+    }
+  ],
+  "bounds": [
+    53.5, -10,
+    61.5, -16.5,
+    10, -22.5,
+    -2, -15.5,
+    -9, -25.5,
+    -45.5, -25.5,
+    -56, -0,
+    -45.5, 25.5,
+    -9, 25.5,
+    -2, 15.5,
+    10, 22.5,
+    61.5, 16.5,
+    53.5, 10
+  ]
+}

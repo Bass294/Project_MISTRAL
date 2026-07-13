@@ -1,0 +1,4 @@
+id,hullIds,name,paintjobFamily,spriteId,unlockedAutomatically,tags,unlockConditions,description
+mistral_sunrain_purp,mistral_sunrain,Mistral,DRA,graphics/ships/mistral_sunrain_purp.png,true,,,
+mistral_tailwind_purp,mistral_tailwind,Mistral,DRA,graphics/ships/mistral_tailwind_purp.png,true,,,
+mistral_raven_kai_purp,diableavionics_mistral_raven_kai,Mistral,DRA,graphics/ships/raven_kai/purp/diableavionics_raven.png,true,,,
