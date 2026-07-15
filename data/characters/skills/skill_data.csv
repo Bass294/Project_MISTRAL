@@ -1,0 +1,3 @@
+id,name,order,tier,description,author,combat officer,admiral,admin,tags,icon
+# LEADERSHIP,,,,,,,,,,
+mistral_ACE,Wanzer Ace,10001,0,Some angels protect the meek and innocent. Others seek out and smite evil wherever it lurks.,Motto of the Angelos Circle,TRUE,,,"npc_only,dummy",graphics/icons/skills/mistral_ACE.png
