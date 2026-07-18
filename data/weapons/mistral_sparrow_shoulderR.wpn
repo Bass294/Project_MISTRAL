@@ -5,7 +5,7 @@
   "size": "SMALL",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/sparrow/mistral_sparrow_shoulderR.png",
+  "turretSprite": "graphics/ships/sparrow/mistral_sparrow_shoulderR_purp.png",
   "hardpointSprite": "",
   "showDamageWhenDecorative": true,
   "glowColor": [

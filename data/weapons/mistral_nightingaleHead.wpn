@@ -6,7 +6,7 @@
   "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/nightingale/mistral_nightingalehead.png",
+  "turretSprite": "graphics/ships/nightingale/mistral_nightingalehead_purp.png",
   "turretGlowSprite": "graphics/ships/nightingale/mistral_nightingale_head_glow.png",
   "hardpointSprite": "",
   "glowColor": [

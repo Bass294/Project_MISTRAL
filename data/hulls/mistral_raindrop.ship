@@ -2,7 +2,7 @@
   "hullName": "Raindrop",
   "hullId": "mistral_raindrop",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/mistral_raindrop.png",
+  "spriteName": "graphics/ships/mistral_raindrop_purp.png",
   "style": "DA_WANZER",
   "height": 126,
   "width": 96,
@@ -11,6 +11,9 @@
   "shieldCenter": [0, 0],
   "shieldRadius": 80.5,
   "viewOffset": 0,
+  "builtInMods": [
+    "mistral_angelosDraSkin"
+  ],
   "builtInWeapons": {
     "WS0004": "mistral_small_dummy_launcher",
     "WS0005": "mistral_small_dummy_launcher",

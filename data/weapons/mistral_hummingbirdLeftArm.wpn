@@ -6,7 +6,7 @@
   "everyFrameEffect": "data.scripts.weapons.mistral_koutoDummyWeapon_A",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/hummingbird/mistral_hummingbirdLeftArm.png",
+  "turretSprite": "graphics/ships/hummingbird/mistral_hummingbirdLeftArm_purp.png",
   "hardpointSprite": "",
   "glowColor": [
     232,

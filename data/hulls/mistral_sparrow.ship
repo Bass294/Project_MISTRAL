@@ -2,7 +2,7 @@
   "hullName": "Nachtreiher",
   "hullId": "mistral_sparrow",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/sparrow/mistral_sparrow.png",
+  "spriteName": "graphics/ships/sparrow/mistral_sparrow_purp.png",
   "style": "MISTRAL",
   "height": 74,
   "width": 74,
@@ -14,7 +14,8 @@
   "builtInMods": [
     "strikeCraft",
     "cataphract2",
-    "mistral_featherDrones"
+    "mistral_featherDrones",
+    "mistral_angelosDraSkin"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_sparrowLeftArm",

@@ -2,7 +2,7 @@
   "hullName": "Tailwind",
   "hullId": "mistral_tailwind",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/mistral_tailwind.png",
+  "spriteName": "graphics/ships/mistral_tailwind_purp.png",
   "style": "MISTRAL",
   "height": 350,
   "width": 140,
@@ -15,7 +15,8 @@
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
     "mistral_priorityLink",
-    "mistral_wanzergantry"
+    "mistral_wanzergantry",
+    "mistral_angelosDraSkin"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing"

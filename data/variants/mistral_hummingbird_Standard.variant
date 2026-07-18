@@ -1,0 +1,46 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 10,
+    "fluxVents": 9,
+    "goalVariant": false,
+    "hullId": "mistral_hummingbird",
+    "hullMods": [
+        "extendedshieldemitter",
+        "frontemitter",
+        "high_scatter_amp",
+        "magazines",
+    ],
+    "permaMods": [
+        "ML_skinSwap",
+    ],
+    "sMods": [],
+    "suppressedMods": [],
+    "tags": ["ML_paintjob-mistral_hummingbird_purp"],
+    "variantId": "mistral_hummingbird_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "HEAD": "mistral_hummingbirdHead",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "diableavionics_graveac",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "TRUE_GUN_B": "diableavionics_burchel",
+                "TRUE_GUN_A": "diableavionics_burchel",
+            }
+        },
+    ],
+    "wings": [],
+    "modules": [],
+}

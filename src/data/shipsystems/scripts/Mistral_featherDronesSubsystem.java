@@ -7,6 +7,8 @@ import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.subsystems.drones.DroneFormation;
 import org.magiclib.subsystems.drones.MagicDroneSubsystem;
 import org.magiclib.subsystems.drones.PIDController;
+import org.magiclib.paintjobs.MagicPaintjobManager;
+import org.magiclib.paintjobs.MagicPaintjobSpec;
 
 import java.awt.Color;
 import java.util.Map;
@@ -78,6 +80,10 @@ public class Mistral_featherDronesSubsystem extends MagicDroneSubsystem {
     public String getDroneVariant() {
         // spawnShipOrWingDirectly (FleetMemberType.FIGHTER_WING) needs the wing_data.csv id,
         // not the .variant id directly - it resolves the variant through that row's "variant" column
+        MagicPaintjobSpec paintjob = MagicPaintjobManager.getCurrentShipPaintjob(ship.getVariant());
+        if (paintjob != null && "DRA".equals(paintjob.getPaintjobFamily())) {
+            return "mistral_feather_drone_purp_wing";
+        }
         return "mistral_feather_drone_wing";
     }
 

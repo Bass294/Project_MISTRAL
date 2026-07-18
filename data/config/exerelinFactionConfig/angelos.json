@@ -65,43 +65,25 @@
 
     "miningVariantsOrWings":["diableavionics_laminar_miner"],
     
-    "startShipsSolo":[
-        ["diableavionics_sleet_standard"],
-        ["diableavionics_draft_standard"],
-    ],
 
     "startShipsCombatSmall":[
-        ["diableavionics_calm_mixed", "diableavionics_draft_support", "diableavionics_draft_support"],
-        ["diableavionics_hayle_combat", "diableavionics_vapor_standard","diableavionics_sleet_standard"],
-        ["diableavionics_coanda_support", "diableavionics_hayle_combat"],
+        ["mistral_raindrop_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsCombatLarge":[
-        ["diableavionics_haze_standard", "diableavionics_coanda_standard", "diableavionics_draft_assault"],
-        ["diableavionics_daze_standard", "diableavionics_hayle_combat", "diableavionics_vapor_attack"],
-        ["diableavionics_gust_missile", "diableavionics_miniGust_support", "diableavionics_sleet_standard"],
-    ],
-
-    "startShipsTradeSmall":[
-        ["diableavionics_stratus_standard", "diableavionics_draft_support", "diableavionics_laminar_miner"],
-    ],
-
-    "startShipsTradeLarge":[
-        ["diableavionics_rime_breach", "diableavionics_calm_mixed", "diableavionics_versant_assault"],
+        ["mistral_tailwind_Standard", "mistral_stormsurge_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsCarrierSmall":[
-        ["diableavionics_fractus_standard", "diableavionics_vapor_standard", "diableavionics_vapor_standard"],
+        ["mistral_typhoon_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsCarrierLarge":[
-        ["diableavionics_storm_standard", "diableavionics_derecho_kite", "diableavionics_draft_standard"],
+        ["mistral_sunrain_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsSuper":[
-        ["diableavionics_versant_standard","diableavionics_stratus_standard"],
-        ["diableavionics_virtuous_carbine","diableavionics_stratus_standard"],
-	["mistral_nightingale_nexstart","diableavionics_rime_m_standard","diableavionics_stratus_standard"],
+	["mistral_nightingale_nexstart","mistral_typhoon_Standard","mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 	
     "defenceStations":[

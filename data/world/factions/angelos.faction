@@ -29,194 +29,116 @@
         "diableavionics":1,
     },	
     "names":{
-        "modern":1,
+		"fringe":1,
+		"modern":1,
+		"world":1,
+		"future":1,
+		"mistral":1,
     },
 
     # variantOverrides restricts hulls to listed variants and adjusts their probability
-    #"variantOverrides":{
-        #"diableavionics_versant_assault":30,
-    #},
+    "variantOverrides":{
+        "diableavionics_versant_assault_angelos":3,
+        "diableavionics_versant_escort_angelos":3,
+        "diableavionics_versant_standard_angelos":4,
+
+        "diableavionics_calm_standard_angelos":2,
+        "diableavionics_calm_assault_angelos":2,
+        "diableavionics_calm_brute_angelos":2,
+        "diableavionics_calm_mixed_angelos":2,
+        "diableavionics_calm_closequarter_angelos":2,
+
+        "diableavionics_hayle_standard_angelos":2,
+        "diableavionics_hayle_attack_angelos":2,
+        "diableavionics_hayle_combat_angelos":2,
+        "diableavionics_hayle_multirole_angelos":2,
+        "diableavionics_hayle_closequarter_angelos":2,
+
+        "diableavionics_haze_standard_angelos":2,
+        "diableavionics_haze_assault_angelos":2,
+        "diableavionics_haze_missile_angelos":2,
+        "diableavionics_haze_support_angelos":2,
+        "diableavionics_haze_closequarter_angelos":2,
+    },
 
     # multiplier for how often hulls show up in the faction's fleets
     "hullFrequency":{
-        "tags":{"diable_ship_bp":1,
+        "tags":{
         },
         "hulls":{
-            "gremlin":0,
-            "diableavionics_draft":1,
-            "diableavionics_vapor":1,
-            "diableavionics_sleet":1,
-            "diable_brisk":0.75,
             "diableavionics_versant":0.5,
-            "diableavionics_coldfront":0.75,
-
-            "diableavionics_laminar":1,
-            "diableavionics_shear":1,
 
             "diableavionics_calm":1,
             "diableavionics_hayle":1,
-            "diableavionics_coanda":1,
-            "diable_polarV":0.75,
-            "diableavionics_derecho":0.5,	
-            "diableavionics_miniGust":0.5,
-            "diableavionics_fractus":1,
-
-            "diableavionics_chinook":1,
-            "diableavionics_stratus":1,
-            "diableavionics_cirrus":1,
 
             "diableavionics_haze":1,
-            "diableavionics_daze":1,
-            "diable_ashfall":0.75,
-            "diable_riptide":0.75,
-            "diableavionics_gust":0.5,
-            "diableavionics_storm":1,	
-            "diableavionics_rime_m":0.25,
 
-            "diableavionics_rime":1,
-
-            "diableavionics_maelstrom":1,
-            "diableavionics_pandemonium":0.2,
         },
     },
 
     # ships the faction gets access to when importing S&W out-of-faction
     "shipsWhenImporting":{
-        "tags":["base_bp","diable_ship_bp"],
+        "tags":["base_bp"],
         "hulls":[
-            "diableavionics_draft",
-            "diableavionics_sleet",
-            "diableavionics_vapor",
             "diableavionics_versant",
-
-            "diableavionics_laminar",
-            "diableavionics_shear",
-
             "diableavionics_calm",
             "diableavionics_hayle",
-            "diableavionics_coanda",
-            "diableavionics_derecho",
-            "diableavionics_miniGust",
-            "diableavionics_fractus",
-
-            "diableavionics_chinook",
-            "diableavionics_stratus",
-            "diableavionics_cirrus",
-
             "diableavionics_haze",
-            "diableavionics_daze",
-            "diableavionics_gust",
-            "diableavionics_storm",
-            "diableavionics_rime_m",
-
-            "diableavionics_rime",
-
-            "diableavionics_maelstrom",
-            "diableavionics_pandemonium",
+			
+			"mistral_raindrop",
+			"mistral_sparrow",
+			"mistral_stormsurge",
+			"mistral_sunrain",
+			"mistral_tailwind",
+			"mistral_typhoon",
+			"mistral_hummingbird",
         ],
     },
 
     "knownShips":{
-        "tags":["diable_ship_bp"],
+        "tags":[],
         "hulls":[
-            "diableavionics_draft",
-            "diableavionics_sleet",
-            "diableavionics_vapor",
-            "diable_brisk",
+			"ox",
+			"dram",
+			"mudskipper",
+			"buffalo",
+			"phaeton",
+			"colossus",
+			"starliner",
+			"prometheus",
+			"atlas",
+				
             "diableavionics_versant",
-            "diableavionics_coldfront",
-
-            "diableavionics_laminar",
-            "diableavionics_shear",
-
             "diableavionics_calm",
             "diableavionics_hayle",
-            "diableavionics_coanda",
-            "diableavionics_derecho",
-            "diableavionics_miniGust",
-            "diable_polarV",
-            "diableavionics_fractus",
-
-            "diableavionics_chinook",
-            "diableavionics_stratus",
-            "diableavionics_cirrus",
-            "diable_tidal",
-
             "diableavionics_haze",
-            "diableavionics_daze",
-            "diableavionics_gust",
-            "diable_riptide",
-            "diable_ashfall",
-            "diableavionics_storm",
-            "diableavionics_rime_m",
-
-            "diableavionics_rime",
-
-            "diableavionics_maelstrom",
-            "diableavionics_pandemonium",
+			
+			"mistral_raindrop",
+			"mistral_sparrow",
+			"mistral_stormsurge",
+			"mistral_sunrain",
+			"mistral_tailwind",
+			"mistral_typhoon",
+			"mistral_hummingbird",
         ],
     },
 
     # listing ships here will make the faction mostly use them even if other hulls become available
     "priorityShips":{
-        "tags":["diable_ship_bp"],
+        "tags":[
+		],
         "hulls":[
-            "diableavionics_draft",
-            "diableavionics_sleet",
-            "diableavionics_vapor",
-            "diable_brisk",
-            "diableavionics_versant",
-            "diableavionics_coldfront",
-
-            "diableavionics_laminar",
-            "diableavionics_shear",
-
-            "diableavionics_calm",
-            "diableavionics_hayle",
-            "diableavionics_coanda",
-            "diableavionics_derecho",
-            "diable_polarV",
-            "diableavionics_miniGust",
-            "diableavionics_fractus",
-
-            "diableavionics_chinook",
-            "diableavionics_stratus",
-            "diableavionics_cirrus",
-            "diable_tidal",
-
-            "diableavionics_haze",
-            "diableavionics_daze",
-            "diableavionics_gust",
-            "diable_riptide",
-            "diable_ashfall",
-            "diableavionics_storm",
-            "diableavionics_rime_m",
-
-            "diableavionics_rime",
-
-            "diableavionics_maelstrom",
-            "diableavionics_pandemonium",
         ],
     },
 
     "knownFighters":{
         "tags":[
-            #"base_bp",
-            #"hightech_bp",
-            #"midline_bp",
-            #"diable_ship_bp",
-            "diable_wanzer_bp"
             ],
         "fighters":[
-            "diableavionics_arbitrator_wing",
-            "diableavionics_arbitratorZ_wing",
             "diableavionics_frost_wing",
             "diableavionics_hoar_wing",
             "diableavionics_strife_wing",
-            "diableavionics_nightinghale_wing",
-            "diableavionics_warlust_wing",
             "diableavionics_valiant_wing",
-            "diableavionics_raven_wing",
             "diableavionics_blizzaia_wing",
             "diableavionics_zephyr_wing",
             "diableavionics_avalanche_wing",
@@ -225,22 +147,9 @@
 
     "priorityFighters":{
         "tags":[
-            #"diable_ship_bp",
-            "diable_wanzer_bp"],
+			],
         "fighters":[
-            "diableavionics_arbitrator_wing",
-            "diableavionics_arbitratorZ_wing",
-            "diableavionics_frost_wing",
-            "diableavionics_hoar_wing",
-            "diableavionics_strife_wing",
-            "diableavionics_nightinghale_wing",
-            "diableavionics_warlust_wing",
-            "diableavionics_valiant_wing",
-            "diableavionics_raven_wing",
-            "diableavionics_blizzaia_wing",
-            "diableavionics_zephyr_wing",
-            "diableavionics_avalanche_wing",
-        ],
+			],
     },
 
     "knownWeapons":{
@@ -249,22 +158,20 @@
             #"missile_bp",
             #"hightech_bp",
             #"midline_bp",
-            "diable_weapon_bp"
+            #"diable_weapon_bp"
             ],
         "weapons":[
             "diableavionics_recson",
             "diableavionics_ibis",
             "diableavionics_artassault",
             "diableavionics_burchel",
-            "diableavionics_micromissile",
             "diableavionics_thunderboltsmall",
             "diableavionics_magicbox",
             "diableavionics_banishsmall",
             "diableavionics_winee",
             "diableavionics_glowfang",
             "diableavionics_graveac",
-            "diableavionics_nocturneDEM_small",
-
+           
             "diableavionics_raptor",
             "diableavionics_recson2",
             "diableavionics_gravemg",
@@ -280,52 +187,17 @@
             "diableavionics_banish",
             "diableavionics_thrush",
             "diableavionics_artdeux",
-            "diableavionics_magicboxPod",
-
-            "diableavionics_mostro",
+            
             "diableavionics_hexafire2",
             "diableavionics_uhlan",
-            "diableavionics_opfergv",
         ],
     },
 
     "priorityWeapons":{
         "tags":[
-            "diable_weapon_bp"],
+			],
         "weapons":[
-            "diableavionics_recson",
-            "diableavionics_ibis",
-            "diableavionics_artassault",
-            "diableavionics_burchel",
-            "diableavionics_micromissile",
-            "diableavionics_thunderboltsmall",
-            "diableavionics_magicbox",
-            "diableavionics_banishsmall",
-            "diableavionics_winee",
-            "diableavionics_glowfang",
-            "diableavionics_graveac",
-
-            "diableavionics_raptor",
-            "diableavionics_recson2",
-            "diableavionics_gravemg",
-            "diableavionics_hexafire",
-            "diableavionics_glowtusk",
-            "diableavionics_lazyhorn",
-            "diableavionics_glaux",
-            "diableavionics_state",
-            "diableavionics_srab",
-            "diableavionics_nocturne",
-            "diableavionics_thunderboltpod",
-            "diableavionics_plover",
-            "diableavionics_banish",
-            "diableavionics_thrush",
-            "diableavionics_artdeux",
-
-            "diableavionics_mostro",
-            "diableavionics_hexafire2",
-            "diableavionics_uhlan",
-            "diableavionics_opfergv",
-        ],
+			],
     },
 
     "knownHullMods":{
@@ -359,8 +231,6 @@
             "shielded_holds",
             "recovery_shuttles",
             "ecm",
-            "diableavionics_sniperkit",
-            "diableavionics_mount",
             "diableavionics_avionics"
         ],
     },
@@ -380,7 +250,7 @@
         "combatFreighterProbability":0,     				# instead of some portion of the freighters in a fleet
         "combatFreighterCombatUseFraction":0,  				# as part of the normal combat lineup
         "combatFreighterCombatUseFractionWhenPriority":0,	# as part of normal combat lineup, when marked as priority ship
-        "autofitRandomizeProbability":0.1,
+        "autofitRandomizeProbability":0,
 
         "commanderSkillsShuffleProbability":0.5,
         "commanderSkills":[
@@ -394,6 +264,8 @@
     },
 
     "illegalCommodities":[
+		"drugs",
+		"organs",
     ],
 
     "music":{

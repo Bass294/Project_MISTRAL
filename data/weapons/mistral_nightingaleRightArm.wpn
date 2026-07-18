@@ -6,7 +6,7 @@
   "everyFrameEffect": "data.scripts.weapons.mistral_koutoDummyWeapon_B",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/nightingale/mistral_nightingaleRightArm.png",
+  "turretSprite": "graphics/ships/nightingale/mistral_nightingaleRightArm_purp.png",
   "turretGlowSprite": "graphics/ships/nightingale/mistral_nightingaleRightArm_glow.png",
   "hardpointSprite": "",
   "glowColor": [

@@ -6,7 +6,7 @@
   "everyFrameEffect": "data.scripts.weapons.mistral_shoulderEffect",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/nightingale/mistral_nightingale_shoulderL.png",
+  "turretSprite": "graphics/ships/nightingale/mistral_nightingale_shoulderL_purp.png",
   "hardpointSprite": "",
   "showDamageWhenDecorative": true,
   "glowColor": [

@@ -2,7 +2,7 @@
   "hullName": "Typhoon",
   "hullId": "mistral_typhoon",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/mistral_typhoon.png",
+  "spriteName": "graphics/ships/mistral_typhoon_purp.png",
   "style": "MISTRAL",
   "height": 288,
   "width": 176,
@@ -13,7 +13,8 @@
   "viewOffset": 50,
   "builtInMods": [
     "armaa_serviceBays",
-    "mistral_wanzergantry"
+    "mistral_wanzergantry",
+    "mistral_angelosDraSkin"
   ],
   "weaponSlots": [
     {

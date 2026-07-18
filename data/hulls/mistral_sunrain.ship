@@ -2,7 +2,7 @@
   "hullName": "Sunrain",
   "hullId": "mistral_sunrain",
   "hullSize": "CAPITAL_SHIP",
-  "spriteName": "graphics/ships/mistral_sunrain.png",
+  "spriteName": "graphics/ships/mistral_sunrain_purp.png",
   "style": "MISTRAL",
   "height": 526,
   "width": 346,
@@ -17,7 +17,7 @@
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
     "mistral_priorityLink_dual",
-    "ML_skinSwap"
+    "mistral_angelosDraSkin"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing",

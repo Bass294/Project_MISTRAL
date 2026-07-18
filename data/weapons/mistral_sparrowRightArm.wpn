@@ -6,7 +6,7 @@
   "everyFrameEffect": "data.scripts.weapons.mistral_koutoDummyWeapon_B",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/sparrow/mistral_sparrowRightArm.png",
+  "turretSprite": "graphics/ships/sparrow/mistral_sparrowRightArm_purp.png",
   "hardpointSprite": "",
   "glowColor": [
     232,

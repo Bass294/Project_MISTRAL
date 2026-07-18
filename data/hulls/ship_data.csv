@@ -6,8 +6,8 @@ Sparrow,mistral_sparrow,Wanzer,Diable Avionics,fastmissileracks,armaa_traveldriv
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #mistral ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Mistral,mistral_mistral_carrier,Weapons Platform,Diable Avionics,mistral_overload,,30,10000,1000,18000,,1250,300,,75,90,80,25,25,3250,OMNI,,120,0.4,0.6,,,5,20,200,200,10,,9,600000,4,16,600,0.25,50,50,SHIP_WITH_MODULES,"no_dealer,restricted,codex_unlockable",,0.6,2,4,76
-Sunshower (DA),mistral_sunshower_DA,Refit Arsenal Ship,Diable Avionics,mistral_shield,,30,15000,1200,20000,,1300,345,2,40,40,30,8,8,4000,OMNI,,360,0.4,0.6,,,500,650,600,300,10,,7,600000,4,20,720,0.25,60,60,,"no_dealer,restricted,codex_unlockable",,0.6,2,4,88
-Sunrain,mistral_sunrain,Fleet Battlecarrier,Diable Avionics,mistral_drift,,30,15000,1200,20000,,1300,345,4,40,40,30,8,8,4000,OMNI,,180,0.4,0.6,,,500,650,600,300,10,,7,500000,4,20,720,0.25,60,60,,"rare_bp, ML_paintjob-mistral_sunrain_purp",,0.6,2,4,26
+Sunshower (DA),mistral_sunshower_DA,Refit Arsenal Ship,Diable Avionics,mistral_shield,,30,15000,1200,20000,,1300,360,2,40,40,30,8,8,4000,OMNI,,360,0.4,0.6,,,500,650,600,300,10,,7,600000,4,20,720,0.25,60,60,,"no_dealer,restricted,codex_unlockable",,0.6,2,4,88
+Sunrain,mistral_sunrain,Fleet Battlecarrier,Diable Avionics,mistral_drift,,30,15000,1200,20000,,1300,360,4,40,40,30,8,8,4000,OMNI,,180,0.4,0.6,,,500,650,600,300,10,,7,500000,4,20,720,0.25,60,60,,"rare_bp, ML_paintjob-mistral_sunrain_purp",,0.6,2,4,26
 Jetstream,mistral_jetstream,Wanzer,Diable Avionics,diableavionics_transitTrainer,,30,10000,1000,18000,,1250,300,,75,90,80,25,25,3250,OMNI,,120,0.4,0.8,,,5,20,200,200,10,,9,600000,4,12,600,0.25,50,50,,"no_dealer,restricted,codex_unlockable",,0.6,2,4,89
 Tailwind,mistral_tailwind,Battlecarrier,Diable Avionics,armaa_recalldevice,,21,10000,1200,12000,,650,200,3,70,40,30,15,20,2000,OMNI,,90,0.4,0.8,,,200,350,250,150,3,,8,150000,4,12,480,0.25,28,28,,rare_bp,,0.6,2,3,56
 Typhoon,mistral_typhoon,Close Support Carrier,Diable Avionics,mistral_shield,,13,8000,800,8000,,500,140,1,85,70,50,20,25,1200,OMNI,,150,0.4,0.8,,,100,200,150,100,3,,9,100000,4,12,480,0.25,18,18,,rare_bp,,0.6,2,3,62
@@ -17,6 +17,7 @@ Raindrop,mistral_raindrop,Frigate,Diable Avionics,displacer,,5,2000,225,2600,,20
 #drones,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Beak,mistral_beak_drone,UWS,Diable Avionics,temporalshell,,,200,50,1000,,150,,,350,400,400,500,500,10,NONE,,,,,0.05,0.05,0,0,,,,,,,,,,,,,UNBOARDABLE,,,0.5,2,2,454
 Feather,mistral_feather_drone,UWS,Diable Avionics,,,,200,50,500,,50,,,350,400,400,500,500,10,FRONT,,80,0,1.0,0.05,0.05,0,0,,,,,,,,,,,,,UNBOARDABLE,,,0.5,2,2,454
+Feather,mistral_feather_drone_purp,UWS,Diable Avionics,,,,200,50,500,,50,,,350,400,400,500,500,10,FRONT,,80,0,1.0,0.05,0.05,0,0,,,,,,,,,,,,,UNBOARDABLE,,,0.5,2,2,454
 Raven,diableavionics_mistral_raven_kai,,Diable Avionics,diableavionics_flicker,,,2000,300,1500,,250,0,,150,120,80,50,50,75,OMNI,,90,0.2,1.0,,,6,6,,,,,,,,,,,,,,"mistralpriotarget, wanzer",,,,,10
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #base diable ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,

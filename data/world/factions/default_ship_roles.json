@@ -1,0 +1,120 @@
+{
+	# should be a copy of "combatSmall", minus variants that are annoying to fight in low numbers
+	# for example, no Hyperions or fast beam-based kiting loadouts, or ships with damper field
+	"combatSmallForSmallFleet":{
+
+	},
+	"combatSmall":{
+            "diableavionics_versant_assault_angelos":3,
+            "diableavionics_versant_escort_angelos":3,
+            "diableavionics_versant_standard_angelos":4,
+
+            "mistral_raindrop_Standard":10,
+            "mistral_sparrow_Standard":10,
+	    "mistral_hummingbird_Standard":10,
+	},
+	"combatMedium":{
+            "diableavionics_calm_standard_angelos":2,
+            "diableavionics_calm_assault_angelos":2,
+            "diableavionics_calm_brute_angelos":2,
+            "diableavionics_calm_mixed_angelos":2,
+            "diableavionics_calm_closequarter_angelos":2,
+
+            "diableavionics_hayle_standard_angelos":2,
+            "diableavionics_hayle_attack_angelos":2,
+            "diableavionics_hayle_combat_angelos":2,
+            "diableavionics_hayle_multirole_angelos":2,
+            "diableavionics_hayle_closequarter_angelos":2,
+
+            "mistral_typhoon_Standard":10,
+	},
+	"combatLarge":{
+            "diableavionics_haze_standard_angelos":2,
+            "diableavionics_haze_assault_angelos":2,
+            "diableavionics_haze_missile_angelos":2,
+            "diableavionics_haze_support_angelos":2,
+            "diableavionics_haze_closequarter_angelos":2,
+
+            "mistral_tailwind_Standard":10,
+            "mistral_stormsurge_Standard":10,
+	},
+	"combatCapital":{
+            "mistral_sunrain_Standard":10,
+	},
+	
+	
+	# hybrid ships with good combat and cargo capacity
+	"combatFreighterSmall":{
+	},
+	"combatFreighterMedium":{
+	},
+	"combatFreighterLarge":{
+	},
+	
+	"civilianRandom":{
+	},
+
+	# carriers
+	"carrierSmall":{
+            "mistral_typhoon_Standard":10,
+	},
+	"carrierMedium":{
+            "mistral_tailwind_Standard":10,
+	},
+	"carrierLarge":{
+            "mistral_sunrain_Standard":10,
+	},
+
+	# phase ships
+	"phaseSmall":{
+	},
+	"phaseMedium":{
+	},
+	"phaseLarge":{
+	},
+	"phaseCapital":{
+	},
+
+	# freighters and such
+	"freighterSmall":{
+	},
+	"freighterMedium":{
+	},
+	"freighterLarge":{
+	},
+	
+	"tankerSmall":{
+	},
+	"tankerMedium":{
+	},
+	"tankerLarge":{
+	},
+	
+	"personnelSmall":{
+	},
+	"personnelMedium":{
+	},
+	"personnelLarge":{
+	},
+	
+	"linerSmall":{
+	},
+	"linerMedium":{
+	},
+	"linerLarge":{
+	},
+	
+	# utility ships
+	"tug":{
+	},
+	"crig":{
+	},
+	"utility":{
+	},
+	
+	"orbitalStationLowTech":{
+	},
+	
+	"battlestationLowTech":{
+	},
+}

@@ -2,7 +2,7 @@
   "hullName": "Nachtreiher",
   "hullId": "mistral_nightingale",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/nightingale/mistral_nightingale.png",
+  "spriteName": "graphics/ships/nightingale/mistral_nightingale_purp.png",
   "style": "MISTRAL",
   "height": 38,
   "width": 46,
@@ -17,7 +17,8 @@
     "cataphract2",
     "mistral_zandatsu",
     "mistral_shield_style",
-    "mistral_shieldsparkles"
+    "mistral_shieldsparkles",
+    "mistral_angelosDraSkin"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_nightingaleLeftArm",

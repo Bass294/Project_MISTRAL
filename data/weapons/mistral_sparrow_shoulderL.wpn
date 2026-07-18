@@ -6,7 +6,7 @@
   "everyFrameEffect": "data.scripts.weapons.mistral_shoulderEffect",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
-  "turretSprite": "graphics/ships/sparrow/mistral_sparrow_shoulderL.png",
+  "turretSprite": "graphics/ships/sparrow/mistral_sparrow_shoulderL_purp.png",
   "hardpointSprite": "",
   "showDamageWhenDecorative": true,
   "glowColor": [

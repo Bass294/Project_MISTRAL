@@ -1,0 +1,66 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 8,
+    "fluxVents": 30,
+    "goalVariant": false,
+    "hullId": "mistral_tailwind",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [
+        "ML_skinSwap",
+    ],
+    "tags": ["ML_paintjob-mistral_tailwind_purp"],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "mistral_tailwind_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_uhlan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "squall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_nocturne",
+                "WS0015": "diableavionics_nocturne",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0011": "diableavionics_winee",
+                "WS0009": "diableavionics_winee",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0016": "diableavionics_raptor",
+                "WS0002": "diableavionics_ibis",
+                "WS0003": "diableavionics_ibis",
+                "WS0005": "diableavionics_ibis",
+                "WS0006": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_frost_wing",
+        "diableavionics_strife_wing",
+    ],
+    "modules": [],
+}

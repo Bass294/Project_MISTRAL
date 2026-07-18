@@ -2,7 +2,7 @@
   "hullName": "Nachtreiher",
   "hullId": "mistral_hummingbird",
   "hullSize": "FRIGATE",
-  "spriteName": "graphics/ships/hummingbird/mistral_hummingbird.png",
+  "spriteName": "graphics/ships/hummingbird/mistral_hummingbird_purp.png",
   "style": "MISTRAL",
   "height": 74,
   "width": 74,
@@ -13,7 +13,8 @@
   "viewOffset": 0,
   "builtInMods": [
     "strikeCraft",
-    "cataphract2"
+    "cataphract2",
+    "mistral_angelosDraSkin"
   ],
   "builtInWings": [
     "mistral_beak_drone_wing"

@@ -1,49 +1,47 @@
 {
-    "displayName": "Prototype",
+    "displayName": "Standard",
     "fluxCapacitors": 10,
-    "fluxVents": 4,
+    "fluxVents": 5,
     "goalVariant": false,
-    "hullId": "mistral_nightingale",
+    "hullId": "mistral_sparrow",
     "hullMods": [
-        "armaa_emergencyRecallDevice",
-        "hardened_subsystems",
         "hardenedshieldemitter",
+        "missleracks",
     ],
     "permaMods": [
         "ML_skinSwap",
     ],
+    "tags": ["ML_paintjob-mistral_sparrow_purp"],
     "sMods": [],
     "suppressedMods": [],
-    "tags": ["ML_paintjob-mistral_nightingale_purp"],
-    "variantId": "mistral_nightingale_nexstart",
+    "variantId": "mistral_sparrow_Standard",
     "weaponGroups": [
         {
             "autofire": true,
-            "mode": "ALTERNATING",
+            "mode": "LINKED",
             "weapons": {
-                "WS0004": "diableavionics_thunderboltsmall",
-                "WS0005": "diableavionics_thunderboltsmall",
+                "TRUE_GUN_B": "diableavionics_gravemg",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "TRUE_GUN_A": "diableavionics_plover",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "TRUE_GUN_B": "diableavionics_glaux",
+                "WS0005": "diableavionics_graveac",
             }
         },
         {
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "TRUE_GUN_A": "diableavionics_gravemg",
-            }
-        },
-        {
-            "autofire": true,
-            "mode": "LINKED",
-            "weapons": {
-                "HEAD": "mistral_nightingaleHead",
+                "HEAD": "mistral_sparrowHead",
             }
         },
     ],

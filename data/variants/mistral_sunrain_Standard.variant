@@ -1,0 +1,95 @@
+{
+    "displayName": "Standard",
+    "fluxCapacitors": 4,
+    "fluxVents": 50,
+    "goalVariant": false,
+    "hullId": "mistral_sunrain",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [
+        "ML_skinSwap",
+    ],
+    "tags": ["ML_paintjob-mistral_sunrain_purp"],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "mistral_sunrain_Standard",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0026": "diableavionics_thunderboltpod",
+                "WS0015": "diableavionics_thunderboltpod",
+                "WS0016": "diableavionics_thunderboltpod",
+                "WS0019": "diableavionics_thunderboltsmall",
+                "WS0020": "diableavionics_thunderboltsmall",
+                "WS0021": "diableavionics_thunderboltsmall",
+                "WS0022": "diableavionics_thunderboltsmall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0029": "diableavionics_esp_kestrel",
+                "WS0028": "diableavionics_esp_kestrel",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0025": "diableavionics_uhlan",
+                "WS0024": "diableavionics_hexafire2",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "diableavionics_nocturne",
+                "WS0002": "diableavionics_nocturne",
+                "WS0003": "diableavionics_state",
+                "WS0004": "diableavionics_state",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0012": "diableavionics_winee",
+                "WS0011": "diableavionics_winee",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "diableavionics_burchel",
+                "WS0009": "diableavionics_burchel",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0023": "diableavionics_raptor",
+                "WS0005": "diableavionics_ibis",
+                "WS0007": "diableavionics_ibis",
+                "WS0013": "diableavionics_ibis",
+                "WS0014": "diableavionics_ibis",
+                "WS0017": "diableavionics_ibis",
+                "WS0018": "diableavionics_ibis",
+                "WS0006": "diableavionics_ibis",
+                "WS0008": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_strife_wing",
+        "diableavionics_frost_wing",
+    ],
+    "modules": [],
+}

@@ -2,7 +2,7 @@
   "hullName": "Stormsurge",
   "hullId": "mistral_stormsurge",
   "hullSize": "CRUISER",
-  "spriteName": "graphics/ships/mistral_stormsurge.png",
+  "spriteName": "graphics/ships/mistral_stormsurge_purp.png",
   "style": "MISTRAL",
   "height": 340,
   "width": 140,
@@ -12,7 +12,8 @@
   "shieldRadius": 179,
   "viewOffset": 50,
   "builtInMods": [
-    "missleracks"
+    "missleracks",
+    "mistral_angelosDraSkin"
   ],
   "weaponSlots": [
     {

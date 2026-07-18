@@ -1,5 +1,6 @@
 id,variant,tags,tier,rarity,fleet pts,op cost,formation,range,attackRunRange,attackPositionOffset,num,role,role desc,refit,base value,,,,,,,,,,,,,number
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 mistral_feather_drone_wing,mistral_feather_drone_std,"no_drop, no_sell, low",0,,3,0,BOX,0,500,,1,SUPPORT,Fire Support,5,6000,,,,,,,,,,,,,
+mistral_feather_drone_purp_wing,mistral_feather_drone_purp,"no_drop, no_sell, low",0,,3,0,BOX,0,500,,1,SUPPORT,Fire Support,5,6000,,,,,,,,,,,,,
 mistral_beak_drone_wing,mistral_beak_drone_std,"no_drop, no_sell,wingmen_no_swarm,leader_no_swarm,stay_in_front_of_ship",3,,3,4,DIAMOND,0,500,,2,SUPPORT,Fire Support,10,6000,,,,,,,,,,,,,19
 diableavionics_mistral_raven_kai_wing,diableavionics_mistral_raven_kai_Standard,"wanzer, fighter4, fighter, high, rare_bp, rd_no_extra_craft",3,0.5,12,24,BOX,4000,500,,1,FIGHTER,Heavy Trooper,25,13000,,,,,,,,,,,,,1
