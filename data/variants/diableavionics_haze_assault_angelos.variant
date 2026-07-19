@@ -3,12 +3,12 @@
     "fluxCapacitors": 14,
     "fluxVents": 30,
     "goalVariant": true,
-    "hullId": "diableavionics_haze",
+    "hullId": "diableavionics_haze_AC",
     "hullMods": [
         "targetingunit",
         "fluxdistributor"
     ],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "sMods": [],
     "variantId": "diableavionics_haze_assault_angelos",
     "weaponGroups": [

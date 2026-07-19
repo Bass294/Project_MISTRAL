@@ -3,9 +3,9 @@
     "fluxCapacitors": 1,
     "fluxVents": 20,
     "goalVariant": true,
-    "hullId": "diableavionics_calm",
+    "hullId": "diableavionics_calm_AC",
     "hullMods": ["targetingunit"],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "sMods": [],
     "variantId": "diableavionics_calm_mixed_angelos",
     "weaponGroups": [

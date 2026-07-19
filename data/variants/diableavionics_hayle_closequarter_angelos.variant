@@ -3,9 +3,9 @@
     "fluxCapacitors": 11,
     "fluxVents": 20,
     "goalVariant": true,
-    "hullId": "diableavionics_hayle",
+    "hullId": "diableavionics_hayle_AC",
     "hullMods": ["eccm"],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "variantId": "diableavionics_hayle_closequarter_angelos",
     "weaponGroups": [
         {

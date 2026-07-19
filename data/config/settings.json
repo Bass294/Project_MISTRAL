@@ -28,6 +28,8 @@
         "planets":{
             	"atoll_texture":"graphics/planets/US_planet_textureAtoll.jpg",
 		"atoll_clouds":"graphics/planets/US_clouds_textureSoft.png",
+		"angelos_planet_iskandar":"graphics/planets/angelos_planet_iskandar.png",
+		"angelos_planet_iskandar_light":"graphics/planets/angelos_planet_iskandar_light.png",
         },
 
 	"characters":{

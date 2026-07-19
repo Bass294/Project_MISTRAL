@@ -3,12 +3,12 @@
     "fluxCapacitors": 10,
     "fluxVents": 10,
     "goalVariant": true,
-    "hullId": "diableavionics_versant",
+    "hullId": "diableavionics_versant_AC",
     "hullMods": [
         "diableavionics_selector_auto",
         "unstable_injector"
     ],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "sMods": [],
     "variantId": "diableavionics_versant_standard_angelos",
     "weaponGroups": [

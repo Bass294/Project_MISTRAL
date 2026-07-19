@@ -1,12 +1,12 @@
 {
   "variantId": "diableavionics_haze_standard_angelos",
-  "hullId": "diableavionics_haze",
+  "hullId": "diableavionics_haze_AC",
   "displayName": "Standard",
   "goalVariant": true,
   "fluxCapacitors": 15,
   "fluxVents": 30,
   "quality": 1,
-  "permaMods": ["mistral_angelosDraSkin"],
+  "permaMods": [],
   "hullMods": [
     "targetingunit",
     "fluxbreakers"

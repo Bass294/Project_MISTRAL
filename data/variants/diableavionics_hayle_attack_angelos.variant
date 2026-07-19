@@ -1,12 +1,12 @@
 {
   "variantId": "diableavionics_hayle_attack_angelos",
-  "hullId": "diableavionics_hayle",
+  "hullId": "diableavionics_hayle_AC",
   "displayName": "Attack",
   "goalVariant": true,
   "fluxCapacitors": 10,
   "fluxVents": 20,
   "quality": 1,
-  "permaMods": ["mistral_angelosDraSkin"],
+  "permaMods": [],
   "hullMods": [
     "fluxbreakers"
   ],

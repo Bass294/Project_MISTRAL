@@ -1,12 +1,12 @@
 {
   "variantId": "diableavionics_hayle_standard_angelos",
-  "hullId": "diableavionics_hayle",
+  "hullId": "diableavionics_hayle_AC",
   "displayName": "Standard",
   "goalVariant": true,
   "fluxCapacitors": 13,
   "fluxVents": 20,
   "quality": 1,
-  "permaMods": ["mistral_angelosDraSkin"],
+  "permaMods": [],
   "hullMods": [
     "advancedoptics",
     "fluxdistributor"

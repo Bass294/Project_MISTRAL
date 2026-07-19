@@ -1,6 +1,7 @@
 package data.scripts.world.systems;
 
 import com.fs.starfarer.api.campaign.*;
+import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
@@ -119,13 +120,16 @@ public class angelos_trinary {
 
         // Kara - water world, medium orbit, market size 4, faction angelos
         PlanetAPI kara = system.addPlanet("Kara", systemCenter, "Kara", "water", 80f, 240f, 9500f, 420f);
-        //kara.setCustomDescriptionId("angelos_kara");
+        kara.setCustomDescriptionId("angelos_kara");
 
         List<String> karaConditions = Arrays.asList(
                 Conditions.POPULATION_4,
                 Conditions.HABITABLE,
                 Conditions.ORGANICS_ABUNDANT,
-                Conditions.WATER_SURFACE
+                Conditions.WATER_SURFACE,
+                Conditions.LUDDIC_MAJORITY,
+                Conditions.MILD_CLIMATE,
+                Conditions.DECIVILIZED_SUBPOP
         );
         List<String> karaSubmarkets = Arrays.asList(
                 Submarkets.SUBMARKET_OPEN,
@@ -140,6 +144,7 @@ public class angelos_trinary {
         );
         MarketAPI karaMarket = addMarket(FACTION_ANGELOS, kara, kara.getName(), 4,
                 karaConditions, karaSubmarkets, karaIndustries);
+        Misc.makeStoryCritical(karaMarket, "angelos_trinary");
 
         kara.getSpec().setTexture(
                 Global.getSettings().getSpriteName("planets", "atoll_texture")
@@ -150,10 +155,33 @@ public class angelos_trinary {
 
         kara.applySpecChanges();
 
+        // Stellar mirrors orbiting Kara, matching vanilla MiscellaneousThemeGenerator.addSolarShadesAndMirrors()
+        float karaMirrorPeriod = kara.getCircularOrbitPeriod();
+        float karaMirrorAngle = kara.getCircularOrbitAngle();
+        float karaMirrorRadius = 270f + kara.getRadius();
+        float karaMirrorXp = 300f;
+        float karaMirrorProfile = 2000f;
+
+        SectorEntityToken karaMirrorBeta = system.addCustomEntity(null, "Stellar Mirror Beta", Entities.STELLAR_MIRROR, Factions.NEUTRAL);
+        SectorEntityToken karaMirrorGamma = system.addCustomEntity(null, "Stellar Mirror Gamma", Entities.STELLAR_MIRROR, Factions.NEUTRAL);
+        SectorEntityToken karaMirrorDelta = system.addCustomEntity(null, "Stellar Mirror Delta", Entities.STELLAR_MIRROR, Factions.NEUTRAL);
+        SectorEntityToken karaMirrorEpsilon = system.addCustomEntity(null, "Stellar Mirror Epsilon", Entities.STELLAR_MIRROR, Factions.NEUTRAL);
+
+        karaMirrorBeta.setCircularOrbitPointingDown(kara, karaMirrorAngle - 45, karaMirrorRadius, karaMirrorPeriod);
+        karaMirrorGamma.setCircularOrbitPointingDown(kara, karaMirrorAngle - 15, karaMirrorRadius, karaMirrorPeriod);
+        karaMirrorDelta.setCircularOrbitPointingDown(kara, karaMirrorAngle + 15, karaMirrorRadius, karaMirrorPeriod);
+        karaMirrorEpsilon.setCircularOrbitPointingDown(kara, karaMirrorAngle + 45, karaMirrorRadius, karaMirrorPeriod);
+
+        for (SectorEntityToken mirror : Arrays.asList(karaMirrorBeta, karaMirrorGamma, karaMirrorDelta, karaMirrorEpsilon)) {
+            mirror.setDiscoverable(true);
+            mirror.setDiscoveryXP(karaMirrorXp);
+            mirror.setSensorProfile(karaMirrorProfile);
+        }
+
 
         // Iskandar - barren moon of Kara, military market size 5, faction angelos
         PlanetAPI iskandar = system.addPlanet("Iskandar", kara, "Iskandar", "barren", 0f, 80f, 750f, 60f);
-        //iskandar.setCustomDescriptionId("angelos_iskandar");
+        iskandar.setCustomDescriptionId("angelos_iskandar");
 
         List<String> iskandarConditions = Arrays.asList(
                 Conditions.POPULATION_5,
@@ -173,15 +201,24 @@ public class angelos_trinary {
                 Industries.MEGAPORT,
                 Industries.WAYSTATION,
                 Industries.MILITARYBASE,
-                Industries.BATTLESTATION_HIGH,
+                "diableavionics_battlestation",
                 Industries.GROUNDDEFENSES,
                 Industries.ORBITALWORKS,
                 Industries.REFINING
         );
         MarketAPI iskandarMarket = addMarket(FACTION_ANGELOS, iskandar, iskandar.getName(), 5,
                 iskandarConditions, iskandarSubmarkets, iskandarIndustries);
-        // Mirrors the "protected military world" style flag used on Jenius in the Gamlin system
-        iskandarMarket.getMemoryWithoutUpdate().set("$nex_uninvadable", true);
+        Misc.makeStoryCritical(iskandarMarket, "angelos_trinary");
+        iskandarMarket.getIndustry(Industries.ORBITALWORKS).setSpecialItem(new SpecialItemData(Items.CORRUPTED_NANOFORGE, null));
+
+        iskandar.getSpec().setTexture(
+                Global.getSettings().getSpriteName("planets", "angelos_planet_iskandar")
+        );
+        iskandar.getSpec().setGlowTexture(
+                Global.getSettings().getSpriteName("planets", "angelos_planet_iskandar_light")
+        );
+
+        iskandar.applySpecChanges();
 
         // Inactive gate - bigger radius than Kara, smaller than the large asteroid belt
         SectorEntityToken gate = system.addCustomEntity("angelos_gate", "Angelos Gate", "inactive_gate", Factions.NEUTRAL);
@@ -199,7 +236,7 @@ public class angelos_trinary {
 
         // Otoha - volcanic moon of Ciella, opposite Ayaha at the same radius, market size 4, faction diableavionics
         PlanetAPI otoha = system.addPlanet("Otoha", ciella, "Otoha", "lava_minor", 180f, 80f, 1100f, 60f); // type id - verify "volcanic" spelling
-        //otoha.setCustomDescriptionId("angelos_otoha");
+        otoha.setCustomDescriptionId("angelos_otoha");
 
         List<String> otohaConditions = Arrays.asList(
                 Conditions.POPULATION_4,
@@ -221,11 +258,12 @@ public class angelos_trinary {
                 Industries.MINING,
                 Industries.MEGAPORT,
                 Industries.WAYSTATION,
-                Industries.ORBITALSTATION_HIGH,
+                "diableavionics_orbitalstation",
                 Industries.GROUNDDEFENSES
         );
         MarketAPI otohaMarket = addMarket(FACTION_DIABLE, otoha, otoha.getName(), 4,
                 otohaConditions, otohaSubmarkets, otohaIndustries);
+        Misc.makeStoryCritical(otohaMarket, "angelos_trinary");
 
         // Small asteroid belt around Ciella, inside Ayaha/Otoha's orbit
         system.addAsteroidBelt(ciella, 40, 800, 60, 55, 75);
@@ -248,6 +286,11 @@ public class angelos_trinary {
         researchStation.setCircularOrbitPointingDown(systemCenter, 320f, 5000f, 200f);
         researchStation.setCustomDescriptionId("angelos_station_research");
         Misc.setAbandonedStationMarket("angelos_research_station", researchStation);
+
+        // Derelict wrecks orbiting the abandoned research station
+        addDerelict(system, systemCenter, "mistral_raindrop_Standard", ShipRecoverySpecial.ShipCondition.WRECKED, 4900f, 318f, 200f, true);
+        addDerelict(system, systemCenter, "mistral_tailwind_Standard", ShipRecoverySpecial.ShipCondition.WRECKED, 4850f, 323f, 200f, true);
+        addDerelict(system, systemCenter, "diableavionics_gust_standard", ShipRecoverySpecial.ShipCondition.WRECKED, 5150f, 310f, 200f, true);
 
         // Nav buoy, comm relay, sensor array - placed at arbitrary "random" locations; adjust freely
         SectorEntityToken navBuoy = system.addCustomEntity("angelos_nav_buoy", "Nav Buoy", "nav_buoy", Factions.NEUTRAL);
@@ -292,6 +335,29 @@ public class angelos_trinary {
 
         Global.getSector().getEconomy().addMarket(market, true);
         return market;
+    }
+
+    // Spawns a recoverable derelict wreck in orbit around the given focus entity.
+    protected void addDerelict(StarSystemAPI system,
+                                SectorEntityToken focus,
+                                String variantId,
+                                ShipRecoverySpecial.ShipCondition condition,
+                                float orbitRadius,
+                                float angle,
+                                float orbitDays,
+                                boolean recoverable) {
+        DerelictShipEntityPlugin.DerelictShipData params = new DerelictShipEntityPlugin.DerelictShipData(new ShipRecoverySpecial.PerShipData(variantId, condition), true);
+        SectorEntityToken ship = BaseThemeGenerator.addSalvageEntity(system, Entities.WRECK, Factions.NEUTRAL, params);
+        ship.setDiscoverable(true);
+
+        ship.setCircularOrbit(focus, angle, orbitRadius, orbitDays);
+
+        WeightedRandomPicker<String> factions = new WeightedRandomPicker<>();
+        factions.add(FACTION_ANGELOS);
+        if (recoverable) {
+            SalvageSpecialAssigner.ShipRecoverySpecialCreator creator = new SalvageSpecialAssigner.ShipRecoverySpecialCreator(null, 0, 0, false, null, factions);
+            Misc.setSalvageSpecial(ship, creator.createSpecial(ship, null));
+        }
     }
 
     // Clears a hole in the surrounding hyperspace nebula so the system isn't obscured

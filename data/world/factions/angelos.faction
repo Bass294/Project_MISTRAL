@@ -38,27 +38,6 @@
 
     # variantOverrides restricts hulls to listed variants and adjusts their probability
     "variantOverrides":{
-        "diableavionics_versant_assault_angelos":3,
-        "diableavionics_versant_escort_angelos":3,
-        "diableavionics_versant_standard_angelos":4,
-
-        "diableavionics_calm_standard_angelos":2,
-        "diableavionics_calm_assault_angelos":2,
-        "diableavionics_calm_brute_angelos":2,
-        "diableavionics_calm_mixed_angelos":2,
-        "diableavionics_calm_closequarter_angelos":2,
-
-        "diableavionics_hayle_standard_angelos":2,
-        "diableavionics_hayle_attack_angelos":2,
-        "diableavionics_hayle_combat_angelos":2,
-        "diableavionics_hayle_multirole_angelos":2,
-        "diableavionics_hayle_closequarter_angelos":2,
-
-        "diableavionics_haze_standard_angelos":2,
-        "diableavionics_haze_assault_angelos":2,
-        "diableavionics_haze_missile_angelos":2,
-        "diableavionics_haze_support_angelos":2,
-        "diableavionics_haze_closequarter_angelos":2,
     },
 
     # multiplier for how often hulls show up in the faction's fleets
@@ -66,12 +45,12 @@
         "tags":{
         },
         "hulls":{
-            "diableavionics_versant":0.5,
+            "diableavionics_versant_AC":0.5,
 
-            "diableavionics_calm":1,
-            "diableavionics_hayle":1,
+            "diableavionics_calm_AC":1,
+            "diableavionics_hayle_AC":1,
 
-            "diableavionics_haze":1,
+            "diableavionics_haze_AC":1,
 
         },
     },
@@ -80,11 +59,11 @@
     "shipsWhenImporting":{
         "tags":["base_bp"],
         "hulls":[
-            "diableavionics_versant",
-            "diableavionics_calm",
-            "diableavionics_hayle",
-            "diableavionics_haze",
-			
+            "diableavionics_versant_AC",
+            "diableavionics_calm_AC",
+            "diableavionics_hayle_AC",
+            "diableavionics_haze_AC",
+
 			"mistral_raindrop",
 			"mistral_sparrow",
 			"mistral_stormsurge",
@@ -108,11 +87,11 @@
 			"prometheus",
 			"atlas",
 				
-            "diableavionics_versant",
-            "diableavionics_calm",
-            "diableavionics_hayle",
-            "diableavionics_haze",
-			
+            "diableavionics_versant_AC",
+            "diableavionics_calm_AC",
+            "diableavionics_hayle_AC",
+            "diableavionics_haze_AC",
+
 			"mistral_raindrop",
 			"mistral_sparrow",
 			"mistral_stormsurge",

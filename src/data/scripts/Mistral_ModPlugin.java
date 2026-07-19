@@ -49,10 +49,31 @@ public class Mistral_ModPlugin extends BaseModPlugin {
         MarketAPI Iskandar = Global.getSector().getEconomy().getMarket("Iskandar");
         if (Iskandar == null) return; // market doesn't exist, bail safely
 
+        addAngelosPersons(Iskandar);
+    }
+
+    // Catches up saves that didn't have the Angelos system/market/persons generated yet,
+    // e.g. the mod was added to an existing save rather than a fresh game.
+    @Override
+    public void onGameLoad(boolean newGame) {
+        super.onGameLoad(newGame);
+        if (newGame) return; // already handled by onNewGame / onNewGameAfterEconomyLoad
+
+        if (Global.getSector().getStarSystem("Angelos") == null) {
+            new MistralGen().generate(Global.getSector());
+        }
+
+        MarketAPI Iskandar = Global.getSector().getEconomy().getMarket("Iskandar");
+        if (Iskandar != null && Global.getSector().getImportantPeople().getPerson("angelosleader1") == null) {
+            addAngelosPersons(Iskandar);
+        }
+    }
+
+    private void addAngelosPersons(MarketAPI Iskandar) {
         PersonAPI angelosleader = MagicCampaign.addCustomPerson(
                 Iskandar,
-                "Kazuki",
                 "Azrael",
+                "The-morning-star",
                 "angelosleader1",
                 FullName.Gender.MALE,
                 "angelos",
@@ -62,14 +83,16 @@ public class Mistral_ModPlugin extends BaseModPlugin {
                 0,
                 0
         );
+        angelosleader.setId("angelosleader1");
+        Global.getSector().getImportantPeople().addPerson(angelosleader);
         angelosleader.addTag(Tags.CONTACT_MILITARY);
         angelosleader.addTag(Tags.CONTACT_UNDERWORLD);
         angelosleader.setImportanceAndVoice(PersonImportance.VERY_HIGH, new Random());
 
         PersonAPI angelospilot = MagicCampaign.addCustomPerson(
                 Iskandar,
-                "Mizuki",
                 "Raziel",
+                "Light-bringer",
                 "angelospilot1",
                 FullName.Gender.FEMALE,
                 "angelos",
@@ -79,14 +102,16 @@ public class Mistral_ModPlugin extends BaseModPlugin {
                 0,
                 1
         );
+        angelospilot.setId("angelospilot1");
+        Global.getSector().getImportantPeople().addPerson(angelospilot);
         angelospilot.addTag(Tags.CONTACT_MILITARY);
         angelospilot.addTag(Tags.CONTACT_TRADE);
         angelospilot.setImportanceAndVoice(PersonImportance.HIGH, new Random());
 
         PersonAPI agnelosdamsel = MagicCampaign.addCustomPerson(
                 Iskandar,
-                "Atra",
                 "Sariel",
+                "Star-of-god",
                 "angelosdamsel1",
                 FullName.Gender.FEMALE,
                 "angelos",
@@ -96,12 +121,14 @@ public class Mistral_ModPlugin extends BaseModPlugin {
                 0,
                 2
         );
+        agnelosdamsel.setId("angelosdamsel1");
+        Global.getSector().getImportantPeople().addPerson(agnelosdamsel);
 
 
         PersonAPI angelosspy = MagicCampaign.addCustomPerson(
                 Iskandar,
-                "Izuki",
                 "Harut",
+                "Oath-of-god",
                 "angelosspy1",
                 FullName.Gender.MALE,
                 "angelos",
@@ -111,6 +138,8 @@ public class Mistral_ModPlugin extends BaseModPlugin {
                 0,
                 3
         );
+        angelosspy.setId("angelosspy1");
+        Global.getSector().getImportantPeople().addPerson(angelosspy);
 
         //Iskandar.getCommDirectory().getEntryForPerson(angelosleader).setHidden(true);
         //Iskandar.getCommDirectory().getEntryForPerson(angelospilot).setHidden(true);

@@ -1,12 +1,12 @@
 {
   "variantId": "diableavionics_hayle_multirole_angelos",
-  "hullId": "diableavionics_hayle",
+  "hullId": "diableavionics_hayle_AC",
   "displayName": "Multirole",
   "goalVariant": true,
   "fluxCapacitors": 15,
   "fluxVents": 20,
   "quality": 1,
-  "permaMods": ["mistral_angelosDraSkin"],
+  "permaMods": [],
   "hullMods": [
     "reinforcedhull",
     "hardenedshieldemitter",

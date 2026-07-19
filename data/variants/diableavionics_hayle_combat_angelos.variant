@@ -2,12 +2,12 @@
     "displayName": "Combat",
     "fluxCapacitors": 14,
     "fluxVents": 20,
-    "hullId": "diableavionics_hayle",
+    "hullId": "diableavionics_hayle_AC",
     "hullMods": [
         "fluxbreakers",
         "hardenedshieldemitter"
     ],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "sMods": [],
     "variantId": "diableavionics_hayle_combat_angelos",
     "weaponGroups": [

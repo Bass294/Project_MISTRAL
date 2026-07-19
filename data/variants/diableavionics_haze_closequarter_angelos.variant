@@ -2,9 +2,9 @@
     "displayName": "Close Quarter",
     "fluxCapacitors": 10,
     "fluxVents": 18,
-    "hullId": "diableavionics_haze",
+    "hullId": "diableavionics_haze_AC",
     "hullMods": ["safetyoverrides"],
-    "permaMods": ["mistral_angelosDraSkin"],
+    "permaMods": [],
     "sMods": [],
     "variantId": "diableavionics_haze_closequarter_angelos",
     "weaponGroups": [

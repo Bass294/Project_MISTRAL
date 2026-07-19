@@ -7,7 +7,7 @@ Sparrow,mistral_sparrow,Wanzer,Diable Avionics,fastmissileracks,armaa_traveldriv
 #mistral ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Mistral,mistral_mistral_carrier,Weapons Platform,Diable Avionics,mistral_overload,,30,10000,1000,18000,,1250,300,,75,90,80,25,25,3250,OMNI,,120,0.4,0.6,,,5,20,200,200,10,,9,600000,4,16,600,0.25,50,50,SHIP_WITH_MODULES,"no_dealer,restricted,codex_unlockable",,0.6,2,4,76
 Sunshower (DA),mistral_sunshower_DA,Refit Arsenal Ship,Diable Avionics,mistral_shield,,30,15000,1200,20000,,1300,360,2,40,40,30,8,8,4000,OMNI,,360,0.4,0.6,,,500,650,600,300,10,,7,600000,4,20,720,0.25,60,60,,"no_dealer,restricted,codex_unlockable",,0.6,2,4,88
-Sunrain,mistral_sunrain,Fleet Battlecarrier,Diable Avionics,mistral_drift,,30,15000,1200,20000,,1300,360,4,40,40,30,8,8,4000,OMNI,,180,0.4,0.6,,,500,650,600,300,10,,7,500000,4,20,720,0.25,60,60,,"rare_bp, ML_paintjob-mistral_sunrain_purp",,0.6,2,4,26
+Sunrain,mistral_sunrain,Fleet Battlecarrier,Diable Avionics,mistral_drift,,30,15000,1200,20000,,1300,360,4,40,40,30,8,8,4000,OMNI,,180,0.4,0.6,,,500,650,600,300,10,,7,500000,4,20,720,0.25,60,60,,rare_bp,,0.6,2,4,26
 Jetstream,mistral_jetstream,Wanzer,Diable Avionics,diableavionics_transitTrainer,,30,10000,1000,18000,,1250,300,,75,90,80,25,25,3250,OMNI,,120,0.4,0.8,,,5,20,200,200,10,,9,600000,4,12,600,0.25,50,50,,"no_dealer,restricted,codex_unlockable",,0.6,2,4,89
 Tailwind,mistral_tailwind,Battlecarrier,Diable Avionics,armaa_recalldevice,,21,10000,1200,12000,,650,200,3,70,40,30,15,20,2000,OMNI,,90,0.4,0.8,,,200,350,250,150,3,,8,150000,4,12,480,0.25,28,28,,rare_bp,,0.6,2,3,56
 Typhoon,mistral_typhoon,Close Support Carrier,Diable Avionics,mistral_shield,,13,8000,800,8000,,500,140,1,85,70,50,20,25,1200,OMNI,,150,0.4,0.8,,,100,200,150,100,3,,9,100000,4,12,480,0.25,18,18,,rare_bp,,0.6,2,3,62
@@ -22,3 +22,7 @@ Raven,diableavionics_mistral_raven_kai,,Diable Avionics,diableavionics_flicker,,
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #base diable ships,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Discordant,mistral_pandemonium_AC,Dreadnought,Diable Avionics,diableavionics_heavyflicker,,50,27500,1600,22000,,1600,400,,40,30,20,6,6,5050,FRONT,,240,0.4,0.8,,,550,750,550,400,11,,7,525000,4,20,720,0.075,70,70,,rare_bp,0.1,0.6,3,5,34
+Versant (AC),diableavionics_versant_AC,Hybrid Wanzer,Diable Avionics,diableavionics_transit2,,8,2000,350,3500,,350,45,,120,200,200,180,220,300,FRONT,,270,0.25,0.8,,,5,5,0,0,1,,10,36000,8,25,240,0.2,8,8,,rare_bp,0.5,0.75,2,2,17
+Haze (AC),diableavionics_haze_AC,Cruiser,Diable Avionics,diableavionics_heavyflicker,,15,10000,900,10750,,650,175,,65,45,40,35,25,1850,FRONT,,120,0.4,0.8,,,165,190,150,90,3,,8,130000,3,15,420,0.1,23,23,,rare_bp,,0.6,2,4,28
+Calm (AC),diableavionics_calm_AC,Destroyer,Diable Avionics,diableavionics_vortex,,9,4750,600,5000,,350,80,0,90,55,44,40,30,450,OMNI,,75,0.4,0.8,,,50,80,80,50,2,,9,40000,6,14,360,0.15,9,9,,,,0.4,2,3,19
+Hayle (AC),diableavionics_hayle_AC,Destroyer,Diable Avionics,diableavionics_flicker,,11,4250,500,6500,,450,105,,95,100,55,55,35,325,OMNI,,90,0.35,0.8,,,40,70,50,60,2.5,,9,55000,5,16,300,0.15,11,11,,,,0.6,2,3,20

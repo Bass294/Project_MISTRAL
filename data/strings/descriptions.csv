@@ -22,6 +22,12 @@ mistral_nightingaleHead,WEAPON,"Design improvements have allowed for the install
 mistral_overload,SHIP_SYSTEM,"Reactor protocols from the 9th gen ""Nightingale"" have been integrated into a much larger frame, although the signiture ""chirping"" remains.",Offensive,"Boosts ballistic weapon rate of fire, energy weapon damage, and mobility by 50% for a short duration.",
 mistral_overload_small,SHIP_SYSTEM,"Reactor protocols from the 9th gen ""Nightingale"" have been carried over into the Nachtreiher, along with it's signiture ""chirping"" calling card.",Offensive,"Boosts ballistic weapon rate of fire, energy weapon damage, and mobility by 50% for a short duration.",
 mistral_shield,SHIP_SYSTEM,"A redesign of Traverser ""Pressurized Shield"" technology already aboard the vessel to match Diable corp's existing shield systems.",Defensive,Reduces the damage taken by shields to a minimum for a short duration.,
+
+#locations,,,,,
+angelos_station_research,CUSTOM,WIP,,,
+angelos_kara,CUSTOM,WIP,,,
+angelos_iskandar,CUSTOM,WIP,,,
+angelos_otoha,CUSTOM,WIP,,,
 ,,,,,
 ,,,,,
 ,,,,,
