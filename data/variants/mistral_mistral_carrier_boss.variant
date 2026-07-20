@@ -3,7 +3,7 @@
     "fluxCapacitors": 30,
     "fluxVents": 50,
     "goalVariant": false,
-    "hullId": "mistral_mistral_carrier",
+    "hullId": "diableavionics_mistral_mistral_carrier",
     "hullMods": [
         "fluxbreakers",
         "missleracks",

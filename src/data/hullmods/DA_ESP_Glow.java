@@ -22,7 +22,7 @@ public class DA_ESP_Glow extends BaseHullMod {
 
     public void advanceInCombat(ShipAPI ship, float amount) {
         //Sun shower ring
-        if (ship.getHullSpec().getHullId().equals("mistral_sunshower_DA")){
+        if (ship.getHullSpec().getHullId().equals("diableavionics_mistral_sunshower_DA")){
             if (ship.getSystem().isActive()){
 
                 //claude nonsense

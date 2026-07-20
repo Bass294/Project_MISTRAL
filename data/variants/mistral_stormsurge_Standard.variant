@@ -3,7 +3,7 @@
     "fluxCapacitors": 8,
     "fluxVents": 30,
     "goalVariant": false,
-    "hullId": "mistral_stormsurge",
+    "hullId": "diableavionics_mistral_stormsurge",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

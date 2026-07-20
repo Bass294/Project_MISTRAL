@@ -3,7 +3,7 @@
     "fluxCapacitors": 10,
     "fluxVents": 8,
     "goalVariant": false,
-    "hullId": "mistral_raindrop",
+    "hullId": "diableavionics_mistral_raindrop",
     "hullMods": [
         "advancedoptics",
         "autorepair",

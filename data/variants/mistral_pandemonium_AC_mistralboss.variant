@@ -3,7 +3,7 @@
     "fluxCapacitors": 27,
     "fluxVents": 50,
     "goalVariant": false,
-    "hullId": "mistral_pandemonium_AC",
+    "hullId": "diableavionics_mistral_pandemonium_AC",
     "hullMods": [
         "hardenedshieldemitter",
         "stabilizedshieldemitter",

@@ -3,7 +3,7 @@
     "fluxCapacitors": 10,
     "fluxVents": 20,
     "goalVariant": false,
-    "hullId": "mistral_typhoon",
+    "hullId": "diableavionics_mistral_typhoon",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

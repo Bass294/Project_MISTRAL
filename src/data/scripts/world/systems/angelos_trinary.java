@@ -3,6 +3,7 @@ package data.scripts.world.systems;
 import com.fs.starfarer.api.campaign.*;
 import com.fs.starfarer.api.campaign.econ.Industry;
 import com.fs.starfarer.api.campaign.econ.MarketAPI;
+import com.fs.starfarer.api.fleet.FleetMemberType;
 import com.fs.starfarer.api.impl.campaign.ids.*;
 import com.fs.starfarer.api.impl.campaign.procgen.NebulaEditor;
 import com.fs.starfarer.api.impl.campaign.terrain.HyperspaceTerrainPlugin;
@@ -286,6 +287,8 @@ public class angelos_trinary {
         researchStation.setCircularOrbitPointingDown(systemCenter, 320f, 5000f, 200f);
         researchStation.setCustomDescriptionId("angelos_station_research");
         Misc.setAbandonedStationMarket("angelos_research_station", researchStation);
+        researchStation.getMarket().getSubmarket(Submarkets.SUBMARKET_STORAGE).getCargo()
+                .addMothballedShip(FleetMemberType.SHIP, "mistral_hummingbird_Standard", null);
 
         // Derelict wrecks orbiting the abandoned research station
         addDerelict(system, systemCenter, "mistral_raindrop_Standard", ShipRecoverySpecial.ShipCondition.WRECKED, 4900f, 318f, 200f, true);

@@ -1,6 +1,6 @@
 {
   "hullName": "Sunrain",
-  "hullId": "mistral_sunrain",
+  "hullId": "diableavionics_mistral_sunrain",
   "hullSize": "CAPITAL_SHIP",
   "spriteName": "graphics/ships/mistral_sunrain_purp.png",
   "style": "MISTRAL",

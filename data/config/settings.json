@@ -32,6 +32,12 @@
 		"angelos_planet_iskandar_light":"graphics/planets/angelos_planet_iskandar_light.png",
         },
 
+        "blueprint_packages":{
+            	"angelos_wanzerBP":"graphics/icons/cargo/angelos_wanzerBP.png",
+		"angelos_shipBP":"graphics/icons/cargo/angelos_shipBP.png",
+		"angelos_weaponBP":"graphics/icons/cargo/angelos_weaponBP.png",
+        },
+
 	"characters":{
             	"angelos":"graphics/portraits/angelos.png",
 		"diableresearcher":"graphics/portraits/diableresearcher.png",

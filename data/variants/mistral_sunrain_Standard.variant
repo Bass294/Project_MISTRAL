@@ -3,7 +3,7 @@
     "fluxCapacitors": 4,
     "fluxVents": 50,
     "goalVariant": false,
-    "hullId": "mistral_sunrain",
+    "hullId": "diableavionics_mistral_sunrain",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

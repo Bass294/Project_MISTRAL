@@ -1,6 +1,6 @@
 {
   "hullName": "Mistral",
-  "hullId": "mistral_mistral_carrier",
+  "hullId": "diableavionics_mistral_mistral_carrier",
   "hullSize": "CAPITAL_SHIP",
   "spriteName": "graphics/ships/mistral_mistral_carrier.png",
   "style": "MISTRAL",

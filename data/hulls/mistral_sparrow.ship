@@ -1,6 +1,6 @@
 {
   "hullName": "Nachtreiher",
-  "hullId": "mistral_sparrow",
+  "hullId": "diableavionics_mistral_sparrow",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/sparrow/mistral_sparrow_purp.png",
   "style": "MISTRAL",

@@ -3,7 +3,7 @@
     "fluxCapacitors": 10,
     "fluxVents": 9,
     "goalVariant": false,
-    "hullId": "mistral_hummingbird",
+    "hullId": "diableavionics_mistral_hummingbird",
     "hullMods": [
         "extendedshieldemitter",
         "frontemitter",

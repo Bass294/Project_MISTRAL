@@ -3,7 +3,7 @@
     "fluxCapacitors": 8,
     "fluxVents": 30,
     "goalVariant": false,
-    "hullId": "mistral_tailwind",
+    "hullId": "diableavionics_mistral_tailwind",
     "hullMods": [
         "hardenedshieldemitter",
         "targetingunit",

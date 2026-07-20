@@ -1,6 +1,6 @@
 {
   "hullName": "Raindrop",
-  "hullId": "mistral_raindrop",
+  "hullId": "diableavionics_mistral_raindrop",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/mistral_raindrop_purp.png",
   "style": "DA_WANZER",

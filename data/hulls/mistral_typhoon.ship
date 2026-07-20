@@ -1,6 +1,6 @@
 {
   "hullName": "Typhoon",
-  "hullId": "mistral_typhoon",
+  "hullId": "diableavionics_mistral_typhoon",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/mistral_typhoon_purp.png",
   "style": "MISTRAL",

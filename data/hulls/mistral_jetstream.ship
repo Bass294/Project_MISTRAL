@@ -1,6 +1,6 @@
 {
   "hullName": "Jetstream",
-  "hullId": "mistral_jetstream",
+  "hullId": "diableavionics_mistral_jetstream",
   "hullSize": "DESTROYER",
   "spriteName": "graphics/ships/mistral_jetstream_base.png",
   "style": "MISTRAL",

@@ -3,7 +3,7 @@
     "fluxCapacitors": 18,
     "fluxVents": 50,
     "goalVariant": false,
-    "hullId": "mistral_sunshower_DA",
+    "hullId": "diableavionics_mistral_sunshower_DA",
     "hullMods": [
         "stabilizedshieldemitter",
     ],
