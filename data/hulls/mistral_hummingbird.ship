@@ -14,7 +14,8 @@
   "builtInMods": [
     "strikeCraft",
     "cataphract2",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWings": [
     "mistral_beak_drone_wing"

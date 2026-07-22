@@ -8,10 +8,7 @@
         "hardenedshieldemitter",
         "missleracks",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
-    "tags": ["ML_paintjob-mistral_sparrow_purp"],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
     "variantId": "mistral_sparrow_Standard",

@@ -1,0 +1,3 @@
+fieldID,fieldName,fieldType,fieldTooltip,tab,defaultValue,secondaryValue,minValue,maxValue
+enableAngelosBounties,Enable depreciated bounties,Boolean,"Enables two depreciated bounties (including the Mistral and the Sunshower DA). These bounties will not spawn unless this is turned on. These will be reworked later.",,false,,,
+enableDiableEngineFixByDefault,Enable Diable Engine Flicker Fix Hullmod,Boolean,"Enables an aesthetic hullmod which replaces the flickering engine glow with a consistent pulsing hum.",,false,,,

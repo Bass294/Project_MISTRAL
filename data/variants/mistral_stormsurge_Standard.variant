@@ -8,10 +8,7 @@
         "hardenedshieldemitter",
         "targetingunit",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
-    "tags": ["ML_paintjob-mistral_stormsurge_purp"],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
     "variantId": "mistral_stormsurge_Standard",

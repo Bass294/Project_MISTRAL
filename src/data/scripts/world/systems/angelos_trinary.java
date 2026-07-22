@@ -283,7 +283,7 @@ public class angelos_trinary {
         // ===================== MISC ENTITIES =====================
 
         // Abandoned research station - smaller radius than Surtr
-        SectorEntityToken researchStation = system.addCustomEntity("angelos_research_station", "Abandoned Research Station", "station_side07", Factions.NEUTRAL);
+        SectorEntityToken researchStation = system.addCustomEntity("angelos_research_station", "Research Station ESO 75a", "station_side07", Factions.NEUTRAL);
         researchStation.setCircularOrbitPointingDown(systemCenter, 320f, 5000f, 200f);
         researchStation.setCustomDescriptionId("angelos_station_research");
         Misc.setAbandonedStationMarket("angelos_research_station", researchStation);

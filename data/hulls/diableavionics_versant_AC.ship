@@ -45,7 +45,8 @@
     #"diableavionics_avionics",\n
     "diableavionics_cramped",
     "diableavionics_tuning",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
     #"delicate"
   ],
   "builtInWeapons": {

@@ -16,7 +16,8 @@
     "armaa_spare_chassis_storage",
     "mistral_priorityLink",
     "mistral_wanzergantry",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing"

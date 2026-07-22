@@ -6,6 +6,7 @@ import com.fs.starfarer.api.combat.FighterWingAPI;
 import com.fs.starfarer.api.combat.MutableShipStatsAPI;
 import com.fs.starfarer.api.combat.ShipAPI;
 import com.fs.starfarer.api.combat.ShipAPI.HullSize;
+import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
@@ -443,6 +444,7 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         if (other == null || other == ship) return false;
         if (!other.isAlive() || other.isHulk()) return false;
         if (other.getOwner() != ship.getOwner()) return false;
+        if (other.getHullSpec() != null && other.getHullSpec().getHints().contains(ShipTypeHints.MODULE)) return false;
         return !BUFFED_TARGETS.contains(other);
     }
 

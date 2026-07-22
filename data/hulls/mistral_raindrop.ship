@@ -12,7 +12,8 @@
   "shieldRadius": 80.5,
   "viewOffset": 0,
   "builtInMods": [
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWeapons": {
     "WS0004": "mistral_small_dummy_launcher",

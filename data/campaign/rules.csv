@@ -1,2 +1,29 @@
 id,trigger,conditions,script,text,options,notes
 #,,,,,,
+marketFlavorAngelos,TradePanelFlavorText,"$global.tradePanelMode == MARKET
+$faction.id == angelos","AddText ""Despite the technological level of their military, the marketplace appears like it belongs to a Luddic outpost. In contrast to the Church however, the helmeted Angelos guards bear no firearms, and casually converse with the vendors and customers alike."" marketFlavorTextColor",,,
+,,,,,,
+angelosContactBarDiableAdd,AddBarEvents,"$faction.id == diableavionics
+!$global.metAngelosContactDiable","AddBarEvent angelosContactBarDiable_open ""Open the tri-pad message."" ""Your tri-pad pings with an unexpected message as you walk in. The contact is encrypted, and bears a purple and gold crest of a moon and stars."" highlight",,,
+angelosContactBarDiableSel,DialogOptionSelected,$option == angelosContactBarDiable_open,"$global.metAngelosContactDiable = true
+Mistral_AddPotentialContact angelospilot1","The message includes a set of coordinates to the moon ""Iskandar"" in the Angelos system located within the eastern core worlds, southwest of 99 ES. Also included is a comm ID, to what you can only assume is the sender.
+
+After forwarding the message to your comms officer, they confirm the included crest belongs to the Angelos Contingent, a rebel group which has earned a reputation for their attacks against Diable Avionics.",backToBar:Close the message.,
+,,,,,,
+angelosContactBarAngelosAdd,AddBarEvents,"$faction.id == angelos
+!$global.metAngelosContactAngelos","AddBarEvent angelosContactBarAngelos_open ""Sit at a table and wait for the Angelos officer to make their rounds."" ""An Angelos officer appears to be conversing with various passing captains, trading rumors, and perhaps mercenary work."" highlight",,,
+angelosContactBarAngelosSel,DialogOptionSelected,$option == angelosContactBarAngelos_open,"$global.metAngelosContactAngelos = true
+Mistral_AddPotentialContact angelospilot1","The officer politely greets you, as polite as someone can be while wearing a pilot-grade spacesuit. You trade smalltalk before they pass you hand-written comm ID.
+
+""My brothers and sisters could use your talents. I hope to be seeing more of you, Captain.""",backToBar:Return to the bar.,
+,,,,,,
+mistral_ramielTopicOpt,PopulateOptions,$id == angelospilot1,,,"99:mistral_ramielTopic1:""I havent seen the faces of any of your men.""",
+mistral_ramielTopic1,DialogOptionSelected,$option == mistral_ramielTopic1,,"Ramiel responds by lifting off her helmet, revealing scars and exposed cybernetics of multiple augmentation surgeries, alongside a large tattoo that appears to be some sort of prisoner marking.
+
+""We weren't given the opportunity to choose before. We can now. And we in the Angelos Circle choose to cover our unholy branding of Moloch with our resolve, our helmets, and our cockpit hatches. Some have chosed to cleanse it from their flesh, but there are many of us who believe that the gifts of the enemy must be returned to them in kind. If it aids in protecting our family, then it's a burden I choose to bear.""","mistral_ramielTopic2:""You're ex-Diable? I didn't realize anyone in Corporate space even knew of Ludd.""",
+mistral_ramielTopic2,DialogOptionSelected,$option == mistral_ramielTopic2,,"""They don't. We learned much from our brothers and sisters of Kara; they helped us not just to survive, but to live. Those chosen as pilots in the Corporation were trained from a young age only for combat. Even once we were free, it was those faithful of Ludd that gave us purpose, gave us names, and taught us of the importance of family.
+
+While faith and belief in ludd aren't completely shared, it is our purpose and conviction that binds us. All accepted the holy names bestowed upon us, none kept the foul 'designations' we once had.""","mistral_ramielTopic3:""I can't imagine Diable corp was giving tours of Luddic planets to it's pilots.""",
+mistral_ramielTopic3,DialogOptionSelected,$option == mistral_ramielTopic3,FireAll PopulateOptions,"""A story for another time. Wounds too fresh to share freely. We have work to do.""
+
+Ramiel slides on her helmet, and the display optics resume their soft cyan glow.",,

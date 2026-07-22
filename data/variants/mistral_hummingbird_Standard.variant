@@ -10,12 +10,9 @@
         "high_scatter_amp",
         "magazines",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
-    "tags": ["ML_paintjob-mistral_hummingbird_purp"],
     "variantId": "mistral_hummingbird_Standard",
     "weaponGroups": [
         {

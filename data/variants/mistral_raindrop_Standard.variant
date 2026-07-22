@@ -9,10 +9,7 @@
         "autorepair",
         "hardenedshieldemitter",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
-    "tags": ["ML_paintjob-mistral_raindrop_purp"],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
     "variantId": "mistral_raindrop_Standard",

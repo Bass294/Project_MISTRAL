@@ -8,10 +8,7 @@
         "hardenedshieldemitter",
         "targetingunit",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
-    "tags": ["ML_paintjob-mistral_tailwind_purp"],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
     "variantId": "mistral_tailwind_Standard",

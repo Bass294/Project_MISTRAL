@@ -12,7 +12,8 @@
   "shieldRadius": 100.5,
   "viewOffset": 0,
   "builtInMods": [
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "weaponSlots": [
     {

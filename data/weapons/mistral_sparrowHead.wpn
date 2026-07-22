@@ -1,54 +1,53 @@
 {
   "id": "mistral_sparrowHead",
-  "specClass": "beam",
-  "type": "ENERGY",
+  "specClass": "projectile",
+  "projectileSpecId": "mistral_sparrowHead_shot",
+  "type": "BALLISTIC",
   "size": "SMALL",
-  "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
-  "collisionClass": "RAY",
-  "collisionClassByFighter": "RAY_FIGHTER",
+  "displayArcRadius": 450,
   "turretSprite": "graphics/ships/sparrow/mistral_sparrowhead.png",
   "hardpointSprite": "",
-  "glowColor": [
-    232,
-    128,
-    35,
-    255
-  ],
-  "hitGlowRadius": 0,
   "turretOffsets": [
     4,
-    0
+    0,
+    3,
+    -2,
+    3,
+    2
   ],
   "turretAngleOffsets": [
-    0
+    0,
+    -0.3,
+    0.3
   ],
   "hardpointOffsets": [
-    4,
-    0
+    23,
+    0,
+    22,
+    -3,
+    22,
+    3
   ],
   "hardpointAngleOffsets": [
+    0,
+    0,
     0
   ],
-  "fringeColor": [
-    155,
-    50,
-    50,
-    255
-  ],
-  "coreColor": [
-    15,
-    15,
-    15,
-    255
-  ],
-  "darkCore": true,
-  "width": 16,
-  "textureType": ROUGH,
-  "textureScrollSpeed": 128,
-  "pixelsPerTexel": 5,
-  "pierceSet": [
-    PROJECTILE_FF,
-    PROJECTILE_NO_FF,
-    PROJECTILE_FIGHTER
-  ]
+  "barrelMode": "LINKED",
+  "animationType": "MUZZLE_FLASH",
+  "muzzleFlashSpec": {
+    "length": 34,
+    "spread": 10,
+    "particleSizeMin": 18,
+    "particleSizeRange": 24,
+    "particleDuration": 0.02,
+    "particleCount": 12,
+    "particleColor": [
+      199,
+      93,
+      76,
+      215
+    ]
+  },
+  "fireSoundTwo": "diableavionics_graveac_fire"
 }

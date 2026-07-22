@@ -1,7 +1,7 @@
 {
   "id":"DA_Mistral",
   "name":"Project MISTRAL",
-  "version": "0.1",
+  "version": "0.5",
   "author": "Bass294 and Selkie",
   "description":"Play MGR NOW also donate to ArmaA patreon",
   "gameVersion":"0.98a-RC7",
@@ -28,6 +28,11 @@
             "id": "diableavionics",
             "name": "Diable Avionics",
             #"version": "2.7.3" # If a specific version is NOT required, comment out this line
+        },
+        {
+            "id": "lunalib",
+            "name": "LunaLib",
+            #"version": "2.0.5" # If a specific version is NOT required, comment out this line
         }
   ],
 }

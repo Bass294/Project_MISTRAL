@@ -2,6 +2,7 @@
 	"mistral_project_mistral":{
 		"trigger_marketFaction_any":["independent","tritachyon","diableavionics"],
 		"trigger_player_minLevel":15,
+		"trigger_memKeys_all":{"$angelos_bounties_enabled":true},
 
 		"job_name":"Project MISTRAL",
 		"job_description":"Your comms officer lets you know your fleet has picked up an anonymous bounty posting for the destruction of an experimental craft, with nothing but coordinates and a payout amount. While the senders have clearly put great effort into covering their tracks, decryption has revealed it to be a job from the ==Diable Avionics corporation==. Further information gathering has revealed that they are likely tracking a ==large, high-mobility weapons platform== that was first sighted fleeing Diable Avionics space several cycles ago. Supposedly the pilot has gained support from dissidents and refugees opposed to Diable, so there is little question why the corporation would like to see this \"movement\" dealt a death blow.",
@@ -65,6 +66,7 @@
 	"mistral_sunshower":{
 		"trigger_marketFaction_any":["independent","tritachyon","diableavionics"],
 		"trigger_player_minLevel":15,
+		"trigger_memKeys_all":{"$angelos_bounties_enabled":true},
 
 		"job_name":"Sundown",
 		"job_description":"Tri-Tachyon has posted a bounty including a ship stolen from the ==Traverser Design Bureau== by the ==Diable Avionics corporation==. It appears to be undergoing field testing alongside other craft that have been integrated with parts of its advanced VLS missile technology. The bounty specifies the assassination of the researcher heading the project, currently acting captain of the ==Sunshower==.",

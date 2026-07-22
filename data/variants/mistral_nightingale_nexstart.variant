@@ -9,12 +9,9 @@
         "hardened_subsystems",
         "hardenedshieldemitter",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
-    "tags": ["ML_paintjob-mistral_nightingale_purp"],
     "variantId": "mistral_nightingale_nexstart",
     "weaponGroups": [
         {

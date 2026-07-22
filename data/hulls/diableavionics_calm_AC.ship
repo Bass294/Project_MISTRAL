@@ -57,7 +57,8 @@
   ],
   "builtInMods": [
     #"diableavionics_avionics"
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWeapons": {
     "SYSTEM": "diableavionics_calmSystem",

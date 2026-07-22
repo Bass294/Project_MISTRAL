@@ -18,6 +18,7 @@ import com.fs.starfarer.api.characters.PersonAPI;
 import com.fs.starfarer.api.characters.FullName;
 
 import org.magiclib.util.MagicCampaign; // <-- new package path
+import lunalib.lunaSettings.LunaSettings;
 
 
 public class Mistral_ModPlugin extends BaseModPlugin {
@@ -57,6 +58,25 @@ public class Mistral_ModPlugin extends BaseModPlugin {
     @Override
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
+
+        // Mirror the LunaLib toggle into sector memory every load, since MagicBounty's
+        // trigger_memKeys_all can only check plain memory keys, not LunaSettings directly.
+        boolean bountiesEnabled = false;
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            Boolean setting = LunaSettings.getBoolean("DA_Mistral", "enableAngelosBounties");
+            if (setting != null) bountiesEnabled = setting;
+        }
+        Global.getSector().getMemoryWithoutUpdate().set("$angelos_bounties_enabled", bountiesEnabled);
+
+        // Diable Engine Flicker Fix is only known-from-the-start (no blueprint needed)
+        // if LunaLib is present and the setting is turned on.
+        boolean engineFixByDefault = false;
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            Boolean setting = LunaSettings.getBoolean("DA_Mistral", "enableDiableEngineFixByDefault");
+            if (setting != null) engineFixByDefault = setting;
+        }
+        Global.getSettings().getHullModSpec("mistral_diableenginefix").setAlwaysUnlocked(engineFixByDefault);
+
         if (newGame) return; // already handled by onNewGame / onNewGameAfterEconomyLoad
 
         if (Global.getSector().getStarSystem("Angelos") == null) {
@@ -91,7 +111,7 @@ public class Mistral_ModPlugin extends BaseModPlugin {
 
         PersonAPI angelospilot = MagicCampaign.addCustomPerson(
                 Iskandar,
-                "Raziel",
+                "Ramiel",
                 "Light-bringer",
                 "angelospilot1",
                 FullName.Gender.FEMALE,
@@ -103,6 +123,7 @@ public class Mistral_ModPlugin extends BaseModPlugin {
                 1
         );
         angelospilot.setId("angelospilot1");
+        angelospilot.setMarket(Iskandar);
         Global.getSector().getImportantPeople().addPerson(angelospilot);
         angelospilot.addTag(Tags.CONTACT_MILITARY);
         angelospilot.addTag(Tags.CONTACT_TRADE);

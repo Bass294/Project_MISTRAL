@@ -147,7 +147,8 @@ public class mistral_WanzerGantry extends BaseHullMod {
         }
     }*/
 
-    @Override
+    // OLD VERSION: 1-fighter wings got nothing, 2-fighter wings got the stat buff, 3+ fighter wings got +1 member. NOT USED
+    /*@Override
     public void advanceInCombat(ShipAPI ship, float amount) {
         if (ship.getOriginalOwner() == -1) {
             return; //suppress in refit
@@ -190,6 +191,71 @@ public class mistral_WanzerGantry extends BaseHullMod {
                             break;
 
                         default: // 3+: original +1 fighter behavior
+                            int maxTotal = baseCount + 1;
+                            int actualAdd = maxTotal - deployed;
+
+                            if (actualAdd > 0) {
+                                bay.setExtraDeployments(actualAdd);
+                                bay.setExtraDeploymentLimit(maxTotal);
+                                bay.setExtraDuration(9999999);
+                                allDeployed = false;
+                            } else {
+                                bay.setExtraDeployments(0);
+                                bay.setExtraDeploymentLimit(0);
+                                bay.setFastReplacements(0);
+                            }
+
+                            if (ship.getMutableStats().getFighterRefitTimeMult().getPercentStatMod(ID) == null && actualAdd != 0) {
+                                bay.setFastReplacements(actualAdd);
+                            }
+                            break;
+                    }
+                }
+            }
+        }
+
+        if (ship.getMutableStats().getFighterRefitTimeMult().getPercentStatMod(ID) == null && allDeployed && ranOnce) {
+            ship.getMutableStats().getFighterRefitTimeMult().modifyPercent(ID, 1);
+        }
+    }*/
+
+    // NEW VERSION: 1-fighter wings get the stat buff (now 50% damage instead of 30%), 2+ fighter wings get +1 member.
+    @Override
+    public void advanceInCombat(ShipAPI ship, float amount) {
+        if (ship.getOriginalOwner() == -1) {
+            return; //suppress in refit
+        }
+
+        boolean allDeployed = true, ranOnce = false;
+
+        for (FighterLaunchBayAPI bay : ship.getLaunchBaysCopy()) {
+            if (bay.getWing() != null) {
+                ranOnce = true;
+                if (bay.getWing().getSpec().hasTag(TAG) || bay.getWing().getSpec().hasTag(TAG2)) {
+
+                    FighterWingSpecAPI wingSpec = bay.getWing().getSpec();
+                    int baseCount = wingSpec.getNumFighters();
+                    int deployed = bay.getWing().getWingMembers().size();
+
+                    switch (baseCount) {
+                        case 1:
+                            // Stat buffs instead of extra fighter
+                            bay.setExtraDeployments(0);
+                            bay.setExtraDeploymentLimit(0);
+                            bay.setFastReplacements(0);
+
+                            for (ShipAPI fighter : bay.getWing().getWingMembers()) {
+                                fighter.getMutableStats().getBallisticWeaponDamageMult().modifyPercent(ID, 50f);
+                                fighter.getMutableStats().getEnergyWeaponDamageMult().modifyPercent(ID, 50f);
+                                fighter.getMutableStats().getMissileWeaponDamageMult().modifyPercent(ID, 50f);
+                                fighter.getMutableStats().getHullDamageTakenMult().modifyMult(ID, 0.7f);
+                                fighter.getMutableStats().getArmorDamageTakenMult().modifyMult(ID, 0.7f);
+                                fighter.getMutableStats().getShieldDamageTakenMult().modifyMult(ID, 0.7f);
+                            }
+                            allDeployed = true; // don't block the check
+                            break;
+
+                        default: // 2+: +1 fighter behavior
                             int maxTotal = baseCount + 1;
                             int actualAdd = maxTotal - deployed;
 
@@ -286,13 +352,26 @@ public class mistral_WanzerGantry extends BaseHullMod {
         return allWanzers;
     }*/
 
-    private List<String> allWanzers(ShipVariantAPI variant) {
+    // OLD VERSION: excluded 1-fighter wings since they got no benefit at the time. NOT USED
+    /*private List<String> allWanzers(ShipVariantAPI variant) {
         List<String> allWanzers = new ArrayList<>();
         for (String w : variant.getFittedWings()) {
             FighterWingSpecAPI f = Global.getSettings().getFighterWingSpec(w);
             //if (f.hasTag(TAG) || f.hasTag(TAG2)) {
             //only buffs fighters with 2+ fighters in wing....
             if ((f.hasTag(TAG) || f.hasTag(TAG2)) && f.getNumFighters() != 1) {
+                allWanzers.add(f.getWingName() + " " + f.getRoleDesc());
+            }
+        }
+        return allWanzers;
+    }*/
+
+    // NEW VERSION: 1-fighter wings now receive the stat buff too, so they belong in the list.
+    private List<String> allWanzers(ShipVariantAPI variant) {
+        List<String> allWanzers = new ArrayList<>();
+        for (String w : variant.getFittedWings()) {
+            FighterWingSpecAPI f = Global.getSettings().getFighterWingSpec(w);
+            if (f.hasTag(TAG) || f.hasTag(TAG2)) {
                 allWanzers.add(f.getWingName() + " " + f.getRoleDesc());
             }
         }

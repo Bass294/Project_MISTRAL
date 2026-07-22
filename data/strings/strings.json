@@ -5,7 +5,7 @@
                 "drift":"Phase Drift in progress",
 
 				"hm_gantry_101":"one additional strikecraft",
-				"hm_gantry_101b":"30%",
+				"hm_gantry_101b":"50%",
 				"hm_gantry_101c":"30%",
 				"hm_gantry_102":"Effect:",
 				"hm_gantry_103":"No fighter complement.",
@@ -26,6 +26,11 @@
 				"hm_priorityLink_bullet4":"%s Targetting a fighter or frigate will overwrite automatic targetting.",
 				"hm_priorityLink_bullet5":"%s Boosts target's timeflow by %s for 10 seconds",
 				"hm_priorityLink_bullet6":"%s Reduces target's damage taken by %s for 10 seconds",
+
+				"hm_featherDrones_tabSubsystem":"Subsystem",
+				"hm_featherDrones_bullet1":"%s Spawns up to %s Feather Drones in front of the ship, a new drone is fabricated every %s.",
+				"hm_featherDrones_bullet2":"%s Each Feather Drone has %s, %s, and is equipped with an %s.",
+				"hm_featherDrones_bullet3":"%s The drone's shields have %s efficiency, %s, and dissipate %s.",
 
 			"eis_RAFTitle":"Overclocked Weapon core",
 			"eis_RAFText1b":"Increases damage of energy weapons by %s",

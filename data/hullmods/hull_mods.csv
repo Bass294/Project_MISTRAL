@@ -3,7 +3,7 @@ Phase Grazer Velocity Assist,mistral_himac_big,,,Diable Avionics,"special,no_dro
 Nachtreiher Subsystems,mistral_zandatsu,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_zandatsu,no description..... yet!!!!!!!,,,graphics/hullmods/mistral_tuning.png
 Wanzer Amp Relay,mistral_priorityLink,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_priorityLink,"This craft contains a long range energy delivery system originally found on the Gust to boost performance of nearby strikecraft and frigates.",,,graphics/hullmods/wanzer_amp_relay.png
 Wanzer Amp Relay (Dual),mistral_priorityLink_dual,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_priorityLink_dual,"This craft contains a long range energy delivery system originally found on the Gust to boost performance of nearby strikecraft and frigates.",,,graphics/hullmods/wanzer_amp_relay.png
-Feather Drone Screen,mistral_featherDrones,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_featherDrones,"Grants a permanent screen of 3 Feather drones that hold station in front of the ship and keep their shields raised.",,,
+Feather Drone Microforge,mistral_featherDrones,,,Diable Avionics,"special,no_drop",,,,TRUE,,0,0,0,0,data.hullmods.mistral_featherDrones,"A miniaturized version of the Vortex Drones used by the Calm-class, the Sparrow's chassis is built around an ultralight microforge for it's ""Feather"" Defense Drones.",,,
 Mistral Shield Style,mistral_shield_style,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.mistral_shield_style,,Replaces shield style to Mistral,,
 Mistral Shield Sparkles,mistral_shieldsparkles,,,,,,,,TRUE,TRUE,0,0,0,0,data.hullmods.mistral_shieldsparkles,,I hope this works lol,,
 Angelos Reactor Tuning,mistral_aquila,,,Diable Avionics,"special, engines, offensive, merc, no_drop","Special, Engines",,,TRUE,,6,13,20,30,data.hullmods.mistral_aquila,no description..... yet!!!!!!!,"Drastic improvement in speed, maneuverability, and active venting speed, lower peak time.",,graphics/hullmods/mistral_quantumsensor.png
@@ -11,15 +11,13 @@ Specialized Wanzer Microforge,mistral_wanzergantry,,,Diable Avionics,"special,no
 
 Grants the following effects to each installed Wanzer or Arbitrator wing based on it's initial wing size:
 
-1 fighter: no benefit.
+1 fighter: %s increased damage and %s less damage taken.
 
-2 fighters: %s increased damage and %s less damage taken.
-
-3+ fighters: %s.
+2+ fighters: %s.
 
 These specialized facilities do not offer any tangible benefit nor drawback when operating regular fighters wings.",,"Once per combat, when the fighter replacement rate reaches %s, the fighter launch bays are switched to operate from a ""B-deck"". Standby fighters are launched to rapidly bring wings back to full strength, and the fighter replacement rate is set to %s.",graphics/hullmods/rapidwanzerbays.png
 Glow Parts,DA_ESP_Glow,,,,"special,no_drop",Special,4000,,TRUE,TRUE,0,0,0,0,data.hullmods.DA_ESP_Glow,no description..... yet!!!!!!!,Make designated weapon invisible,,graphics/hullmods/mistral_avionics.png
-Diable Engine Flicker Fix,mistral_diableenginefix,,,Diable Avionics,"diable, cosmetic, engines, no_build_in",Engines,0,TRUE,FALSE,FALSE,0,0,0,0,data.hullmods.mistral_diableenginefix,Changes engine glow from a flicker to a slow pulse.,"Cosmetic. No bonuses, no cost.",,graphics/hullmods/mistral_avionics.png
+Diable Engine Flicker Fix,mistral_diableenginefix,,,Diable Avionics,"diable, cosmetic, engines, no_build_in",Engines,0,FALSE,FALSE,FALSE,0,0,0,0,data.hullmods.mistral_diableenginefix,Changes engine glow from a flicker to a slow pulse.,"Cosmetic. No bonuses, no cost.",,graphics/hullmods/mistral_avionics.png
 Heavy Weapon Mount Integration,mistral_pandemounts,,,Diable Avionics,,,,,TRUE,,0,0,0,0,data.hullmods.mistral_pandemounts,"The ship's weapon emplacements are designed around strengthened recoil dampeners, enabling projectile weapons to fire with a %s reduction in recoil. Also reduces the cost of Diable Avionics large ballistic and energy weapons by %s.",,,graphics/hullmods/ballistics_integration.png
 Angelos DRA Skin,mistral_angelosDraSkin,,,,"special,no_drop",,,,TRUE,TRUE,0,0,0,0,data.hullmods.mistral_angelosDraSkin,,Applies the DRA magic paintjob to this ship,,
 ,,,,,,,,,,,,,,,,,,,

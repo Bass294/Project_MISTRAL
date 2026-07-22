@@ -14,7 +14,8 @@
   "builtInMods": [
     "armaa_serviceBays",
     "mistral_wanzergantry",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "weaponSlots": [
     {

@@ -107,7 +107,8 @@
   ],
   "builtInMods": [
     #"diableavionics_avionics",\n
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWings": [],
   "center": [

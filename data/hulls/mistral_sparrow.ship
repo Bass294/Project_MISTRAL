@@ -15,7 +15,8 @@
     "strikeCraft",
     "cataphract2",
     "mistral_featherDrones",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_sparrowLeftArm",

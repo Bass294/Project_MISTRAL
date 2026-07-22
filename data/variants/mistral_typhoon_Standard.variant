@@ -8,10 +8,7 @@
         "hardenedshieldemitter",
         "targetingunit",
     ],
-    "permaMods": [
-        "ML_skinSwap",
-    ],
-    "tags": ["ML_paintjob-mistral_typhoon_purp"],
+    "permaMods": [],
     "sMods": [],
     "suppressedMods": [],
     "variantId": "mistral_typhoon_Standard",

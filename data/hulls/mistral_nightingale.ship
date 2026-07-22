@@ -18,7 +18,8 @@
     "mistral_zandatsu",
     "mistral_shield_style",
     "mistral_shieldsparkles",
-    "mistral_angelosDraSkin"
+    "mistral_angelosDraSkin",
+    "ML_skinSwap"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_nightingaleLeftArm",
