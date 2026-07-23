@@ -6,7 +6,7 @@ $faction.id == angelos","AddText ""Despite the technological level of their mili
 angelosContactBarDiableAdd,AddBarEvents,"$faction.id == diableavionics
 !$global.metAngelosContactDiable","AddBarEvent angelosContactBarDiable_open ""Open the tri-pad message."" ""Your tri-pad pings with an unexpected message as you walk in. The contact is encrypted, and bears a purple and gold crest of a moon and stars."" highlight",,,
 angelosContactBarDiableSel,DialogOptionSelected,$option == angelosContactBarDiable_open,"$global.metAngelosContactDiable = true
-Mistral_AddPotentialContact angelospilot1","The message includes a set of coordinates to the moon ""Iskandar"" in the Angelos system located within the eastern core worlds, southwest of 99 ES. Also included is a comm ID, to what you can only assume is the sender.
+Mistral_AddPotentialContact angelospilot1","The message includes a set of coordinates to the moon ""Iskandar"" in the Angelos system. An image is displayed of a rare trinary system of the stars Ein, Soph, and Ohr located south of diable space, near 86 RN. Also included is a comm ID, to what you can only assume is the sender.
 
 After forwarding the message to your comms officer, they confirm the included crest belongs to the Angelos Contingent, a rebel group which has earned a reputation for their attacks against Diable Avionics.",backToBar:Close the message.,
 ,,,,,,
@@ -17,13 +17,125 @@ Mistral_AddPotentialContact angelospilot1","The officer politely greets you, as 
 
 ""My brothers and sisters could use your talents. I hope to be seeing more of you, Captain.""",backToBar:Return to the bar.,
 ,,,,,,
-mistral_ramielTopicOpt,PopulateOptions,$id == angelospilot1,,,"99:mistral_ramielTopic1:""I havent seen the faces of any of your men.""",
+mistral_ramielTopicOpt,PopulateOptions,"$id == angelospilot1
+!$global.metRamielTopic1",,,"99:mistral_ramielTopic1:""I havent seen the faces of any of your men.""",
 mistral_ramielTopic1,DialogOptionSelected,$option == mistral_ramielTopic1,,"Ramiel responds by lifting off her helmet, revealing scars and exposed cybernetics of multiple augmentation surgeries, alongside a large tattoo that appears to be some sort of prisoner marking.
 
 ""We weren't given the opportunity to choose before. We can now. And we in the Angelos Circle choose to cover our unholy branding of Moloch with our resolve, our helmets, and our cockpit hatches. Some have chosed to cleanse it from their flesh, but there are many of us who believe that the gifts of the enemy must be returned to them in kind. If it aids in protecting our family, then it's a burden I choose to bear.""","mistral_ramielTopic2:""You're ex-Diable? I didn't realize anyone in Corporate space even knew of Ludd.""",
 mistral_ramielTopic2,DialogOptionSelected,$option == mistral_ramielTopic2,,"""They don't. We learned much from our brothers and sisters of Kara; they helped us not just to survive, but to live. Those chosen as pilots in the Corporation were trained from a young age only for combat. Even once we were free, it was those faithful of Ludd that gave us purpose, gave us names, and taught us of the importance of family.
 
 While faith and belief in ludd aren't completely shared, it is our purpose and conviction that binds us. All accepted the holy names bestowed upon us, none kept the foul 'designations' we once had.""","mistral_ramielTopic3:""I can't imagine Diable corp was giving tours of Luddic planets to it's pilots.""",
-mistral_ramielTopic3,DialogOptionSelected,$option == mistral_ramielTopic3,FireAll PopulateOptions,"""A story for another time. Wounds too fresh to share freely. We have work to do.""
+mistral_ramielTopic3,DialogOptionSelected,$option == mistral_ramielTopic3,"$global.metRamielTopic1 = true
+AdjustRepActivePerson COOPERATIVE 5
+FireAll PopulateOptions","""A story for another time. Wounds too fresh to share freely. We have work to do.""
 
 Ramiel slides on her helmet, and the display optics resume their soft cyan glow.",,
+,,,,,,
+mistral_ramielRecruitOpt,PopulateOptions,"$id == angelospilot1
+Mistral_PersonRepIsAtWorst angelospilot1 FRIENDLY
+!$global.ramielRecruited",,,"98:mistral_ramielRecruit:""Recruitment Offer""",
+mistral_ramielRecruitSel,DialogOptionSelected,$option == mistral_ramielRecruit,Mistral_ShowOfficerSkills angelospilot1,"The Couniller has approved my transfer to your fleet. I will still retain my position within the Angelos Contingent, and can contact my subordinates on Iskandar whenever we dock to coordinate work for your fleet, as usual.","mistral_ramielRecruitAccept:""I accept. I look forward to working together.""
+mistral_ramielRecruitDecline:""Maybe another time.""",
+mistral_ramielRecruitAccept,DialogOptionSelected,$option == mistral_ramielRecruitAccept,"$global.ramielRecruited = true
+Mistral_RecruitRamiel angelospilot1
+FireAll PopulateOptions",,,
+mistral_ramielRecruitDecline,DialogOptionSelected,$option == mistral_ramielRecruitDecline,FireAll PopulateOptions,"""I see. The offer remains open.""",,
+,,,,,,
+mistral_ramielShipOpt,PopulateOptions,"$id == angelospilot1
+Mistral_PersonRepIsAtWorst angelospilot1 WELCOMING
+!$global.ramielShipGranted",,,"97:mistral_ramielShip:""Experimental Strikecraft""",
+mistral_ramielShipSel,DialogOptionSelected,$option == mistral_ramielShip,"$global.ramielShipGranted = true
+Mistral_GrantShip mistral_nightingale_nexstart
+FireAll PopulateOptions","Ramiel checks a display off screen. ""Ah, I see the Counciller has approved transfer of one of our finest craft to your fleet. Use it well, Captain.""
+
+You receive a notification from your fleet, a large container has been delivered to your cargo holds, awaiting your review.",,
+,,,,,,
+mistral_ramielWeaponsOpt,PopulateOptions,"$id == angelospilot1
+Mistral_PersonRepAtLeast angelospilot1 75
+!$global.ramielWeaponsGranted",,,"96:mistral_ramielWeapons:""Advanced Energy Weapons""",
+mistral_ramielWeaponsSel,DialogOptionSelected,$option == mistral_ramielWeapons,"$global.ramielWeaponsGranted = true
+AddRemoveAnyItem WEAPONS diableavionics_mistral_infernal_star 3
+FireAll PopulateOptions","Ramiel oversees a weapons transfer to your cargo holds. While you can't see her face, you can sense a smirk behind her words.
+
+""Ah, you'll like these captain. There is no better way to deliver retribution within our arsenal. I am told the base design comes from an elite faction within the Hegemony. They seem particularly interested in our victory over the Corporation.""",,
+,,,,,,
+mistral_ramielTechOpt,PopulateOptions,"$id == angelospilot1
+Mistral_PersonRepAtLeast angelospilot1 100
+!$global.ramielTechGranted",,,"95:mistral_ramielTech:""Technology Exchange""",
+mistral_ramielTechSel,DialogOptionSelected,$option == mistral_ramielTech,"$global.ramielTechGranted = true
+AddRemoveAnyItem SPECIAL angelos_shipBP 1
+AddRemoveAnyItem SPECIAL angelos_wanzerBP 1
+AddRemoveAnyItem SPECIAL ship_bp diableavionics_mistral_sunrain 1
+FireAll PopulateOptions","Ramiel joins you on the bridge of your flagship, delivering you a hand-written letter from her superior in the Angelos Contingent.
+
+""I appreciate the aid you have granted my brothers and sisters, Captain. I hope to count you among us in time.""
+
+The letter is signed: Azrael The-morning-star",,
+,,,,,,
+mistral_wanzerBayAdd,AddBarEvents,"$market.id == diableavionics_ressource
+!$global.boughtWazabiModel","AddBarEvent mistral_wanzerBayEnter ""Enter THE WANZER BAY"" ""You see the entrance to a large storefront, fashioned in the shape of a Storm's rear launch bay. Through the glass windows, you can see several large red statues of Diable's trademark Wanzer mechs, with a sign displaying THE WANZER BAY prominently shining above the enrance. From the stacks of boxes visible in the interior, it appears to be a model shop."" highlight",,,
+mistral_wanzerBayEnterSel,DialogOptionSelected,$option == mistral_wanzerBayEnter,ShowImageVisual wanzerbase,"You are greeted by several isles of colorful boxes, below lovingly crafted renditions of the entire line of Diable's strikecraft in glass cases. The walls are plastered with posters bordering on propoganda, glorifying these machines of war and showing off their weapon compliments.
+
+A shopkeeper is attending to customers while you have time to read the descriptions of the different holo-ads, your guards in plainclothes standing watch.","mistral_wanzerBayOpt1:Watch the holo-display of Mobile Fighter W-Wanzer
+mistral_wanzerBayOpt2:Skim the summary of Mobile Suit Wanzer 00
+mistral_wanzerBayOpt3:Read the description of Mobile Suit Wanzer Charlotte's Counter-Attack
+backToBar:Leave the shop.",
+mistral_wanzerBayOpt1Sel,DialogOptionSelected,$option == mistral_wanzerBayOpt1,,"The advertisement plays an up-beat song in a local dialect, while the colorful wanzers fight, and fight, and continue fighting in what seems to be a martial arts style tournament. In this fictional universe, each faction of the sector has created a custom Wanzer, and competes for the planetary governce rights of newly discovered planets.
+
+You see the representative Wanzer of the Neo Diable Avionics Corporation fire barrages of micro missiles and effortlessly destroy a bright orange Wanzer donning a military uniform and the crest of the Neo 14th Battlegroup, as well as a green Wanzer swinging around a massive cross, seemly the representative of the ""Neo"" Luddic Church. This is quickly followed by flurries of punches between two mecha, and a lot of screaming. You catch the pilots saying ""Look, the galactic east is burning Diable Red!"".
+
+You attempt to look for the associated model kits, but they are apprently sold out.","mistral_wanzerBayOpt1:Watch the holo-display of Mobile Fighter W-Wanzer
+mistral_wanzerBayOpt2:Skim the summary of Mobile Suit Wanzer 00
+mistral_wanzerBayOpt3:Read the description of Mobile Suit Wanzer Charlotte's Counter-Attack
+backToBar:Leave the shop.",
+mistral_wanzerBayOpt2Sel,DialogOptionSelected,$option == mistral_wanzerBayOpt2,,"This story apparently follows the group ""Terrestrial Being"", an armed group of Wanzer pilots trying to end conflict on Sieve through ""armed interventions"", surgical strikes on military infrastructure. Using their Alpha-level AI core, DEVA, they are able to strike several victories against the military before the Diable Avionics Corporation was able to sieze control of DEVA, destroy Terrestrial Being through their superior Wanzer technology, and unite the population against such blatant terrorism.
+
+You get the sense from the underground reviews of the series you've pulled up on your Tri-Pad that this one may have had some corporate meddling in the plot, with some accusations of ""glorifying AI"" and framing dissent against the corporation as impossible.
+
+Regardless, the model kits seem rather nocel, which of course are all sold out.","mistral_wanzerBayOpt1:Watch the holo-display of Mobile Fighter W-Wanzer
+mistral_wanzerBayOpt2:Skim the summary of Mobile Suit Wanzer 00
+mistral_wanzerBayOpt3:Read the description of Mobile Suit Wanzer Charlotte's Counter-Attack
+backToBar:Leave the shop.",
+mistral_wanzerBayOpt3Sel,DialogOptionSelected,$option == mistral_wanzerBayOpt3,,"One of the more popular storylines, this movie seems to follow the climax of Diable Avionics Corp fighting the Hegemony. The Hegemony is painted as a group of genocidal maniacs, who have launched several planet killers as acts of terrorism against the noble Diable Corp. In the finale, Jangala had apparently been turned into a mobile battlestation and set on a collision course with Sieve. The protagonist, Damuro, and the villian, Charlotte duel as the planet hurtles through space, finally ending with the pilots and a fleet of Wanzers pushing Jangala off course and into the star of outer teminus.
+
+Apparently this series has had a loyal fanbase for dozens of cycles, with several Wanzer model kits on display, and in stock. You spot a particularly eye-catching box nearby, next to chibi figurines of the main pilot characters.","mistral_wanzerBayBuy:Buy 1 RG P-Wanzai WSN-04 Wazabi Prototype Starfarer-Use Assault Wanzer [10,000 credits]
+mistral_wanzerBayDecline:Maybe another time.",
+mistral_wanzerBayBuySelYes,DialogOptionSelected,"$option == mistral_wanzerBayBuy
+$player.credits >= 10000","AddRemoveCommodity credits -10000
+AddRemoveAnyItem RESOURCES mistral_wazabi_model_kit 1
+$global.boughtWazabiModel = true",,backToBar:Leave the shop.,
+mistral_wanzerBayBuySelNo,DialogOptionSelected,"$option == mistral_wanzerBayBuy
+$player.credits < 10000",,You count your credits and realize you're short. The shopkeeper gives you a pitying look.,"mistral_wanzerBayBuy:Buy 1 RG P-Wanzai WSN-04 Wazabi Prototype Starfarer-Use Assault Wanzer [10,000 credits]
+mistral_wanzerBayDecline:Maybe another time.",
+mistral_wanzerBayDeclineSel,DialogOptionSelected,$option == mistral_wanzerBayDecline,,,"mistral_wanzerBayOpt1:Watch the holo-display of Mobile Fighter W-Wanzer
+mistral_wanzerBayOpt2:Skim the summary of Mobile Suit Wanzer 00
+mistral_wanzerBayOpt3:Read the description of Mobile Suit Wanzer Charlotte's Counter-Attack
+backToBar:Leave the shop.",
+,,,,,,
+mistral_ramielGiftOpt,PopulateOptions,"$id == angelospilot1
+PlayerHasCargo mistral_wazabi_model_kit
+!$global.gaveRamielModelKit",,,"94:mistral_ramielGift1:Offer Ramiel the RG P-Wanzai WSN-04 Wazabi Prototype Starfarer-Use Assault Wanzer Model Kit",
+mistral_ramielGift1Sel,DialogOptionSelected,$option == mistral_ramielGift1,,"You visit Ramiel in person to deliver the gift. She seems shocked. ""C-captain? Where did you get this? I haven't seen one of these since I was a child. I had looked, but even the Contingent can't get these below a 10000% mark up! They are only liscenced to be produced from the nanoforge of Sieve...""",mistral_ramielGift2:I'm glad you like it.,
+mistral_ramielGift2Sel,DialogOptionSelected,$option == mistral_ramielGift2,,"She fiddles with her Tri-pad and pulls up a listing she apparently had saved, and begins reading
+
+""Wazabi, one of the most iconic custom made Wanzers of the Orange Comet, Charlotte, comes alive in the 1/144 Real Grade format! From the feature film ""Mobile Suit Wanzer: Charlotte's Counterattack"" this large orange Wanzer features complex detail as well as gimmicks that allow it to perform a wide variety of dynamic poses. Special attention has been made to ensure both surface detail and also functional detail not seen before in previous interpretations of the Wazabi including pop out and deployment mechanisms are included. Numerous moving parts are present including drones with opening fins, a head that can open to reveal the cockpit, muzzle recoil action on the Hexafire rifle, pistons that move in conjunction with other parts and open maintenance hatches. Includes 6 hands and one right handed trigger hand for a variety of display options.""","mistral_ramielGift3:Oh, yeah it did seem rather-",
+mistral_ramielGift3Sel,DialogOptionSelected,$option == mistral_ramielGift3,,"Ramiel has already opened the package and has begun to read the lore section of the manual, interrupting you.
+
+""Technology & Combat Characteristics: After Charlotte returned as the leader of her own Hegemony faction in c+203, she ordered her engineers to create a new Wanzer which would fit her piloting skills and Starfarer powers. The result was the MSN-04 Wazabi, which was later built by the Jangala-based contractor Altair Exotech. With an overall height of 25.6 meters, the Wazabi is much bigger than most standard Wanzers, but thanks to the use of lightweight armor materials and a great number of thrusters it is much faster and maneuverable than other suits. The suit is armed with an abdomen-mounted scattering mega particle cannon, a Hexafire rifle, a pair of beam sabers stored in the arms and a shield with three missiles as well as a beam tomahawk. Because Charlotte is a Starfarer, the Wazabi was also equipped with six drones which the pilot could control through her psycowaves via a Psycommu system. The Wazabi was also the first Wanzer to be equipped with the revolutionary new Psycho-Frame cockpit. This system featured microscopic psycommu receiver circuits installed throughout a mobile suit's internal frame and cockpit walls. These tiny circuits amplify and transmit a Starfarer pilot's psycowaves, enabling the mobile suit to respond instantaneously to mental commands.""
+
+She flips the page.",mistral_ramielGift4:I see-,
+mistral_ramielGift4Sel,DialogOptionSelected,$option == mistral_ramielGift4,,"""Armaments: Beam Saber - The Wazabi is equipped with a pair of beam sabers, one stored in each forearm for quick deployment in combat. The beam sabers serve as one of two close combat weaponry of the Wazabi and is a beam of plasma contained by an I-field that can cut through any metal alloy. Drones - One of the Wazabi's powerful weapons is its Starfarer-use remote weaponry - drones. The Wazabi stores six drones in its backpack-mounted storage pods, each with a power rating of 10.6 MW. Hexafire Rifle - The Hexafire rifle is a hand-carried ranged beam weapon that was designed to be used by the Wazabi. It is noticeably larger than most other beam rifles, is powered by a rechargable energy cap, and has a power rating of 10.2 MW. A unique feature of this rifle is that it has two barrels, one for firing normal beam shots and another for firing a scattershot-like beam blasts. The latter is similar to what is fired by a shotgun, the wider beam spreads the damage over a greater area. Shield - The Wazabi is equipped with a shield on its left forearm. The shield mounts three small missiles that can heavily damage a mobile suit, but not a battleship. The shield also holds the storage rack for the Wazabi's beam tomahawk. Beam Tomahawk - Stored on the back of the shield, the beam tomahawk is the Wazabi's most powerful melee weapon and mounts three beam emitters, two at the sides that generate beam axe-like blades, and one at the center that generate a long beam blade. When conserving energy, only one of the side emitter would be used, enabling it to function as a beam axe. At maximum output, all three emitters are used simultaneously, creating a single large beam saber.""
+
+Another page.",mistral_ramielGift5:Wow..,
+mistral_ramielGift5Sel,DialogOptionSelected,$option == mistral_ramielGift5,,"""Special Equipment & Features: Psycho-Frame Cockpit - The Psycho-Frame is a technology that builds the brainwave-to-machine code translator known as Psycommu into the atom-level of the metal frame of a Wanzer. This allows a Starfarer pilot to control the mobile suit as if it were his/her own body. Psycommu System - A Psycommu is a device connected directly into the user's thoughts, through which the user can manipulate it by using his/her mind. The name derives from psychic and communicator. In essence, a psycommu system works by passively scanning the brainwaves of Starfarers, amplifying them in order to send the brainwave signal out long distances, and then translating these brainwaves into raw machine codes upon being received by the selected object. Since brainwaves are not affected by the radio interference property of Minovsky particles, at first it was mainly used to mentally control remote weapons, usually mounted with a single beam gun. This enabled the resurrection of BVR engagements, with bits and drones being the first weapons able to engage targets without visual contact since the development of the Minovsky particle. Later on, the psycommu system would also be used to increase response times.""","mistral_ramielGift6:Nod, contemplating the implications of such a craft flying across the sector in your fleet.",
+mistral_ramielGift6Sel,DialogOptionSelected,$option == mistral_ramielGift6,,"""History: After Charlotte, the legendary Hegemony ace, reappears in the early c+200s and establishes the second Hegemony movement, Charlotte commissioned Altair Exotech to produce a custom-designed Wanzer specifically for her Starfarer abilities and superb piloting skills. Painted in her trademark orange color scheme and insignia. The Wazabi was used by Charlotte to personally lead the Hegemony forces in the battle against Diable Avionics' Londo Bell Task Force and especially against her old archrival Damuro Ray and his RX-93 ν Wanzer, which was also equipped with a Psycho-Frame system. However, it would be more accurate to say she led defensive actions against Londo Bell. As Charlotte's Hegemony did not have the manpower or the resources to fight extensive battles to claim territory, they instead relied on the strategy of accelerating asteroids and dropping them on Sieve to create a nuclear winter. Londo Bell would launch its forces and attempt to destroy the asteroids, but they were aggressively guarded by the AMS-119 Geara Doga mobile suits of the Hegemony, led by the MSN-03 Jagd Doga and Charlotte's MSN-04 Wazabi. In one of the earlier asteroid drops, Charlotte would use her MSN-04 Wazabi to battle Damuro Ray in his RGZ-91 Re-GZ, however, the Re-GZ was not able to keep up with the more powerful Wazabi and was nearly destroyed. Afterwards, Charlotte supplied the Altair Exotech with the Psycho-Frame system, which is then used in the RX-93 ν Wanzer they were building for Damuro. As the Hegemony was trying to drop the asteroid Axis, the two would duel again in equal machines. The battle would carry them across, and through Axis in a battle reminiscent of their final duel in the Second AI War. Although Charlotte was an excellent pilot she was ultimately defeated by Damuro who severely damaged the Wazabi and captured Charlotte's escape pod. The wreckage of the Wazabi would remain on the outer surface of Axis for years. Later, Altair Exotech used data from the Wazabi and the ν Wanzer as a basis for the MSN-06S Winanju Stein, which later give rise to the MSN-06S Winanju and RX-0 Unicorn Wanzer.""
+
+She closes the manual, seemingly very content. You have to admit, your interest has been piqued.",mistral_ramielGift7:Does Angelos have this series in their database?,
+mistral_ramielGift7Sel,DialogOptionSelected,$option == mistral_ramielGift7,"AddRemoveAnyItem RESOURCES mistral_wazabi_model_kit -1
+AdjustRepActivePerson COOPERATIVE 50
+$global.gaveRamielModelKit = true
+FireAll PopulateOptions","No, but I have personal copies. Care to join?
+
+She starts up the series from episode 1, takes out several small tools, and spreads out the colorful plastic pieces of the model kit across the table.
+
+You wake up nearly 72 hours later, and have an akward conversation with your bridge crew about where you were the last few days.",,

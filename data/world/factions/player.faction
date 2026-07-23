@@ -1,0 +1,41 @@
+{
+    "portraits":{
+        "standard_male":[
+            "graphics/portraits/angelosnpc1.png",
+            "graphics/portraits/angelosnpc2.png",
+			"graphics/portraits/angelosnpc3.png",
+			"graphics/portraits/angelosnpc4.png",
+			"graphics/portraits/angelosnpc5.png",
+			"graphics/portraits/angelosnpc6.png",
+            "graphics/portraits/angelosnpc7.png",
+			"graphics/portraits/angelosnpc8.png",
+			"graphics/portraits/angelosnpc9.png",
+			"graphics/portraits/angelosnpc10.png",
+        ],
+        "standard_female":[
+            "graphics/portraits/angelosnpc1.png",
+            "graphics/portraits/angelosnpc2.png",
+			"graphics/portraits/angelosnpc3.png",
+			"graphics/portraits/angelosnpc4.png",
+			"graphics/portraits/angelosnpc5.png",
+			"graphics/portraits/angelosnpc6.png",
+            "graphics/portraits/angelosnpc7.png",
+			"graphics/portraits/angelosnpc8.png",
+			"graphics/portraits/angelosnpc9.png",
+			"graphics/portraits/angelosnpc10.png",
+        ],
+    },
+
+    "ranks":{
+            "ranks":{
+				"angelospilot":{"name":"Officer"},
+				"angelosspy":{"name":"Spy1"},
+				"angelosdamsel":{"name":"Damsel1"},
+			},
+            "posts":{
+				"angelospilot":{"name":"Officer"},
+				"angelosspy":{"name":"Spy2"},
+				"angelosdamsel":{"name":"Damsel2"},
+			},
+	},
+}

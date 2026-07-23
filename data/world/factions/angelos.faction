@@ -288,16 +288,16 @@
 
     "ranks":{
             "ranks":{
-				"factionLeader":{"name":"Councilor"},
-				"angelospilot":{"name":"Pilot"},
+				"factionLeader":{"name":"Councillor"},
+				"angelospilot":{"name":"Angelos Officer"},
 				"angelosspy":{"name":"Spy1"},
 				"angelosdamsel":{"name":"Damsel1"},
 				
 				"spaceCommander":{"name":"Commander"},
             },
             "posts":{
-				"factionLeader":{"name":"Councilor"},
-				"angelospilot":{"name":"Pilot"},
+				"factionLeader":{"name":"Councillor"},
+				"angelospilot":{"name":"Angelos Officer"},
 				"angelosspy":{"name":"Spy2"},
 				"angelosdamsel":{"name":"Damsel2"},
 			
