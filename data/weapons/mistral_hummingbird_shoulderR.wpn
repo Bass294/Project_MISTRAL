@@ -8,6 +8,7 @@
   "turretSprite": "graphics/ships/hummingbird/mistral_hummingbird_shoulderR_purp.png",
   "hardpointSprite": "",
   "showDamageWhenDecorative": true,
+  "everyFrameEffect": "data.scripts.weapons.Mistral_HummingbirdCompositeHide",
   "glowColor": [
     255,
     255,

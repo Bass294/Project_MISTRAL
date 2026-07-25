@@ -59,7 +59,7 @@
       "id": "WS0005",
       "size": "SMALL",
       "type": "COMPOSITE",
-      "mount": "HIDDEN",
+      "mount": "TURRET",
       "arc": 10,
       "angle": -0,
       "locations": [9, -0],

@@ -5,6 +5,7 @@
 	"size":"LARGE",
 	"showDamageWhenDecorative":true,
 	"renderBelowAllWeapons":false,
+	"everyFrameEffect":"data.scripts.weapons.Mistral_AmeMissileHide",
 	"turretSprite":"graphics/ships/decos/mistral_raindrop_center_purp.png",
 	"hardpointSprite":"graphics/ships/decos/mistral_raindrop_center_purp.png",
 	"turretOffsets":[0, 0],

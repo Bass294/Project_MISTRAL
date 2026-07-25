@@ -4,6 +4,7 @@
   "type": "ENERGY",
   "size": "SMALL",
   "beamEffect": "data.scripts.weapons.Diableavionics_fastBurstsEffect",
+  "everyFrameEffect": "data.scripts.weapons.Mistral_NightingaleMissileHide",
   "collisionClass": "RAY",
   "collisionClassByFighter": "RAY_FIGHTER",
   "turretSprite": "graphics/ships/nightingale/mistral_nightingalehead_purp.png",
