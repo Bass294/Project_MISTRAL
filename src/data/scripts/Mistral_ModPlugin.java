@@ -59,6 +59,26 @@ public class Mistral_ModPlugin extends BaseModPlugin {
     public void onGameLoad(boolean newGame) {
         super.onGameLoad(newGame);
 
+        boolean hasWeaponStorageScript = false;
+        for (Object script : Global.getSector().getScripts()) {
+            if (script instanceof Mistral_WeaponStorageScript) {
+                hasWeaponStorageScript = true;
+                break;
+            }
+        }
+        if (!hasWeaponStorageScript) {
+            Global.getSector().addScript(new Mistral_WeaponStorageScript());
+        }
+
+        // BaseCampaignEventListener instances are saved/restored with the sector once added, so
+        // this only needs to fire once per save - guarded via a persistent-data flag rather than
+        // an enumeration check, since SectorAPI has no public way to list registered listeners.
+        String listenerRegisteredKey = "$mistral_continuousRepairsListenerRegistered";
+        if (!Boolean.TRUE.equals(Global.getSector().getPersistentData().get(listenerRegisteredKey))) {
+            Global.getSector().addListener(new Mistral_ContinuousRepairsListener());
+            Global.getSector().getPersistentData().put(listenerRegisteredKey, true);
+        }
+
         // Mirror the LunaLib toggle into sector memory every load, since MagicBounty's
         // trigger_memKeys_all can only check plain memory keys, not LunaSettings directly.
         boolean bountiesEnabled = false;

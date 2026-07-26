@@ -14,6 +14,8 @@ Typhoon,diableavionics_mistral_typhoon,Close Support Carrier,Diable Avionics,mis
 Stormsurge,diableavionics_mistral_stormsurge,Heavy Cruiser,Diable Avionics,mistral_drift,,15,10000,1000,12000,,700,165,,70,40,30,15,20,650,OMNI,,120,0.4,0.8,,,150,250,200,100,3,,8,120000,4,12,480,0.25,22,22,,"rare_bp,angelos_ship_bp",,0.6,2,3,42
 Ame,diableavionics_mistral_raindrop,Frigate,Diable Avionics,displacer,,5,2000,225,2600,,200,65,,150,130,100,60,120,200,OMNI,,120,0.35,0.6,,,20,35,50,20,1,20,10,16000,10,20,250,0.25,6,6,,"rare_bp,angelos_ship_bp",,0.6,2,3,23
 ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+Cyclogenesis,diableavionics_mistral_cyclogenesis,Colony Ship,Diable Avionics,,,56,30000,1500,10000,,800,150,,30,15,10,4,4,8000,OMNI,,120,0.25,1.0,,,3000,10000,8000,4000,15,,6,1000000,2,60,600,0.075,80,80,"CIVILIAN, FREIGHTER, CARRIER","no_dealer,restricted,codex_unlockable",,0.6,3,8,49
+,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 #drones,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
 Beak,mistral_beak_drone,UWS,Diable Avionics,temporalshell,,,200,50,1000,,150,,,350,400,400,500,500,10,NONE,,,,,0.05,0.05,0,0,,,,,,,,,,,,,UNBOARDABLE,,,0.5,2,2,454
 Feather,mistral_feather_drone,UWS,Diable Avionics,,,,200,50,500,,50,,,350,400,400,500,500,10,FRONT,,80,0,1.0,0.05,0.05,0,0,,,,,,,,,,,,,UNBOARDABLE,,,0.5,2,2,454
