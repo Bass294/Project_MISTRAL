@@ -13,9 +13,11 @@
   "viewOffset": 50,
   "builtInMods": [
     "armaa_serviceBays",
-    "mistral_wanzergantry",
     "mistral_angelosDraSkin",
-    "ML_skinSwap"
+    "ML_skinSwap",
+    "mistral_angeloscarriermod",
+    "ground_support",
+    "bdeck"
   ],
   "weaponSlots": [
     {
@@ -45,7 +47,7 @@
     {
       "id": "WS0010",
       "size": "MEDIUM",
-      "type": "MISSILE",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": 0,
@@ -108,7 +110,7 @@
     {
       "id": "WS0001",
       "size": "MEDIUM",
-      "type": "MISSILE",
+      "type": "COMPOSITE",
       "mount": "HARDPOINT",
       "arc": 10,
       "angle": 0,

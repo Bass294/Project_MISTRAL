@@ -14,10 +14,10 @@
   "builtInWeapons": {
     "WS0022": "mistral_panda_ml",
     "WS0023": "mistral_panda_mr",
-    "WS0026": "diableavionics_esp_kestrel_light",
-    "WS0027": "diableavionics_esp_kestrel_light",
-    "WS0028": "diableavionics_esp_kestrel_light",
-    "WS0029": "diableavionics_esp_kestrel_light"
+    "WS0026": "diableavionics_mistral_esp_kestrel_light",
+    "WS0027": "diableavionics_mistral_esp_kestrel_light",
+    "WS0028": "diableavionics_mistral_esp_kestrel_light",
+    "WS0029": "diableavionics_mistral_esp_kestrel_light"
   },
     "builtInMods": [
     "mistral_pandemounts"

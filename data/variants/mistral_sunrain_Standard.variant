@@ -30,8 +30,8 @@
             "autofire": true,
             "mode": "LINKED",
             "weapons": {
-                "WS0029": "diableavionics_esp_kestrel",
-                "WS0028": "diableavionics_esp_kestrel",
+                "WS0029": "diableavionics_mistral_esp_kestrel",
+                "WS0028": "diableavionics_mistral_esp_kestrel",
             }
         },
         {

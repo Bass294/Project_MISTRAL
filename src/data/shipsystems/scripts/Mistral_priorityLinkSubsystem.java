@@ -37,7 +37,7 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
 
     // ---- tuning knobs, adjust freely ----
     private static final String SYSTEM_ID = "mistral_priorityLink";
-    private static final float SCAN_RANGE = 1500f;
+    private static final float SCAN_RANGE = 2000f;
     private static final float DP_THRESHOLD = 6f;
     private static final String PRIORITY_TAG = "mistralpriotarget";
 
@@ -54,7 +54,7 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     private static final float BEEP_INTERVAL = 0.7f;
 
     private static final float TIME_MULT = 1.25f;
-    private static final float DAMAGE_TAKEN_MULT = 0.66f;
+    private static final float DAMAGE_TAKEN_MULT = 0.8f;
     // derived once for the in-game buff description text
     private static final int TIME_BONUS_PERCENT = Math.round((TIME_MULT - 1f) * 100f);
     private static final int DAMAGE_REDUCTION_PERCENT = Math.round((1f - DAMAGE_TAKEN_MULT) * 100f);

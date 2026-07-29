@@ -19,7 +19,8 @@
     "mistral_shield_style",
     "mistral_shieldsparkles",
     "mistral_angelosDraSkin",
-    "ML_skinSwap"
+    "ML_skinSwap",
+    "missleracks"
   ],
   "builtInWeapons": {
     "FAKE_GUN_A": "mistral_nightingaleLeftArm",
@@ -117,6 +118,15 @@
   ],
   "engineSlots": [
     {
+      "location": [-21.5, -0],
+      "length": 18.5,
+      "width": 10,
+      "angle": 180,
+      "contrailSize": 10,
+      "style": "CUSTOM",
+      "styleId": "MISTRAL_ENG_P"
+    },
+    {
       "location": [-17.5, 7.5],
       "length": 8.5,
       "width": 6,
@@ -133,15 +143,6 @@
       "contrailSize": 6,
       "style": "CUSTOM",
       "styleId": "MISTRAL_ENG_B"
-    },
-    {
-      "location": [-21.5, -0],
-      "length": 18.5,
-      "width": 10,
-      "angle": 180,
-      "contrailSize": 10,
-      "style": "CUSTOM",
-      "styleId": "MISTRAL_ENG_P"
     }
   ],
   "bounds": [

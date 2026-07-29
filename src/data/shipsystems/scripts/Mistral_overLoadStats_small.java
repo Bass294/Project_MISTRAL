@@ -14,9 +14,8 @@ import java.util.Map;
 
 
 public class Mistral_overLoadStats_small extends BaseShipSystemScript {
-    public static final float MOBILE_BONUS_PERCENT = 50f;
+    public static final float MOBILE_BONUS_PERCENT = 100f;
     public static final float ROF_BONUS = 0.5f;
-    public static final float FLUX_REDUCTION = 33f;
     private boolean system_used = false;
     private ShipAPI ship;
     private Map<ShipEngineControllerAPI.ShipEngineAPI, Float> trailIDMap = new HashMap<>();
@@ -95,9 +94,7 @@ public class Mistral_overLoadStats_small extends BaseShipSystemScript {
         float mult = 1f + ROF_BONUS * effectLevel;
 
         stats.getEnergyWeaponDamageMult().modifyMult(id, mult);
-        stats.getBallisticRoFMult().modifyMult(id, mult);
-        stats.getBallisticAmmoRegenMult().modifyMult(id, mult);
-        stats.getBallisticWeaponFluxCostMod().modifyMult(id, 1f - (FLUX_REDUCTION * 0.01f));
+        stats.getBallisticWeaponDamageMult().modifyMult(id, mult);
 
 
         stats.getTurnAcceleration().modifyPercent(id,MOBILE_BONUS_PERCENT);
@@ -115,9 +112,7 @@ public class Mistral_overLoadStats_small extends BaseShipSystemScript {
     }
     public void unapply(MutableShipStatsAPI stats, String id) {
         stats.getEnergyWeaponDamageMult().unmodify(id);
-        stats.getBallisticRoFMult().unmodify(id);
-        stats.getBallisticWeaponFluxCostMod().unmodify(id);
-        stats.getBallisticAmmoRegenMult().unmodify(id);
+        stats.getBallisticWeaponDamageMult().unmodify(id);
         stats.getMaxSpeed().unmodify(id);
         stats.getDeceleration().unmodify(id);
         stats.getAcceleration().unmodify(id);
@@ -132,15 +127,12 @@ public class Mistral_overLoadStats_small extends BaseShipSystemScript {
             return new StatusData("energy weapon damage +" + (int) bonusPercent + "%", false);
         }
         if (index == 1) {
-            return new StatusData("Ballistic weapon rate of fire +" + (int) bonusPercent + "%", false);
+            return new StatusData("Ballistic weapon damage +" + (int) bonusPercent + "%", false);
         }
         if (index == 2) {
-            return new StatusData("ballistic flux use -" + (int) FLUX_REDUCTION + "%", false);
-        }
-        if (index == 3) {
             return new StatusData("mobility +" + (int) MOBILE_BONUS_PERCENT + "%", false);
         }
-        if (index == 4) {
+        if (index == 3) {
             return new StatusData("+" + (int) MOBILE_BONUS_PERCENT + "% top speed", false);
         }
         return null;

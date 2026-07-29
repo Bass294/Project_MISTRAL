@@ -33,10 +33,10 @@
 				"hm_featherDrones_bullet3":"%s The drone's shields have %s efficiency, %s, and dissipate %s.",
 
 			"eis_RAFTitle":"Overclocked Weapon core",
-			"eis_RAFText1b":"Increases damage of energy weapons by %s",
+			"eis_RAFText1b":"Increases rate of fire of energy weapons by %s",
 			"eis_RAFText1":"Increases rate of fire of ballistic weapons by %s",
-			"eis_RAFText2":"Decreases flux generation of ballistic weapons by %s",
-			"eis_RAFText3":"Increases reload speed of ballistic weapons by %s",
+			"eis_RAFText2":"Increases ammo regeneration of energy weapons by %s",
+			"eis_RAFText3":"Increases ammo regeneration of ballistic weapons by %s",
 			"eis_RAFText4":"Always active",
 			"eis_lungeTitle":"Zandatsu Lunge",
 			"eis_lungeText1":"Brief, massive boost to speed and acceleration, allowing the ship to lunge in any direction",

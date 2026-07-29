@@ -78,8 +78,8 @@ public class mistral_himac_big extends BaseHullMod {
             case CRUISER:
                 return 0.90f;
             case CAPITAL_SHIP:
-                //return 0.80f;
-                return 0.40f;
+                return 0.80f;
+                //return 0.40f;
             default:
                 return 1f;
         }
@@ -105,6 +105,7 @@ public class mistral_himac_big extends BaseHullMod {
         boolean assaultBoostCharging = false;
         boolean assaultBoostCharged = false;
         boolean burnedOut = false;
+        float carryTimer = 0f;
         IntervalUtil chargeInterval = new IntervalUtil(1.5f, 1.5f);
         IntervalUtil tracker = new IntervalUtil(5f, 5f);
         IntervalUtil aiTracker = new IntervalUtil(0.05f, 1f);
@@ -354,6 +355,7 @@ public class mistral_himac_big extends BaseHullMod {
         // --- ADDED: start the jitter/afterimage fade timer for directional dashes ---
         if (!assaultBoost) {
             data.boostVisualTime = armaa_himacdata.BOOST_VISUAL_DURATION;
+            data.carryTimer = 0.15f;
         }
     }
 
@@ -362,15 +364,20 @@ public class mistral_himac_big extends BaseHullMod {
         boolean aPressed = Keyboard.isKeyDown(Keyboard.getKeyIndex(Global.getSettings().getControlStringForEnumName("SHIP_TURN_LEFT")));
         boolean sPressed = Keyboard.isKeyDown(Keyboard.getKeyIndex(Global.getSettings().getControlStringForEnumName("SHIP_ACCELERATE_BACKWARDS")));
         boolean dPressed = Keyboard.isKeyDown(Keyboard.getKeyIndex(Global.getSettings().getControlStringForEnumName("SHIP_TURN_RIGHT")));
+        boolean cPressed = Keyboard.isKeyDown(Keyboard.getKeyIndex(Global.getSettings().getControlStringForEnumName("SHIP_DECELERATE")));
 
         String key = DATA_KEY + "_" + ship.getId();
         armaa_himacdata data = (armaa_himacdata) Global.getCombatEngine().getCustomData().get(key);
+
+        boolean absoluteMovementEnabled = Boolean.TRUE.equals(
+                ship.getCustomData().get("absolute_movement_mode_enabled")
+        );
 
         // Check if *any* movement key is pressed
         data.keyPressed = wPressed || aPressed || sPressed || dPressed;
 
         // Disable assault boost if moving backward
-        if (sPressed && data.assaultBoostEnabled) {
+        if (data.assaultBoostEnabled && (cPressed || (!absoluteMovementEnabled && sPressed))) {
             data.assaultBoostEnabled = false;
         }
 
@@ -402,17 +409,10 @@ public class mistral_himac_big extends BaseHullMod {
                     // Double tap check: same key pressed again within time
                     if (currentKey.equals(data.lastKeyPressed) && now - data.lastKeyTime < inputTime) {
 
-                        //if ("W".equals(currentKey)) {
-                        //if (data.cooldown >= BOOST_COST) boost(ship.getFacing() + 0f, ship, false);
-                            /*if ("W".equals(currentKey)) {
+                        if ("W".equals(currentKey)) {
                             if (!data.assaultBoostCharging && !data.assaultBoostCharged && !data.assaultBoostEnabled) {
                                 data.assaultBoostCharging = true;
                                 data.boostEnabled = false;
-                            }*/
-
-                        if ("W".equals(currentKey)) {
-                            if (data.cooldown >= BOOST_COST) {
-                                boost(ship.getFacing() + 0f, ship, false);
                             } else {
                                 Global.getSoundPlayer().playSound("disabled_small_crit", 1f, 1f, ship.getLocation(), ship.getVelocity());
                             }
@@ -469,11 +469,6 @@ public class mistral_himac_big extends BaseHullMod {
         }
         if(ship.isStationModule())
             return;
-        if(ship.isPhased())
-            return;
-
-        if(ship.getFluxTracker().isOverloadedOrVenting())
-            return;
         String key = DATA_KEY + "_" + ship.getId();
         String id = "armaa_assaultBoost_" + ship.getId();
         armaa_himacdata data = (armaa_himacdata) engine.getCustomData().get(key);
@@ -486,8 +481,27 @@ public class mistral_himac_big extends BaseHullMod {
             data.subsysID = this.getClass().getName() + "_" + ship.getId();
             data.maxcooldown = armaa_himacsubsys(ship);
         }
+        if (data.carryTimer > 0f) {
+            data.carryTimer -= amount;
+            float t = Math.max(0f, data.carryTimer / 0.35f); // 1 -> 0
+            ship.getMutableStats().getDeceleration().modifyMult(ID, 1f - t); // 0 during carry, ramps back
+            ship.getMutableStats().getMaxSpeed().modifyFlat(ID, 300f * t);   // legalize the overspeed
+            if (data.carryTimer <= 0f) {
+                ship.getMutableStats().getDeceleration().unmodify(ID);
+                ship.getMutableStats().getMaxSpeed().unmodify(ID);
+            }
+        }
+        if (ship.isPhased()) {
+            return;
+        }
+        if (ship.isLanding() || ship.controlsLocked()) {
+            return;
+        }
+        if (ship.getFluxTracker().isOverloadedOrVenting()) {
+            return;
+        }
         if (!data.assaultBoostEnabled && data.cooldown < data.maxcooldown && data.activeTime <= 0f && ship.getCurrentCR() > 0f && !ship.getFluxTracker().isOverloadedOrVenting()) {
-            float bonus = 1f;
+            float bonus = 0.7f;
             if (data.burnedOut) {
                 bonus = 0.5f;
             }
@@ -738,31 +752,25 @@ public class mistral_himac_big extends BaseHullMod {
 
             // Absolute damage threshold derived from CURRENT HP
             float minDmgToDodge = hp * frac;
-            //boolean isLargeShip = ship.isCapital() || ship.isCruiser();
+            boolean isLargeShip = ship.isCapital() || ship.isCruiser();
             p = clamp01(p);
             if (!player && !ship.isPhased() && data.aiTracker.intervalElapsed() && data.cooldown >= 5f && !ship.getFluxTracker().isOverloaded()) {
-                /*if(!ship.areAnyEnemiesInRange() && (isLargeShip|| flags.hasFlag(AIFlags.MOVEMENT_DEST) || flags.hasFlag(AIFlags.PURSUING)) && !data.assaultBoostEnabled && data.cooldown >= 5f) {
+                if (!ship.areAnyEnemiesInRange() && (isLargeShip || flags.hasFlag(AIFlags.MOVEMENT_DEST) || flags.hasFlag(AIFlags.PURSUING)) && !data.assaultBoostEnabled && data.cooldown >= 5f) {
                     data.assaultBoostCharging = true;
                 } else if (data.assaultBoostEnabled && (ship.getEngineController().isDecelerating() || armaa_utils.estimateIncomingDamage(ship) > 1.5f * minDmgToDodge)) {
                     data.assaultBoostEnabled = false;
-                }*/
-
-                if (!ship.areAnyEnemiesInRange()
-                        && (flags.hasFlag(AIFlags.MOVEMENT_DEST) || flags.hasFlag(AIFlags.PURSUING))
-                        && data.cooldown >= data.maxcooldown * 0.6f) {
-                    boost(ship.getFacing() + 0f, ship, false);
                 }
 
-                //boosts backwards
+                // enabled for large ships too, per explicit request
                 if (ship.getEngineController().isDecelerating() && flags.hasFlag(AIFlags.BACKING_OFF) && Math.random() < p) {
                     boost(ship.getFacing() - 180f, ship, false);
                 }
-
-                /*if (!isLargeShip && data.assaultBoostEnabled && flags.hasFlag(AIFlags.HAS_INCOMING_DAMAGE)) {
+                if (!isLargeShip && data.assaultBoostEnabled && flags.hasFlag(AIFlags.HAS_INCOMING_DAMAGE)) {
                     data.assaultBoostEnabled = false;
                     return;
-                }*/
+                }
 
+                // enabled for large ships too, per explicit request
                 if (armaa_utils.estimateIncomingDamage(ship) < minDmgToDodge && ship.getHullLevel() > 0.5f) {
                     return;
                 }
@@ -776,19 +784,19 @@ public class mistral_himac_big extends BaseHullMod {
                         continue;
                     }
                     float dodgeChance = clamp01(0.10f + 0.80f * q); // simple
-
                     if (Math.random() < dodgeChance || ship.getFluxLevel() > 0.70f) {
                         if (armaa_utils.getHitChance(proj, ship) > 0.8f) {
-                            if (proj.getLocation().getX() < ship.getLocation().getX()) {
-                                boost(ship.getFacing() + 90f, ship, false);
-                                break;
-                            } else if (proj.getLocation().getX() > ship.getLocation().getX()) {
-                                boost(ship.getFacing() - 90f, ship, false);
-                                break;
+                            float projHeading;
+                            if (proj.getVelocity().lengthSquared() > 100f) { // moving faster than ~10 su/s
+                                projHeading = VectorUtils.getFacing(proj.getVelocity());
                             } else {
-                                boost(ship.getFacing() - 180f, ship, false);
-                                break;
+                                // barely moving (fresh guided launch): treat its bearing to us as the threat line
+                                projHeading = VectorUtils.getAngle(proj.getLocation(), ship.getLocation());
                             }
+                            float side = MathUtils.getShortestRotation(projHeading,
+                                    VectorUtils.getAngle(proj.getLocation(), ship.getLocation()));
+                            boost(projHeading + (side >= 0f ? 90f : -90f), ship, false);
+                            break;
                         }
                     }
                 }
@@ -820,7 +828,6 @@ public class mistral_himac_big extends BaseHullMod {
         return clamp01(q);
     }
 
-/*
     @Override
     public String getDescriptionParam(final int index, final HullSize hullSize) {
         return null;
@@ -834,18 +841,17 @@ public class mistral_himac_big extends BaseHullMod {
         tooltip.addSectionHeading("Subsystem", Alignment.MID, 10f);
         final TooltipMakerAPI text2 = tooltip.beginImageWithText("graphics/hullmods/mistral_avionics.png", 40f);
         text2.addPara("Phase Grazer Velocity Assist", 0f, Global.getSettings().getColor("tooltipTitleAndLightHighlightColor"), "Phase Grazer Velocity Assist");
-        text2.addPara("Rapidly boost in any direction using the [%s] keys.",
+        text2.addPara("Rapidly boost in any lateral direction using the [%s] keys.",
                 0f, Misc.getHighlightColor(),
                 new String[]{
                     "ASD",
                     Misc.getRoundedValue(5.0f),
                     Misc.getRoundedValue(30.0f)
                 });
-        //text2.addPara("%s " + "Engine health reduced by %s", 10f, Misc.getNegativeHighlightColor(), "\u2022", "50%");
         tooltip.addImageWithText(10f);
         TooltipMakerAPI text3 = tooltip.beginImageWithText("graphics/icons/hullsys/burn_drive.png", 40f);
         tooltip.addSectionHeading("Assault Boost", Alignment.MID, 10f);
-        text3.addPara("assault boost is disabled TEST [%s] button.",
+        text3.addPara("Initiate an 'Assault Boost' for increased forward speed and weapon damage with the [%s] button.",
                 0f, Misc.getHighlightColor(),
                 new String[]{
                     "W",
@@ -863,7 +869,6 @@ public class mistral_himac_big extends BaseHullMod {
         tooltip.addPara("%s", 6f, Misc.getGrayColor(), new String[]{"\"I won't stop! I'll chase the clouds from over Mazalot. Only I can fly high enough!\""}).italicize();
         tooltip.addPara("%s", 1f, Misc.getGrayColor(), new String[]{"         \u2014 ???"});
     }
-*/
 
     @Override
     public boolean isApplicableToShip(ShipAPI ship) {

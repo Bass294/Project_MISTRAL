@@ -12,12 +12,13 @@
   "shieldRadius": 285.5,
   "viewOffset": 0,
   "builtInMods": [
-    "mistral_wanzergantry",
-    "DA_ESP_Glow"
+    "diableavionics_universaldecksExtra",
+    "DA_ESP_Glow",
+    "mistral_sunshowermounts"
   ],
   "builtInWeapons": {
-    "WS0028": "diableavionics_esp_kestrel",
-    "WS0029": "diableavionics_esp_kestrel"
+    "WS0028": "diableavionics_mistral_esp_kestrel",
+    "WS0029": "diableavionics_mistral_esp_kestrel"
   },
   "weaponSlots": [
     {

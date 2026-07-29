@@ -264,6 +264,14 @@
   ],
   "engineSlots": [
     {
+      "location": [-94.5, 47],
+      "length": 0,
+      "width": 0,
+      "angle": 180,
+      "contrailSize": 0,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
       "location": [-94.5, 50.5],
       "length": 40,
       "width": 6,
@@ -274,26 +282,10 @@
     {
       "location": [-94.5, -50.5],
       "length": 40,
-      "width": 10,
+      "width": 6,
       "angle": -180,
       "contrailSize": 30,
       "style": "MISTRAL_ENG_B"
-    },
-    {
-      "location": [-94.5, 47],
-      "length": 36,
-      "width": 17,
-      "angle": 180,
-      "contrailSize": 17,
-      "style": "MISTRAL_ENG_P"
-    },
-    {
-      "location": [-94.5, -47],
-      "length": 36,
-      "width": 17,
-      "angle": -180,
-      "contrailSize": 17,
-      "style": "MISTRAL_ENG_P"
     },
     {
       "location": [-94.5, 43.5],
@@ -344,7 +336,7 @@
       "style": "MISTRAL_ENG_B"
     },
     {
-      "location": [-136.5, 30.5],
+      "location": [-136, 30.5],
       "length": 36,
       "width": 17,
       "angle": 180,
@@ -352,10 +344,26 @@
       "style": "MISTRAL_ENG_P"
     },
     {
-      "location": [-136.5, -30.5],
+      "location": [-94.5, -47],
       "length": 36,
       "width": 17,
       "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-136, -30.5],
+      "length": 36,
+      "width": 17,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-94.5, 47],
+      "length": 36,
+      "width": 17,
+      "angle": 180,
       "contrailSize": 17,
       "style": "MISTRAL_ENG_P"
     }

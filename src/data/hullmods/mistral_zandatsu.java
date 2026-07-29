@@ -11,11 +11,7 @@ import java.awt.Color;
 public class mistral_zandatsu extends BaseHullMod {
     
     private static final float ROF_BONUS = 1.5f;
-    private static final float DMG_BUFF = 1.5f;
-    private static final float FLUX_REDUCTION = .33f;
     private static final float RAF_ROF_BUFF = 50f;
-    private static final float RAF_DMG_BUFF = 50f;
-    private static final float RAF_FLUX_BUFF = 33f;
     /*
     private static final float LUNGE_AI_ASSIST_TIME = 1f;
     private static final float PARRY_RADIUS = 300f;
@@ -70,10 +66,10 @@ public class mistral_zandatsu extends BaseHullMod {
         
         TooltipMakerAPI rapidAmmoFeeder = tooltip.beginImageWithText(RAFIcon, HEIGHT);
         rapidAmmoFeeder.addPara(RAFTitle, 0f, YELLOW, RAFTitle);
-        rapidAmmoFeeder.addPara(RAFText1b, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_DMG_BUFF)+"%");
         rapidAmmoFeeder.addPara(RAFText1, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_ROF_BUFF)+"%");
-        rapidAmmoFeeder.addPara(RAFText2, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_FLUX_BUFF)+"%");
+        rapidAmmoFeeder.addPara(RAFText1b, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_ROF_BUFF)+"%");
         rapidAmmoFeeder.addPara(RAFText3, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_ROF_BUFF)+"%");
+        rapidAmmoFeeder.addPara(RAFText2, 0f, Misc.getPositiveHighlightColor(), Math.round(RAF_ROF_BUFF)+"%");
         rapidAmmoFeeder.addPara(RAFText4, Misc.getPositiveHighlightColor(), 0f);
         tooltip.addImageWithText(PAD);
 
@@ -115,10 +111,10 @@ public class mistral_zandatsu extends BaseHullMod {
     
     @Override
     public void applyEffectsBeforeShipCreation(ShipAPI.HullSize hullSize, MutableShipStatsAPI stats, String id) {
-    stats.getEnergyWeaponDamageMult().modifyMult(id, DMG_BUFF);
-	stats.getBallisticRoFMult().modifyMult(id, ROF_BONUS);
+    stats.getBallisticRoFMult().modifyMult(id, ROF_BONUS);
     stats.getBallisticAmmoRegenMult().modifyMult(id, ROF_BONUS);
-	stats.getBallisticWeaponFluxCostMod().modifyMult(id, 1f - FLUX_REDUCTION);
+    stats.getEnergyRoFMult().modifyMult(id, ROF_BONUS);
+    stats.getEnergyAmmoRegenMult().modifyMult(id, ROF_BONUS);
     }
 
 }

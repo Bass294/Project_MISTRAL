@@ -47,12 +47,12 @@ public class mistral_priorityLink extends BaseHullMod {
 
         tooltip.addSectionHeading(txt("hm_priorityLink_tabSubsystem"), Alignment.MID, 10);
         tooltip.addPara(txt("hm_priorityLink_bullet1"), 3, YELLOW, "•", keyText, "30 second cooldown");
-        tooltip.addPara(txt("hm_priorityLink_bullet2_single"), 3, YELLOW, "•", "1500su");
+        tooltip.addPara(txt("hm_priorityLink_bullet2_single"), 3, YELLOW, "•", "2000su");
         tooltip.addPara(txt("hm_priorityLink_bullet3"), 3, YELLOW, "•");
         tooltip.addPara(txt("hm_priorityLink_bullet4"), 3, YELLOW, "•");
 
         tooltip.addSectionHeading(txt("hm_priorityLink_tabBuff"), Alignment.MID, 10);
         tooltip.addPara(txt("hm_priorityLink_bullet5"), 3, Misc.getPositiveHighlightColor(), "•", "25%");
-        tooltip.addPara(txt("hm_priorityLink_bullet6"), 3, Misc.getPositiveHighlightColor(), "•", "33%");
+        tooltip.addPara(txt("hm_priorityLink_bullet6"), 3, Misc.getPositiveHighlightColor(), "•", "20%");
     }
 }

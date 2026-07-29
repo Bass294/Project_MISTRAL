@@ -15,9 +15,10 @@
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
     "mistral_priorityLink",
-    "mistral_wanzergantry",
     "mistral_angelosDraSkin",
-    "ML_skinSwap"
+    "ML_skinSwap",
+    "mistral_angeloscarriermod",
+    "bdeck"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing"
@@ -115,7 +116,7 @@
     {
       "id": "WS0009",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 120,
       "angle": -0,
@@ -124,7 +125,7 @@
     {
       "id": "WS0011",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 120,
       "angle": 0,

@@ -29,6 +29,8 @@ public class Mistral_ModPlugin extends BaseModPlugin {
         switch (missile.getProjectileSpecId()) {
             case "diableavionics_esp_kestrelpod":
                 return new PluginPick<MissileAIPlugin>(new DA_ESP_kestrelmirv(missile), CampaignPlugin.PickPriority.MOD_SPECIFIC);
+            case "diableavionics_mistral_esp_kestrelpod":
+                return new PluginPick<MissileAIPlugin>(new data.scripts.weapons.Mistral_ESP_kestrelmirv(missile), CampaignPlugin.PickPriority.MOD_SPECIFIC);
             default:
         }
         return null;

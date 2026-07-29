@@ -12,21 +12,23 @@
   "shieldRadius": 285.5,
   "viewOffset": 0,
   "builtInMods": [
-    "mistral_wanzergantry",
     "DA_ESP_Glow",
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
     "mistral_priorityLink_dual",
     "mistral_angelosDraSkin",
-    "ML_skinSwap"
+    "ML_skinSwap",
+    "mistral_sunshowermounts",
+    "mistral_angeloscarriermod",
+    "bdeck"
   ],
   "builtInWings": [
     "diableavionics_mistral_raven_kai_wing",
     "diableavionics_mistral_raven_kai_wing"
   ],
   "builtInWeapons": {
-    "WS0028": "diableavionics_esp_kestrel",
-    "WS0029": "diableavionics_esp_kestrel"
+    "WS0028": "diableavionics_mistral_esp_kestrel",
+    "WS0029": "diableavionics_mistral_esp_kestrel"
   },
   "weaponSlots": [
     {
@@ -104,7 +106,7 @@
     {
       "id": "WS0009",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 235,
       "angle": 45,
@@ -113,7 +115,7 @@
     {
       "id": "WS0010",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 235,
       "angle": -45,
@@ -122,7 +124,7 @@
     {
       "id": "WS0011",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 235,
       "angle": -45,
@@ -131,7 +133,7 @@
     {
       "id": "WS0012",
       "size": "SMALL",
-      "type": "ENERGY",
+      "type": "HYBRID",
       "mount": "TURRET",
       "arc": 235,
       "angle": 45,
