@@ -32,7 +32,7 @@
     {
       "major": 0,
       "minor": 5,
-      "patch": e # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
+      "patch": f # Can be a number, character or string (1, 2, a, b, "-RC2", etc)
     },
 
   # OPTIONAL
