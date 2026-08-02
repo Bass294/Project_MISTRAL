@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "mistral_angelosDraSkin",
+	"mistral_shield_style",
     "ML_skinSwap"
   ],
   "builtInWeapons": {

@@ -72,17 +72,19 @@ public class MistralGen implements SectorGeneratorPlugin {
 
         FactionAPI angelos = sector.getFaction("angelos");
 
-        angelos.setRelationship(Factions.LUDDIC_CHURCH, 0.6f);
+        angelos.setRelationship(Factions.LUDDIC_CHURCH, 0.3f);
         angelos.setRelationship(Factions.LUDDIC_PATH, 0f);
         angelos.setRelationship(Factions.TRITACHYON, -0.2f);
         angelos.setRelationship(Factions.PERSEAN, -0.2f);
-        angelos.setRelationship(Factions.PIRATES, 0f);
+        angelos.setRelationship(Factions.PIRATES, 0.2f);
         angelos.setRelationship(Factions.INDEPENDENT, 0.5f);
-        angelos.setRelationship(Factions.DIKTAT, -0.2f);
-        angelos.setRelationship(Factions.LIONS_GUARD, -0.2f);
-        angelos.setRelationship(Factions.HEGEMONY, 0.5f);
+        angelos.setRelationship(Factions.DIKTAT, -0.4f);
+        angelos.setRelationship(Factions.LIONS_GUARD, -0.4f);
+        angelos.setRelationship(Factions.HEGEMONY, 0.3f);
         angelos.setRelationship(Factions.REMNANTS, -0.5f);
-        angelos.setRelationship("diableavionics", -0.4f);
+        angelos.setRelationship("diableavionics", -0.5f);
+        angelos.setRelationship("armaarmatura", 0.3f);
+        angelos.setRelationship("armaarmatura_pirates", 0.6f);
 
     }
 

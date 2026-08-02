@@ -12,6 +12,7 @@
   "shieldRadius": 105,
   "viewOffset": 50,
   "builtInMods": [
+  	"mistral_shield_style",
     "mistral_himac_big"
   ],
   "builtInWeapons": {

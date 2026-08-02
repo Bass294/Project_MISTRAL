@@ -5,7 +5,7 @@
     "hullId": "mistral_beak_drone",
     "goalVariant": true,
     "hullMods": ["terminator_core"],
-    "permaMods": [],
+    "permaMods": ["mistral_shield_style"],
     "variantId": "mistral_beak_drone_std",
     "weaponGroups": [{
         "autofire": true,

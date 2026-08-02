@@ -106,8 +106,8 @@ public class angelos_trinary {
         //system.addRingBand(systemCenter, "misc", "rings_dust0", 256f, 1, Color.white, 512f, 11500, 200f, null, null);
 
 
-        // Surtr - desert world, small orbit, no market
-        PlanetAPI surtr = system.addPlanet("Surtr", systemCenter, "Surtr", "desert", 40f, 170f, 5800f, 250f);
+        // Surtr - arid world, small orbit, no market
+        PlanetAPI surtr = system.addPlanet("Surtr", systemCenter, "Surtr", "arid", 40f, 170f, 5800f, 250f);
         //surtr.setCustomDescriptionId("angelos_surtr");
 
         // Dust ring orbiting Surtr itself
@@ -241,7 +241,7 @@ public class angelos_trinary {
 
         List<String> otohaConditions = Arrays.asList(
                 Conditions.POPULATION_4,
-                Conditions.NO_ATMOSPHERE,
+                Conditions.TOXIC_ATMOSPHERE,
                 Conditions.ORE_ULTRARICH,
                 Conditions.RARE_ORE_RICH,
                 Conditions.VERY_HOT

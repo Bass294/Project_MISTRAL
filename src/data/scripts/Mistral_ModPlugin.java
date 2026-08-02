@@ -99,6 +99,15 @@ public class Mistral_ModPlugin extends BaseModPlugin {
         }
         Global.getSettings().getHullModSpec("mistral_diableenginefix").setAlwaysUnlocked(engineFixByDefault);
 
+        // Service Bay Integration is only known-from-the-start (no blueprint needed)
+        // if LunaLib is present and the setting is turned on.
+        boolean serviceBaysRetrofitByDefault = false;
+        if (Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            Boolean setting = LunaSettings.getBoolean("DA_Mistral", "enableServiceBaysRetrofitByDefault");
+            if (setting != null) serviceBaysRetrofitByDefault = setting;
+        }
+        Global.getSettings().getHullModSpec("mistral_serviceBaysRetrofit").setAlwaysUnlocked(serviceBaysRetrofitByDefault);
+
         if (newGame) return; // already handled by onNewGame / onNewGameAfterEconomyLoad
 
         if (Global.getSector().getStarSystem("Angelos") == null) {

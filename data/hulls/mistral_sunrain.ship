@@ -12,7 +12,7 @@
   "shieldRadius": 285.5,
   "viewOffset": 0,
   "builtInMods": [
-    "DA_ESP_Glow",
+    "Mistral_ESP_Glow",
     "armaa_serviceBays",
     "armaa_spare_chassis_storage",
     "mistral_priorityLink_dual",
@@ -20,6 +20,7 @@
     "ML_skinSwap",
     "mistral_sunshowermounts",
     "mistral_angeloscarriermod",
+	"mistral_shield_style",
     "bdeck"
   ],
   "builtInWings": [

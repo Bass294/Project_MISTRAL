@@ -13,6 +13,7 @@
   "viewOffset": 0,
   "builtInMods": [
     "mistral_zeroWeaponStorage",
+	"mistral_shield_style",
     "mistral_continuousRepairs",
     "mistral_crReduction"
   ],

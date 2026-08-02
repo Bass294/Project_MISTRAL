@@ -5,6 +5,7 @@
   "hullId": "diableavionics_mistral_raven_kai",
   "hullMods": [
     "diableavionics_wanzer",
+	"mistral_shield_style",
     "autorepair"
   ],
   "quality": 0,
