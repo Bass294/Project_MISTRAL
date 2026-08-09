@@ -22,7 +22,7 @@ public class mistral_angeloscarriermod extends BaseHullMod {
 
     private static final float ENGAGEMENT_RANGE_REDUCTION = 0.4f;
     private static final float FIGHTER_OP_COST_REDUCTION = 8f;
-    private static final float ZERO_FLUX_GEN_THRESHOLD = 0.07f;
+    private static final float ZERO_FLUX_GEN_THRESHOLD = 0.01f;
     private static final float FIGHTER_DAMAGE_TAKEN_MULT = 0.8f;
     private static final float FIGHTER_CREW_LOSS_MULT = 0.5f;
 

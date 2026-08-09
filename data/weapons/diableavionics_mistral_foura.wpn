@@ -10,26 +10,39 @@
   "turretGlowSprite": "graphics/weapons/mistral_foura_turret_glow.png",
   "hardpointSprite": "graphics/weapons/mistral_foura_hardpoint_base.png",
   "hardpointGlowSprite": "graphics/weapons/mistral_foura_hardpoint_glow.png",
+  "glowColor": [
+    200,
+    20,
+    255,
+    255
+  ],
   "hitGlowRadius": 0,
   "turretOffsets": [
-    13,
+    25,
     0
   ],
   "turretAngleOffsets": [
     0
   ],
   "hardpointOffsets": [
-    23,
+    35,
     0
   ],
   "hardpointAngleOffsets": [
     0
   ],
-  "glowColor": [255,255,255,185],
-  #"fringeColor": [75,15,205,175],
-  "fringeColor": [130,15,205,175],
-  #"fringeColor": [255,15,15,175],
-  "coreColor": [50,110,140,200],
+  "fringeColor": [
+    130,
+    15,
+    205,
+    175
+  ],
+  "coreColor": [
+    255,
+    255,
+    255,
+    255
+  ],
   "width": 40,
   "textureType": ROUGH,
   "textureScrollSpeed": 292,
@@ -41,5 +54,6 @@
     MISSILE_FF,
     MISSILE_NO_FF
   ],
-  "fireSoundTwo": "tachyon_lance_fire"
+  "fireSoundOne": "mistral_foura_fire",
+  "fireSoundTwo": "mistral_foura_loop"
 }

@@ -117,7 +117,9 @@
             "diableavionics_frost_wing",
             "diableavionics_hoar_wing",
             "diableavionics_strife_wing",
+            "diableavionics_warlust_wing",
             "diableavionics_valiant_wing",
+            "diableavionics_raven_wing",
             "diableavionics_blizzaia_wing",
             "diableavionics_zephyr_wing",
             "diableavionics_avalanche_wing",
@@ -168,6 +170,15 @@
             
             "diableavionics_hexafire2",
             "diableavionics_uhlan",
+
+            "reaper",
+            "sabot",
+            "sabot_single",
+            "sabotpod",
+            "squall",
+            "locust",
+            "diableavionics_mistral_foura",
+            "diableavionics_mistral_fasan",
         ],
     },
 
@@ -248,9 +259,9 @@
 
     "music":{
             "theme":"diableavionics_market_interaction_neutral",
-            "market_neutral":"diableavionics_market_interaction_neutral",
-            "market_hostile":"diableavionics_market_interaction_hostile",
-            "market_friendly":"diableavionics_market_interaction_friendly",
+            "market_neutral":"mistral_angelos_market",
+            "market_hostile":"mistral_angelos_market",
+            "market_friendly":"mistral_angelos_market",
             "encounter_neutral":"diableavionics_market_interaction_neutral",
             "encounter_hostile":"diableavionics_market_interaction_hostile",
             "encounter_friendly":"diableavionics_market_interaction_friendly",

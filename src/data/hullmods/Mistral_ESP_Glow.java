@@ -11,9 +11,22 @@ import org.lwjgl.opengl.GL11;
 import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.util.MagicRender;
 
+import java.util.Map;
+import java.util.WeakHashMap;
+
 
 
 public class Mistral_ESP_Glow extends BaseHullMod {
+
+    // Phase Grazer Core (AC) (mistral_drift) has a 3-second chargeup, so tying the glow boost to
+    // getEffectLevel() made it crawl up over that whole window - well behind the system's own
+    // (instant) sound/visual cues. Instead this is a one-shot flash timed off the moment the system
+    // starts being used (isOn() going false -> true), independent of the system's own chargeup
+    // length or how long it stays on afterward.
+    private static final float FLASH_RAMP_UP_DURATION = 0.02f;
+    private static final float FLASH_RAMP_DOWN_DURATION = 0.1f;
+    private static final Map<ShipAPI, Boolean> driftWasOn = new WeakHashMap<>();
+    private static final Map<ShipAPI, Float> driftFlashElapsed = new WeakHashMap<>();
 
     public static String txt(String id) {
         return Global.getSettings().getString("hullmods", id);
@@ -53,16 +66,37 @@ public class Mistral_ESP_Glow extends BaseHullMod {
                 renderGlow(ship, effect, size, opacity);
             }
         }
-        //Sunrain ring - always active (not gated on system state), boosted while the system is active
+        //Sunrain ring - always active (not gated on system state), flashes once when the system activates
         else if (hullId.equals("diableavionics_mistral_sunrain")){
             float fluxLevel = ship.getFluxTracker().getFluxLevel();
             int minOpacity = 0;
             int maxOpacity = 10;
             float opacity = minOpacity + (maxOpacity - minOpacity) * Math.min(1f, fluxLevel / 0.5f);
 
-            if (ship.getSystem().isActive()){
-                float effectLevel = ship.getSystem().getEffectLevel();
-                opacity += 10f * effectLevel;
+            boolean onNow = ship.getSystem().isOn();
+            if (onNow && !Boolean.TRUE.equals(driftWasOn.get(ship))) {
+                driftFlashElapsed.put(ship, 0f);
+            }
+            driftWasOn.put(ship, onNow);
+
+            Float flashElapsed = driftFlashElapsed.get(ship);
+            if (flashElapsed != null) {
+                flashElapsed += amount;
+
+                float flashDuration = FLASH_RAMP_UP_DURATION + FLASH_RAMP_DOWN_DURATION;
+                if (flashElapsed >= flashDuration) {
+                    driftFlashElapsed.remove(ship);
+                } else {
+                    driftFlashElapsed.put(ship, flashElapsed);
+
+                    float flashRatio;
+                    if (flashElapsed <= FLASH_RAMP_UP_DURATION) {
+                        flashRatio = flashElapsed / FLASH_RAMP_UP_DURATION;
+                    } else {
+                        flashRatio = 1f - (flashElapsed - FLASH_RAMP_UP_DURATION) / FLASH_RAMP_DOWN_DURATION;
+                    }
+                    opacity += 10f * flashRatio;
+                }
             }
             opacity = Math.min(opacity, maxOpacity);
 

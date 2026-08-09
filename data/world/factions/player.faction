@@ -38,4 +38,12 @@
 				"angelosdamsel":{"name":"Damsel2"},
 			},
 	},
+	
+	"flags":[
+		{
+			"logo":"graphics/factions/angelos_player_flag_1.png",
+			"crest":"graphics/factions/angelos_player_icon_1.png"
+		},
+	],
+	
 }

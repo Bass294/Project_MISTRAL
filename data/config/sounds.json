@@ -1,6 +1,8 @@
-{        
+{
   "music":{
-
+        "mistral_angelos_market":[
+                {"file":"Jungle -A lush load.ogg","source":"sounds/music/","volume":0.5,"randomStart":true},
+        ],
   },
 
 	"voidcaller_sound":[
@@ -19,11 +21,31 @@
 			{"file":"sounds/diablefx/mistral_nightingale_howling.ogg","pitch":0.7, "volume":0.9}
 		],
 	"zimmy":[
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.06, "volume":12},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.03, "volume":12},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.00, "volume":12},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.97, "volume":12},
-            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.94, "volume":12}
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.06, "volume":18},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.03, "volume":18},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":1.00, "volume":18},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.97, "volume":18},
+            {"file":"sounds/diablefx/zimmytake2.ogg","pitch":0.94, "volume":18}
 		],
-
+	"mistral_fasan_fire":[
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.00,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":0.90,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.10,"volume":0.8},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.00,"volume":0.75},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":0.90,"volume":0.75},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.10,"volume":0.75},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.00,"volume":0.85},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":0.90,"volume":0.85},
+		{"file":"sounds/sfx_wpn_energy/minipulser_fire_02.ogg","pitch":1.10,"volume":0.85},
+	],
+        "mistral_foura_fire":[
+		{"file":"sounds/diablefx/mistral_foura_fire.ogg","pitch":1.0, "volume":0.70},
+		{"file":"sounds/diablefx/mistral_foura_fire.ogg","pitch":0.97, "volume":0.66},
+		{"file":"sounds/diablefx/mistral_foura_fire.ogg","pitch":1.03, "volume":0.64}
+	],
+        "mistral_foura_loop":[
+		{"file":"sounds/diablefx/mistral_foura_loop.ogg","pitch":1.0, "volume":0.31},
+		{"file":"sounds/diablefx/mistral_foura_loop.ogg","pitch":0.97, "volume":0.33},
+		{"file":"sounds/diablefx/mistral_foura_loop.ogg","pitch":1.03, "volume":0.35}
+	],
         }

@@ -20,12 +20,7 @@
     "ML_skinSwap",
     "mistral_sunshowermounts",
     "mistral_angeloscarriermod",
-	"mistral_shield_style",
-    "bdeck"
-  ],
-  "builtInWings": [
-    "diableavionics_mistral_raven_kai_wing",
-    "diableavionics_mistral_raven_kai_wing"
+	"mistral_shield_style"
   ],
   "builtInWeapons": {
     "WS0028": "diableavionics_mistral_esp_kestrel",

@@ -10,6 +10,7 @@ import com.fs.starfarer.api.combat.ShipHullSpecAPI.ShipTypeHints;
 import com.fs.starfarer.api.combat.WeaponAPI;
 import com.fs.starfarer.api.combat.WeaponAPI.WeaponType;
 import com.fs.starfarer.api.fleet.FleetMemberAPI;
+import com.fs.starfarer.api.loading.FighterWingSpecAPI;
 import com.fs.starfarer.api.util.IntervalUtil;
 import com.fs.starfarer.api.util.Misc;
 import org.lazywizard.lazylib.MathUtils;
@@ -17,7 +18,6 @@ import org.lazywizard.lazylib.combat.AIUtils;
 import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.subsystems.MagicSubsystem;
-import org.magiclib.subsystems.MagicSubsystemsManager;
 import org.magiclib.util.MagicRender;
 
 import java.awt.Color;
@@ -38,8 +38,6 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     // ---- tuning knobs, adjust freely ----
     private static final String SYSTEM_ID = "mistral_priorityLink";
     private static final float SCAN_RANGE = 2000f;
-    private static final float DP_THRESHOLD = 6f;
-    private static final String PRIORITY_TAG = "mistralpriotarget";
 
     private static final float IN_DURATION = 2f;
     private static final float ACTIVE_DURATION = 10f;
@@ -88,25 +86,13 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     // throttle for the AI activation check, same pattern as Diableavionics_virtuousItanoAI's TICK
     private final IntervalUtil aiCheckInterval = new IntervalUtil(1.5f, 2.5f);
 
+    private static final Color RANGE_CIRCLE_COLOR = new Color(0, 200, 255, 60);
+    private static final float RANGE_CIRCLE_FADE_DURATION = 0.8f;
+    private float rangeCircleOpacity = 0f;
+
     public Mistral_priorityLinkSubsystem(ShipAPI ship, int maxTargets) {
         super(ship);
         this.maxTargets = maxTargets;
-    }
-
-    // shared lookup for hullmod tooltips (mistral_priorityLink/mistral_priorityLink_dual) that
-    // want to display this ship's actual assigned hotkey via MagicSubsystem#getKeyText()
-    public static Mistral_priorityLinkSubsystem getAttachedInstance(ShipAPI ship) {
-        if (ship == null) return null;
-
-        List<MagicSubsystem> subsystems = MagicSubsystemsManager.getSubsystemsForShipCopy(ship);
-        if (subsystems == null) return null;
-
-        for (MagicSubsystem subsystem : subsystems) {
-            if (subsystem instanceof Mistral_priorityLinkSubsystem) {
-                return (Mistral_priorityLinkSubsystem) subsystem;
-            }
-        }
-        return null;
     }
 
     @Override
@@ -141,6 +127,14 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
 
     @Override
     public boolean isToggle() {
+        return false;
+    }
+
+    @Override
+    public boolean canAssignKey() {
+        // AI-only: no hotkey is assigned, so the library's own isKeyDown() activation path never
+        // fires (getAssignedKey() stays -1). All activation - player-piloted or not - goes through
+        // shouldActivateAI(), via maybeActivateUnderPlayerControl() for the player-piloted case.
         return false;
     }
 
@@ -228,25 +222,6 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
             BUFFED_TARGETS.add(target);
         }
 
-        // scan AOE ring, one pulse timed to last through the chargeup
-        MagicRender.objectspace(
-                Global.getSettings().getSprite("diableavionics", "RING"),
-                ship,
-                new Vector2f(),
-                new Vector2f(),
-                new Vector2f(64, 64),
-                new Vector2f(2000, 2000),
-                MathUtils.getRandomNumberInRange(-180, 180),
-                0f,
-                false,
-                new Color(0, 200, 255, 128),
-                true,
-                0f, 0f, 0.2f, 0.5f, 0.05f,
-                0.05f, Math.max(0.1f, getInDuration() - 0.1f), 0.3f,
-                true,
-                CombatEngineLayers.UNDER_SHIPS_LAYER
-        );
-
         // targeting diamond + initial lock beep on each selected target
         for (ShipAPI target : selectedTargets) {
             if (target == null) continue;
@@ -254,6 +229,50 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
             Global.getSoundPlayer().playSound("diableavionics_virtuousTarget_beep", 1f, 0.5f, ship.getLocation(), ship.getVelocity());
             spawnDiamondPulse(target);
         }
+    }
+
+    // persistent scan-range indicator, same sprite the old activation pulse used - shown while the
+    // system isn't actively buffing a target, and only to a player who could actually care about
+    // this ship's scan range: either they're flying it themselves, or they're flying a frigate
+    // (frigates are this system's own priority target class, wherever it's mounted).
+    //
+    // Uses MagicRender.singleframe() - same technique armaa_AWACSCeylon.java uses for its own
+    // constantly-displayed AOE indicator - instead of objectspace(). objectspace() has its own
+    // fadein/full/fadeout lifecycle per call; re-triggering it on an interval to fake a persistent
+    // circle meant every new instance's fade-in overlapped the previous instance's fade-out,
+    // and that overlap is what read as flickering. singleframe() has no lifecycle at all - it
+    // just draws the sprite for the current frame - so calling it every single frame (like AWACS
+    // does from its own advance()) produces a solid, constant circle with nothing to overlap.
+    //
+    // Since singleframe() has no fade of its own, rangeCircleOpacity is a hand-rolled 0..1 ramp we
+    // fade toward the target state (shown/hidden) by RANGE_CIRCLE_FADE_DURATION worth of amount
+    // each frame, instead of the visibility condition just hard-cutting the sprite on/off.
+    private void updateRangeCircle(float amount) {
+        boolean shouldShow = !isActive() && shouldShowRangeCircle();
+        float fadeStep = amount / RANGE_CIRCLE_FADE_DURATION;
+        rangeCircleOpacity = MathUtils.clamp(rangeCircleOpacity + (shouldShow ? fadeStep : -fadeStep), 0f, 1f);
+
+        if (rangeCircleOpacity <= 0f) {
+            return;
+        }
+
+        Color color = Misc.setAlpha(RANGE_CIRCLE_COLOR, Math.round(RANGE_CIRCLE_COLOR.getAlpha() * rangeCircleOpacity));
+
+        MagicRender.singleframe(
+                Global.getSettings().getSprite("ceylon", "armaa_ceylonrad"),
+                ship.getLocation(),
+                new Vector2f(SCAN_RANGE * 2f, SCAN_RANGE * 2f),
+                0f,
+                color,
+                true,
+                CombatEngineLayers.UNDER_SHIPS_LAYER
+        );
+    }
+
+    private boolean shouldShowRangeCircle() {
+        ShipAPI playerShip = Global.getCombatEngine().getPlayerShip();
+        if (playerShip == null) return false;
+        return playerShip == ship || playerShip.getHullSize() == HullSize.FRIGATE;
     }
 
     // one short flash of the targeting diamond, timed to fully fade before the next beep -
@@ -320,6 +339,9 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
 
         if (isPaused) return;
 
+        maybeActivateUnderPlayerControl(amount);
+        updateRangeCircle(amount);
+
         if (errorSoundTimer > 0f) {
             errorSoundTimer -= amount;
         }
@@ -375,33 +397,43 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         }
     }
 
+    // MagicSubsystem.advanceInternal() only calls shouldActivateAI() when this ship ISN'T the one
+    // the player is directly flying (player-piloted ships are gated on isKeyDown() only - see
+    // MagicSubsystem.java's advanceInternal()). This system should keep auto-firing off the AI's
+    // own judgement even while the player is at the stick, so we replicate that missing branch here.
+    // Both paths check state == READY (shouldActivateAI()/canActivateInternal()), so this can never
+    // double-activate against the library's own key-down check running earlier in the same frame.
+    private void maybeActivateUnderPlayerControl(float amount) {
+        if (Global.getCombatEngine().getPlayerShip() != ship || !Global.getCombatEngine().isUIAutopilotOn()) {
+            return;
+        }
+
+        if (!shouldActivateAI(amount)) {
+            return;
+        }
+
+        if (ship.getFluxTracker().isOverloaded() || ship.getFluxTracker().isVenting()) {
+            return;
+        }
+
+        if (canActivateInternal() && canActivate()) {
+            activate();
+        }
+    }
+
     // ---- targeting ----
 
     private List<ShipAPI> findTargets() {
-        List<ShipAPI> highDPFrigates = new ArrayList<>();
-        List<ShipAPI> lowDPFrigates = new ArrayList<>();
-
+        List<ShipAPI> frigates = new ArrayList<>();
         for (ShipAPI other : CombatUtils.getShipsWithinRange(ship.getLocation(), SCAN_RANGE)) {
             if (!isEligible(other)) continue;
             if (other.getHullSize() != HullSize.FRIGATE) continue;
-
-            if (getDP(other) > DP_THRESHOLD) {
-                highDPFrigates.add(other);
-            } else {
-                lowDPFrigates.add(other);
-            }
+            frigates.add(other);
         }
-        sortByDPThenDistance(highDPFrigates);
-        sortByDPThenDistance(lowDPFrigates);
+        sortByDPThenDistance(frigates);
 
-        List<ShipAPI> priorityTargets = new ArrayList<>();
-        for (ShipAPI other : Global.getCombatEngine().getShips()) {
-            if (!isEligible(other)) continue;
-            if (other.getHullSpec() != null && other.getHullSpec().hasTag(PRIORITY_TAG)) {
-                priorityTargets.add(other);
-            }
-        }
-        sortByDistance(priorityTargets);
+        List<ShipAPI> carrierFighters = findCarrierFighters();
+        sortByOpCostThenDistance(carrierFighters);
 
         // fill both slots if possible: exhaust the highest tier first, then backfill
         // from the next tier down rather than stopping as soon as one tier is non-empty
@@ -415,10 +447,27 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
             result.add(targetedPriority);
         }
 
-        addUpToLimit(result, highDPFrigates);
-        addUpToLimit(result, priorityTargets);
-        addUpToLimit(result, lowDPFrigates);
+        addUpToLimit(result, frigates);
+        addUpToLimit(result, carrierFighters);
 
+        return result;
+    }
+
+    // Single-fighter wings (getNumFighters() == 1) launched by this ship itself, one candidate
+    // per wing (its currently-live member, if any). Wings with more than one fighter are skipped
+    // entirely - only lone-fighter wings (e.g. heavy bombers) are eligible for the buff.
+    private List<ShipAPI> findCarrierFighters() {
+        List<ShipAPI> result = new ArrayList<>();
+        for (FighterWingAPI wing : ship.getAllWings()) {
+            FighterWingSpecAPI spec = wing.getSpec();
+            if (spec == null || spec.getNumFighters() != 1) continue;
+
+            for (ShipAPI fighter : wing.getWingMembers()) {
+                if (!isEligible(fighter)) continue;
+                result.add(fighter);
+                break; // at most one fighter per wing
+            }
+        }
         return result;
     }
 
@@ -467,10 +516,21 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
         });
     }
 
-    private void sortByDistance(List<ShipAPI> list) {
+    private float getOpCost(ShipAPI fighter) {
+        FighterWingAPI wing = fighter.getWing();
+        if (wing == null || wing.getSpec() == null || wing.getSourceShip() == null) return 0f;
+        return wing.getSpec().getOpCost(wing.getSourceShip().getMutableStats());
+    }
+
+    private void sortByOpCostThenDistance(List<ShipAPI> list) {
         Collections.sort(list, new Comparator<ShipAPI>() {
             @Override
             public int compare(ShipAPI a, ShipAPI b) {
+                float opA = getOpCost(a);
+                float opB = getOpCost(b);
+                if (opA != opB) {
+                    return Float.compare(opB, opA); // higher OP cost first
+                }
                 return Float.compare(MathUtils.getDistance(a, ship), MathUtils.getDistance(b, ship));
             }
         });
