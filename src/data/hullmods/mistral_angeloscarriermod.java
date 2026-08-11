@@ -44,7 +44,8 @@ public class mistral_angeloscarriermod extends BaseHullMod {
 
     @Override
     public void applyEffectsAfterShipCreation(ShipAPI ship, String id) {
-        ship.addListener(new ZeroFluxTracker(ship, id));
+        // Zero-flux speed boost section - disabled, see ZeroFluxTracker below
+        // ship.addListener(new ZeroFluxTracker(ship, id));
     }
 
     @Override
@@ -63,8 +64,9 @@ public class mistral_angeloscarriermod extends BaseHullMod {
                 3f, Misc.getNegativeHighlightColor(), "•", Math.round(ENGAGEMENT_RANGE_REDUCTION * 100f) + "%");
         tooltip.addPara("%s Reduces the OP cost of fighter wings by %s.",
                 3f, Misc.getPositiveHighlightColor(), "•", Math.round(FIGHTER_OP_COST_REDUCTION) + " OP");
-        tooltip.addPara("%s Zero-flux speed boost stays active as long as flux generation stays under %s of max flux per second.",
-                3f, Misc.getPositiveHighlightColor(), "•", Math.round(ZERO_FLUX_GEN_THRESHOLD * 100f) + "%");
+        // Zero-flux speed boost section - disabled, see ZeroFluxTracker below
+        // tooltip.addPara("%s Zero-flux speed boost stays active as long as flux generation stays under %s of max flux per second.",
+        //         3f, Misc.getPositiveHighlightColor(), "•", Math.round(ZERO_FLUX_GEN_THRESHOLD * 100f) + "%");
         tooltip.addPara("%s Fighter damage taken is reduced by %s.",
                 3f, Misc.getPositiveHighlightColor(), "•", Math.round((1f - FIGHTER_DAMAGE_TAKEN_MULT) * 100f) + "%");
         tooltip.addPara("%s Crew lost due to fighter losses in combat is reduced by %s.",
@@ -76,6 +78,8 @@ public class mistral_angeloscarriermod extends BaseHullMod {
         return true;
     }
 
+    // Zero-flux speed boost section - disabled
+    /*
     private static class ZeroFluxTracker implements AdvanceableListener {
         private final ShipAPI ship;
         private final String id;
@@ -113,4 +117,5 @@ public class mistral_angeloscarriermod extends BaseHullMod {
             }
         }
     }
+    */
 }

@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_typhoon",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/mistral_typhoon_purp.png",
-  "style": "MISTRAL",
+  "style": "HIGH_TECH",
   "height": 288,
   "width": 176,
   "center": [88, 144],

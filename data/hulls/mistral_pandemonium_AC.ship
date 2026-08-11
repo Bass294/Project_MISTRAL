@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_pandemonium_AC",
   "hullSize": "CAPITAL_SHIP",
   "spriteName": "graphics/ships/mistral_pandemonium_AC.png",
-  "style": "DA_WANZER",
+  "style": "HIGH_TECH",
   "height": 610,
   "width": 356,
   "center": [178, 255],

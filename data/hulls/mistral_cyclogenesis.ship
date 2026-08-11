@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_cyclogenesis",
   "hullSize": "CAPITAL_SHIP",
   "spriteName": "graphics/ships/mistral_cyclogenesis.png",
-  "style": "MISTRAL",
+  "style": "HIGH_TECH",
   "height": 712,
   "width": 648,
   "center": [324, 356],

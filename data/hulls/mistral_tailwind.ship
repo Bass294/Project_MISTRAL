@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_tailwind",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/mistral_tailwind_purp.png",
-  "style": "MISTRAL",
+  "style": "HIGH_TECH",
   "height": 350,
   "width": 140,
   "center": [70, 175],

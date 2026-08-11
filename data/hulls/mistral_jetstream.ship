@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_jetstream",
   "hullSize": "DESTROYER",
   "spriteName": "graphics/ships/mistral_jetstream_base.png",
-  "style": "MISTRAL",
+  "style": "HIGH_TECH",
   "height": 192,
   "width": 170,
   "center": [85, 94],

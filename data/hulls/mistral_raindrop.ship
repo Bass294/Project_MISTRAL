@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_raindrop",
   "hullSize": "FRIGATE",
   "spriteName": "graphics/ships/mistral_raindrop_purp.png",
-  "style": "DA_WANZER",
+  "style": "HIGH_TECH",
   "height": 126,
   "width": 96,
   "center": [48, 63],

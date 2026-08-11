@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_mistral_carrier",
   "hullSize": "CAPITAL_SHIP",
   "spriteName": "graphics/ships/mistral_mistral_carrier.png",
-  "style": "MISTRAL",
+  "style": "MISTRAL_ADV",
   "height": 296,
   "width": 290,
   "center": [145, 141],

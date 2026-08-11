@@ -3,7 +3,7 @@
   "hullId": "diableavionics_mistral_stormsurge",
   "hullSize": "CRUISER",
   "spriteName": "graphics/ships/mistral_stormsurge_purp.png",
-  "style": "MISTRAL",
+  "style": "HIGH_TECH",
   "height": 340,
   "width": 140,
   "center": [67, 170],

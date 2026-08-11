@@ -19,6 +19,7 @@ import org.lazywizard.lazylib.combat.CombatUtils;
 import org.lwjgl.util.vector.Vector2f;
 import org.magiclib.subsystems.MagicSubsystem;
 import org.magiclib.util.MagicRender;
+import lunalib.lunaSettings.LunaSettings;
 
 import java.awt.Color;
 import java.util.ArrayList;
@@ -270,9 +271,21 @@ public class Mistral_priorityLinkSubsystem extends MagicSubsystem {
     }
 
     private boolean shouldShowRangeCircle() {
+        if (!isRangeIndicatorEnabled()) return false;
+
         ShipAPI playerShip = Global.getCombatEngine().getPlayerShip();
         if (playerShip == null) return false;
         return playerShip == ship || playerShip.getHullSize() == HullSize.FRIGATE;
+    }
+
+    // LunaLib toggle, defaults to on (matches LunaSettings.csv's declared defaultValue) both when
+    // LunaLib isn't installed and when the setting hasn't been read yet (null)
+    private boolean isRangeIndicatorEnabled() {
+        if (!Global.getSettings().getModManager().isModEnabled("lunalib")) {
+            return true;
+        }
+        Boolean setting = LunaSettings.getBoolean("DA_Mistral", "enableWanzerAmpRelayRangeIndicators");
+        return setting == null || setting;
     }
 
     // one short flash of the targeting diamond, timed to fully fade before the next beep -
