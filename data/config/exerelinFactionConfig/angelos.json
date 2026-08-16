@@ -75,19 +75,21 @@
     ],
 
     "startShipsCombatLarge":[
-        ["mistral_tailwind_Standard", "mistral_stormsurge_Standard", "mistral_hummingbird_Standard"],
+        ["diableavionics_mistral_tailwind_Standard", "diableavionics_mistral_stormsurge_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsCarrierSmall":[
-        ["mistral_typhoon_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
+        ["diableavionics_mistral_typhoon_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
+	["diableavionics_mistral_breeze_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsCarrierLarge":[
-        ["mistral_sunrain_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
+        ["diableavionics_mistral_sunrain_Standard", "diableavionics_mistral_breeze_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
+        ["diableavionics_mistral_tailwind_Standard", "diableavionics_mistral_breeze_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 
     "startShipsSuper":[
-	["mistral_nightingale_nexstart","mistral_typhoon_Standard","mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
+	["mistral_nightingale_nexstart", "diableavionics_mistral_breeze_Standard", "mistral_sparrow_Standard", "mistral_hummingbird_Standard"],
     ],
 	
     "defenceStations":[

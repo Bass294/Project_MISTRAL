@@ -1,0 +1,58 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 10,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_breeze",
+    "hullMods": [
+        "hardenedshieldemitter",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_breeze_Assault",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_hexafire",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "diableavionics_plover",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0011": "diableavionics_banishsmall",
+                "WS0009": "diableavionics_banishsmall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_recson",
+                "WS0002": "diableavionics_recson",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "diableavionics_ibis",
+                "WS0004": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_blizzaia_wing",
+    ],
+    "modules": [],
+}

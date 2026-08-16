@@ -1,0 +1,52 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 9,
+    "fluxVents": 20,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_typhoon",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_typhoon_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "diableavionics_thrush",
+                "WS0010": "diableavionics_thrush",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_srab",
+                "WS0015": "diableavionics_srab",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_ibis",
+                "WS0002": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_valiant_wing",
+    ],
+    "modules": [],
+}

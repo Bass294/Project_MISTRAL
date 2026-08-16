@@ -1,6 +1,7 @@
 id,hullIds,name,paintjobFamily,spriteId,unlockedAutomatically,tags,unlockConditions,description
 mistral_sunrain_purp,diableavionics_mistral_sunrain,Angelos,DRA,graphics/ships/mistral_sunrain_purp.png,true,,,
 mistral_tailwind_purp,diableavionics_mistral_tailwind,Angelos,DRA,graphics/ships/mistral_tailwind_purp.png,true,,,
+mistral_breeze_purp,diableavionics_mistral_breeze,Angelos,DRA,graphics/ships/mistral_breeze_purp.png,true,,,
 mistral_raven_kai_purp,diableavionics_mistral_raven_kai,Angelos,DRA,graphics/ships/raven_kai/purp/diableavionics_raven.png,true,,,
 mistral_typhoon_purp,diableavionics_mistral_typhoon,Angelos,DRA,graphics/ships/mistral_typhoon_purp.png,true,,,
 mistral_stormsurge_purp,diableavionics_mistral_stormsurge,Angelos,DRA,graphics/ships/mistral_stormsurge_purp.png,true,,,
@@ -12,6 +13,7 @@ mistral_feather_drone_purp,mistral_feather_drone,Angelos,DRA,graphics/ships/dron
 mistral_beak_drone_purp,mistral_beak_drone,Angelos,DRA,graphics/ships/drones/mistral_beak_drone_purp.png,true,,,
 mistral_sunrain_traitor,diableavionics_mistral_sunrain,Traitor,stripeless,graphics/ships/mistral_sunrain.png,true,,,
 mistral_tailwind_traitor,diableavionics_mistral_tailwind,Traitor,stripeless,graphics/ships/mistral_tailwind.png,true,,,
+mistral_breeze_traitor,diableavionics_mistral_breeze,Traitor,stripeless,graphics/ships/mistral_breeze.png,true,,,
 mistral_typhoon_traitor,diableavionics_mistral_typhoon,Traitor,stripeless,graphics/ships/mistral_typhoon.png,true,,,
 mistral_stormsurge_traitor,diableavionics_mistral_stormsurge,Traitor,stripeless,graphics/ships/mistral_stormsurge.png,true,,,
 mistral_raindrop_traitor,diableavionics_mistral_raindrop,Traitor,stripeless,graphics/ships/mistral_raindrop.png,true,,,

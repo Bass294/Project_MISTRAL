@@ -45,13 +45,6 @@
         "tags":{
         },
         "hulls":{
-            "diableavionics_versant_AC":0.5,
-
-            "diableavionics_calm_AC":1,
-            "diableavionics_hayle_AC":1,
-
-            "diableavionics_haze_AC":1,
-
         },
     },
 
@@ -60,7 +53,6 @@
         "tags":["base_bp"],
         "hulls":[
             "diableavionics_versant_AC",
-            "diableavionics_calm_AC",
             "diableavionics_hayle_AC",
             "diableavionics_haze_AC",
 
@@ -71,6 +63,7 @@
 			"diableavionics_mistral_tailwind",
 			"diableavionics_mistral_typhoon",
 			"diableavionics_mistral_hummingbird",
+			"diableavionics_mistral_breeze",
         ],
     },
 
@@ -88,7 +81,6 @@
 			"atlas",
 				
             "diableavionics_versant_AC",
-            "diableavionics_calm_AC",
             "diableavionics_hayle_AC",
             "diableavionics_haze_AC",
 
@@ -99,6 +91,7 @@
 			"diableavionics_mistral_tailwind",
 			"diableavionics_mistral_typhoon",
 			"diableavionics_mistral_hummingbird",
+			"diableavionics_mistral_breeze",
         ],
     },
 

@@ -1,0 +1,62 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 15,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_tailwind",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_tailwind_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_hexafire2",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "locust",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_hexafire",
+                "WS0015": "diableavionics_hexafire",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "diableavionics_winee",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_burchel",
+                "WS0002": "diableavionics_burchel",
+                "WS0005": "diableavionics_ibis",
+                "WS0006": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_avalanche_wing",
+        "diableavionics_strife_wing",
+        "diableavionics_frost_wing",
+    ],
+    "modules": [],
+}

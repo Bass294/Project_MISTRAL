@@ -5,20 +5,25 @@
 
 	},
 	"combatSmall":{
-            "diableavionics_versant_assault_angelos":3,
-            "diableavionics_versant_escort_angelos":3,
-            "diableavionics_versant_standard_angelos":4,
+            "diableavionics_versant_assault_angelos":2,
+            "diableavionics_versant_escort_angelos":2,
+            "diableavionics_versant_standard_angelos":3,
 
-            "mistral_raindrop_Standard":10,
-            "mistral_sparrow_Standard":10,
-	    "mistral_hummingbird_Standard":10,
+            "mistral_raindrop_Standard":12,
+            "mistral_sparrow_Standard":12,
+	    "mistral_hummingbird_Standard":12,
 	},
 	"combatMedium":{
-            "diableavionics_calm_standard_angelos":2,
-            "diableavionics_calm_assault_angelos":2,
-            "diableavionics_calm_brute_angelos":2,
-            "diableavionics_calm_mixed_angelos":2,
-            "diableavionics_calm_closequarter_angelos":2,
+            "diableavionics_calm_standard_angelos":1,
+            "diableavionics_calm_assault_angelos":1,
+            "diableavionics_calm_brute_angelos":1,
+            "diableavionics_calm_mixed_angelos":1,
+            "diableavionics_calm_closequarter_angelos":1,
+
+            "diableavionics_mistral_breeze_Assault":3,
+            "diableavionics_mistral_breeze_Escort":3,
+            "diableavionics_mistral_breeze_Standard":3,
+            "diableavionics_mistral_breeze_Support":3,
 
             "diableavionics_hayle_standard_angelos":2,
             "diableavionics_hayle_attack_angelos":2,
@@ -26,20 +31,36 @@
             "diableavionics_hayle_multirole_angelos":2,
             "diableavionics_hayle_closequarter_angelos":2,
 
-            "mistral_typhoon_Standard":10,
+            "mistral_typhoon_Standard":0,
+            "diableavionics_mistral_typhoon_Assault":3,
+            "diableavionics_mistral_typhoon_Burst":3,
+            "diableavionics_mistral_typhoon_Standard":3,
+            "diableavionics_mistral_typhoon_Support":3,
 	},
 	"combatLarge":{
-            "diableavionics_haze_standard_angelos":2,
-            "diableavionics_haze_assault_angelos":2,
-            "diableavionics_haze_missile_angelos":2,
-            "diableavionics_haze_support_angelos":2,
-            "diableavionics_haze_closequarter_angelos":2,
+            "diableavionics_haze_standard_angelos":1,
+            "diableavionics_haze_assault_angelos":1,
+            "diableavionics_haze_missile_angelos":1,
+            "diableavionics_haze_support_angelos":1,
+            "diableavionics_haze_closequarter_angelos":1,
 
-            "mistral_tailwind_Standard":10,
-            "mistral_stormsurge_Standard":10,
+            "mistral_tailwind_Standard":0,
+            "diableavionics_mistral_tailwind_Assault":3,
+            "diableavionics_mistral_tailwind_Siege":3,
+            "diableavionics_mistral_tailwind_Standard":3,
+            "diableavionics_mistral_tailwind_Support":3,
+            "mistral_stormsurge_Standard":0,
+            "diableavionics_mistral_stormsurge_Assault":3,
+            "diableavionics_mistral_stormsurge_Siege":3,
+            "diableavionics_mistral_stormsurge_Standard":3,
+            "diableavionics_mistral_stormsurge_Support":3,
 	},
 	"combatCapital":{
-            "mistral_sunrain_Standard":10,
+            "mistral_sunrain_Standard":0,
+            "diableavionics_mistral_sunrain_Assault":3,
+            "diableavionics_mistral_sunrain_Siege":3,
+            "diableavionics_mistral_sunrain_Standard":3,
+            "diableavionics_mistral_sunrain_Support":3,
 	},
 	
 	
@@ -56,13 +77,30 @@
 
 	# carriers
 	"carrierSmall":{
-            "mistral_typhoon_Standard":10,
+            "mistral_typhoon_Standard":0,
+            "diableavionics_mistral_typhoon_Assault":3,
+            "diableavionics_mistral_typhoon_Burst":3,
+            "diableavionics_mistral_typhoon_Standard":3,
+            "diableavionics_mistral_typhoon_Support":3,
+
+            "diableavionics_mistral_breeze_Assault":3,
+            "diableavionics_mistral_breeze_Escort":3,
+            "diableavionics_mistral_breeze_Standard":3,
+            "diableavionics_mistral_breeze_Support":3,
 	},
 	"carrierMedium":{
-            "mistral_tailwind_Standard":10,
+            "mistral_tailwind_Standard":0,
+            "diableavionics_mistral_tailwind_Assault":3,
+            "diableavionics_mistral_tailwind_Siege":3,
+            "diableavionics_mistral_tailwind_Standard":3,
+            "diableavionics_mistral_tailwind_Support":3,
 	},
 	"carrierLarge":{
-            "mistral_sunrain_Standard":10,
+            "mistral_sunrain_Standard":0,
+            "diableavionics_mistral_sunrain_Assault":3,
+            "diableavionics_mistral_sunrain_Siege":3,
+            "diableavionics_mistral_sunrain_Standard":3,
+            "diableavionics_mistral_sunrain_Support":3,
 	},
 
 	# phase ships

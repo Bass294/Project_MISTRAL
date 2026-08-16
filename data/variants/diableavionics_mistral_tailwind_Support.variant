@@ -1,0 +1,63 @@
+{
+    "displayName": "Support",
+    "fluxCapacitors": 2,
+    "fluxVents": 30,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_tailwind",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_tailwind_Support",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_mistral_fasan",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "squall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_glaux",
+                "WS0015": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0009": "diableavionics_winee",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_ibis",
+                "WS0002": "diableavionics_ibis",
+                "WS0016": "diableavionics_raptor",
+                "WS0005": "diableavionics_ibis",
+                "WS0006": "diableavionics_ibis",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_zephyr_wing",
+        "diableavionics_valiant_wing",
+        "diableavionics_strife_wing",
+    ],
+    "modules": [],
+}

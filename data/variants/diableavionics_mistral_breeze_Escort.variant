@@ -1,0 +1,58 @@
+{
+    "displayName": "Escort",
+    "fluxCapacitors": 9,
+    "fluxVents": 10,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_breeze",
+    "hullMods": [
+        "escort_package",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_breeze_Escort",
+    "weaponGroups": [
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0010": "diableavionics_thunderboltpod",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0011": "diableavionics_thunderboltsmall",
+                "WS0009": "diableavionics_thunderboltsmall",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_recson",
+                "WS0002": "diableavionics_recson",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0001": "diableavionics_burchel",
+                "WS0004": "diableavionics_burchel",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_hoar_wing",
+    ],
+    "modules": [],
+}

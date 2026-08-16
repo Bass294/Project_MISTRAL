@@ -1,0 +1,204 @@
+{
+  "hullName": "Breeze",
+  "hullId": "diableavionics_mistral_breeze",
+  "hullSize": "DESTROYER",
+  "spriteName": "graphics/ships/mistral_breeze_purp.png",
+  "style": "HIGH_TECH",
+  "height": 196,
+  "width": 120,
+  "center": [60, 98],
+  "collisionRadius": 132.5,
+  "shieldCenter": [0, -0],
+  "shieldRadius": 105.5,
+  "viewOffset": 50,
+  "builtInMods": [
+    "armaa_serviceBays",
+    "mistral_angelosDraSkin",
+    "mistral_shield_style",
+    "ML_skinSwap",
+    "mistral_angeloscarriermod"
+  ],
+  "weaponSlots": [
+    {
+      "id": "LB 1",
+      "size": "LARGE",
+      "type": "LAUNCH_BAY",
+      "mount": "HIDDEN",
+      "arc": 360,
+      "angle": 0,
+      "locations": [
+        7, 29,
+        6, -29,
+        11, 25,
+        11, -26
+      ]
+    },
+    {
+      "id": "WS0005",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": 90,
+      "locations": [-29, 18],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0006",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 160,
+      "angle": -90,
+      "locations": [-29, -18],
+      "renderOrderMod": 201
+    },
+    {
+      "id": "WS0010",
+      "size": "MEDIUM",
+      "type": "MISSILE",
+      "mount": "HARDPOINT",
+      "arc": 10,
+      "angle": 0,
+      "locations": [62, -0]
+    },
+    {
+      "id": "WS0008",
+      "size": "MEDIUM",
+      "type": "ENERGY",
+      "mount": "HARDPOINT",
+      "arc": 15,
+      "angle": 0,
+      "locations": [44, -0],
+      "renderOrderMod": 100
+    },
+    {
+      "id": "WS0002",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 45,
+      "locations": [41, 28]
+    },
+    {
+      "id": "WS0003",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 235,
+      "angle": -45,
+      "locations": [41, -28]
+    },
+    {
+      "id": "WS0009",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": -0,
+      "locations": [59, 21]
+    },
+    {
+      "id": "WS0011",
+      "size": "SMALL",
+      "type": "UNIVERSAL",
+      "mount": "TURRET",
+      "arc": 120,
+      "angle": 0,
+      "locations": [59, -21]
+    },
+    {
+      "id": "WS0001",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": -90,
+      "locations": [23, -35]
+    },
+    {
+      "id": "WS0004",
+      "size": "SMALL",
+      "type": "HYBRID",
+      "mount": "TURRET",
+      "arc": 210,
+      "angle": 90,
+      "locations": [23, 35]
+    }
+  ],
+  "engineSlots": [
+    {
+      "location": [-69, 12.5],
+      "length": 30,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-69, -12.5],
+      "length": 30,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-67, 6.5],
+      "length": 30,
+      "width": 5,
+      "angle": 180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-67, -6.5],
+      "length": 30,
+      "width": 5,
+      "angle": -180,
+      "contrailSize": 30,
+      "style": "MISTRAL_ENG_B"
+    },
+    {
+      "location": [-68, 9.5],
+      "length": 28,
+      "width": 13,
+      "angle": -180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    },
+    {
+      "location": [-68, -9.5],
+      "length": 28,
+      "width": 13,
+      "angle": 180,
+      "contrailSize": 17,
+      "style": "MISTRAL_ENG_P"
+    }
+  ],
+  "bounds": [
+    -68, -5,
+    -70, -15,
+    -85, -15,
+    -95, -23.5,
+    -33.5, -33,
+    -3, -30,
+    20, -52,
+    46.5, -54,
+    76, -28,
+    75, -18,
+    66.5, -10,
+    66.5, 10,
+    75, 18,
+    76, 28,
+    46.5, 54,
+    20, 52,
+    -3, 30,
+    -33.5, 33,
+    -95, 23.5,
+    -85, 15,
+    -70, 15,
+    -68, 5
+  ]
+}

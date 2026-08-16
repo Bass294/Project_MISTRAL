@@ -59,6 +59,7 @@ public class angelos_trinary {
     public void generate(SectorAPI sector) {
         // ===================== SYSTEM SETUP =====================
         StarSystemAPI system = sector.createStarSystem("Angelos");
+        system.getMemoryWithoutUpdate().set(MemFlags.CLAIMING_FACTION, FACTION_ANGELOS);
 
         //system.setBackgroundTextureFilename("graphics/backgrounds/angelos_background.jpg");
         system.setBackgroundTextureFilename("graphics/backgrounds/background5.jpg");

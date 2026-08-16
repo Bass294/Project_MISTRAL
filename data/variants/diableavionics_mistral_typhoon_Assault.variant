@@ -1,0 +1,66 @@
+{
+    "displayName": "Assault",
+    "fluxCapacitors": 9,
+    "fluxVents": 24,
+    "goalVariant": true,
+    "hullId": "diableavionics_mistral_typhoon",
+    "hullMods": [
+        "hardenedshieldemitter",
+        "targetingunit",
+    ],
+    "permaMods": [],
+    "sMods": [],
+    "suppressedMods": [],
+    "variantId": "diableavionics_mistral_typhoon_Assault",
+    "weaponGroups": [
+        {
+            "autofire": true,
+            "mode": "ALTERNATING",
+            "weapons": {
+                "WS0001": "diableavionics_banish",
+                "WS0010": "diableavionics_banish",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0014": "diableavionics_glaux",
+                "WS0015": "diableavionics_glaux",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0008": "diableavionics_hexafire",
+            }
+        },
+        {
+            "autofire": true,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0003": "diableavionics_ibis",
+                "WS0002": "diableavionics_ibis",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0004": "diableavionics_banishsmall",
+            }
+        },
+        {
+            "autofire": false,
+            "mode": "LINKED",
+            "weapons": {
+                "WS0005": "diableavionics_banishsmall",
+            }
+        },
+    ],
+    "wings": [
+        "diableavionics_blizzaia_wing",
+    ],
+    "modules": [],
+}
